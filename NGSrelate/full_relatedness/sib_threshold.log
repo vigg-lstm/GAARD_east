@@ -1,0 +1,112 @@
+null device 
+          1 
+null device 
+          1 
+pdf 
+  2 
+
+Running find.sib.groups with a king threshold of 0.15 
+18 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.155 
+18 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.16 
+18 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.165 
+18 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.17 
+18 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.175 
+18 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.18 
+18 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.185 
+18 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.19 
+18 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.195 
+18 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.2 
+18 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.205 
+18 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.21 
+18 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.215 
+18 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.22 
+17 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.225 
+17 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.23 
+16 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.235 
+16 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.24 
+16 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.245 
+16 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.25 
+16 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.255 
+15 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.26 
+15 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.265 
+13 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.27 
+13 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.275 
+12 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.28 
+12 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.285 
+12 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.29 
+12 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.295 
+11 sib groups were found.
+
+Running find.sib.groups with a king threshold of 0.3 
+11 sib groups were found.
+ [1] 0.150 0.155 0.160 0.165 0.170 0.175 0.180 0.185 0.275 0.280 0.285 0.290
+[13] 0.295 0.300 0.190 0.195 0.200 0.205 0.210 0.215 0.220 0.225 0.230 0.235
+[25] 0.240 0.245 0.250 0.255 0.260 0.265 0.270
+
+We have removed 19 samples as sibs, broken down as follows:
+
+, , insecticide = Delta
+
+        phenotype
+location alive dead
+  Moshi      1    0
+  Muleba    11    7
+

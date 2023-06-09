@@ -1,0 +1,1 @@
+The file tanzania.allsnps.king.csv contains the relevant columns from a file that Sanjay Nagi generated in June 2023 called ngsRelate.wholegenome.gaard_tz.gz
