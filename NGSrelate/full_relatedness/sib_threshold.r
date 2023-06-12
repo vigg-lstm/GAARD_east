@@ -74,8 +74,35 @@ with(ngs.relate[(a %in% odd.samples[3:4]) | (b %in% odd.samples[3:4])], hist(kin
 with(ngs.relate[(a %in% odd.samples[4]) | (b %in% odd.samples[4])], hist(king, col = rgb(1,0.6,1), add = T, breaks = hist1$breaks))
 dev.off()
 
-# Those four samples together pretty much explain all the weirdly high relatedness values. So let's 
-# just chuck them out of the dataset. 
+# Those four samples together pretty much explain all the weirdly high relatedness values. 
+# They also have the highest heterozygosities of all the samples:
+
+hets = fread('heterozygosities.csv')
+setkey(hets, V1)
+
+jpeg('heterozygosity.jpg', width = 6, height = 6, units = 'in', res = 200)
+par(mar = c(4,2,1,1))
+main.hist <- hist(hets$het, breaks = 50, main = '', xlab = 'heterozygosity', col = rgb(0.6,0.6,1))
+br <- main.hist$breaks
+hist(hets[odd.samples[1], het], breaks = br, col = rgb(1,0.6,0.6), add = T)
+hist(hets[odd.samples[2], het], breaks = br, col = rgb(0.6,1,0.6), add = T)
+hist(hets[odd.samples[3], het], breaks = br, col = rgb(1,1,0.6), add = T)
+hist(hets[odd.samples[4], het], breaks = br, col = rgb(1,0.6,1), add = T)
+dev.off()
+
+# Those four samples are also the ones with the highest cross-contamination values of all the
+# samples that passed qc_filtering:
+qc.filters <- fread('qc_summary.tsv')
+setkey(meta, sample_id)
+filter.passing <- qc.filters[median_cov > 10 & frac_gen_cov > 0.5 & pc_contam < 4.5] %>%
+                  .[order(pc_contam, decreasing = T)]
+sample.names <- meta[filter.passing$derived_sample_id, partner_sample_id]
+filter.passing[, sample.name := ..sample.names]
+setkey(meta, partner_sample_id)
+head(filter.passing)
+
+# So let's just check them out of the dataset
+write(odd.samples, 'samples_to_exclude.csv')
 
 ngs.relate.clean <- ngs.relate[!((a %in% odd.samples) | (b %in% odd.samples))]
 
