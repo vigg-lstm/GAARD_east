@@ -1,1 +1,3 @@
 The file tanzania.allsnps.king.csv contains the relevant columns from a file that Sanjay Nagi generated in June 2023 called ngsRelate.wholegenome.gaard_tz.gz
+
+The file qc_summary.tsv is the summary of the Ag1000G sample QC process, obtained from the vector-ops github
