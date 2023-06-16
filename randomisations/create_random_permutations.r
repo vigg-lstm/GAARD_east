@@ -1,10 +1,15 @@
 library(data.table)
 library(stringr)
 
+arg.values <- commandArgs(trailingOnly=T)
+cat('Running with metadata:', arg.values[1], '\n', sep = '\n')
+
+meta_fn <- arg.values[1]
+output_fn <- arg.values[2]
 # Load the phenotypes (original GAARD metadata) and the VObs metadata (provided by Sanger, contains only 
 # sequenced samples. 
-phenotypes <- fread('../data/combined/sample_phenotypes.csv', key = 'specimen')
-vobs.meta <- fread('../data/combined/all_samples.samples.meta.csv', key = 'partner_sample_id')
+phenotypes <- fread('../data/sample_phenotypes_EA.csv', key = 'specimen')
+vobs.meta <- fread(meta_fn, key = 'partner_sample_id')
 # Remove males
 vobs.meta <- vobs.meta[sex_call == 'F', ]
 
@@ -25,9 +30,10 @@ shuffle <- function(x, k)
 # Create 1000 randomisations of the phenotype labels, stratified by population, and add them to the phenotypes
 # table
 set.seed(42)
-num.randomisations <- 1000
+num.randomisations <- 10000
 replicate.names <- paste('r', str_pad(1:num.randomisations, nchar(as.character(num.randomisations)), pad = 0), sep = '')
 phenotypes[, (replicate.names) := shuffle(phenotype, num.randomisations), by = population]
 
 # Write the table to file
-fwrite(phenotypes, 'phenotype_randomisations.csv', sep = '\t', quote = F)
+fwrite(phenotypes, output_fn, sep = '\t', quote = F)
+
