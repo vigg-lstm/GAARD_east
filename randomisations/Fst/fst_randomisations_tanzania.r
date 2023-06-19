@@ -138,7 +138,13 @@ windowed.fst.permuted.sibdrop <- function(pop, randomisations, window.size, num.
 	if (nrow(permutations) > num.permutations)
 		permutations <- permutations[sample(1:nrow(permutations), num.permutations), ]
 	sample.keep.index <- t(t(permutations) + sib.group.start.index) - 1
-	samples.to.drop <- t(apply(sample.keep.index, 1, function(x) sib.groups.list[[pop]][-x, sample.name]))
+	# Outputting a list and piping to rbind (rather than just outputting a matrix) is required because
+	# of apply's ridiculous behaviour of outputting a vector (which R considers to be a column matrix)
+	# when simplify = T and FUN only outputs one value per row of the input matrix, whereas if more 
+	# than one value is output, then it fills a matrix by column, which means that anything downstream 
+	# then behaves differently depending on whether FUN output one or more than one value. 
+	samples.to.drop <- apply(sample.keep.index, 1, function(x) sib.groups.list[[pop]][-x, sample.name], simplify = F) %>%
+	                   do.call(rbind, .)
 	
 	cat('\nRunning', length(randomisations), 'fst calculations for', pop, '\n')
 	windowed.data <- lapply(setNames(nm = c('phenotype', randomisations)), 
