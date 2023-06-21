@@ -1,15 +1,33 @@
 library(data.table)
 library(stringr)
 
+arg.values <- commandArgs(trailingOnly=T)
+
+meta.fn <- arg.values[1]
+output.fn <- arg.values[2]
+{if (length(arg.values) == 2)
+	samples.to.remove <- 'none'
+else
+	samples.to.remove <- readLines(arg.values[3])
+}
+
+arg.values <- commandArgs(trailingOnly=T)
+cat('Running with metadata:', meta.fn, 
+    'and output filename:', output.fn, 
+    'samples to remove:', paste(samples.to.remove, sep = ','), '\n', sep = '\n')
+
 # Load the phenotypes (original GAARD metadata) and the VObs metadata (provided by Sanger, contains only 
 # sequenced samples. 
-phenotypes <- fread('../data/combined/sample_phenotypes.csv', key = 'specimen')
-vobs.meta <- fread('../data/combined/all_samples.samples.meta.csv', key = 'partner_sample_id')
-# Remove males
-vobs.meta <- vobs.meta[sex_call == 'F', ]
+phenotypes <- fread('../data/sample_phenotypes_EA.csv', key = 'specimen')
+vobs.meta <- fread(meta.fn, key = 'partner_sample_id')
+# Remove samples that need excluding
+samples.to.include <- setdiff(
+	vobs.meta[sex_call == 'F', partner_sample_id],
+	samples.to.remove
+)
 
 # Reduced the phenotype table to only include sequenced samples
-phenotypes <- phenotypes[vobs.meta$partner_sample_id, ]
+phenotypes <- phenotypes[samples.to.include]
 
 # Have a column to indicate population (location x species x insecticide)
 phenotypes$population <- with(phenotypes, paste(location, species, insecticide, sep = '.'))
@@ -25,9 +43,10 @@ shuffle <- function(x, k)
 # Create 1000 randomisations of the phenotype labels, stratified by population, and add them to the phenotypes
 # table
 set.seed(42)
-num.randomisations <- 1000
+num.randomisations <- 10000
 replicate.names <- paste('r', str_pad(1:num.randomisations, nchar(as.character(num.randomisations)), pad = 0), sep = '')
 phenotypes[, (replicate.names) := shuffle(phenotype, num.randomisations), by = population]
 
 # Write the table to file
-fwrite(phenotypes, 'phenotype_randomisations.csv', sep = '\t', quote = F)
+fwrite(phenotypes, output.fn, sep = '\t', quote = F)
+

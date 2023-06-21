@@ -1,0 +1,11 @@
+Running with metadata:
+../data/tanzania.samples.meta.csv
+and output filename:
+phenotype_randomisations_tanzania.csv
+samples to remove:
+EA18-0330
+EA18-0268
+EA18-0195
+EA18-0234
+
+
