@@ -1,0 +1,70 @@
+Loading required package: Matrix
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:Matrix’:
+
+    expand, unname
+
+The following objects are masked from ‘package:data.table’:
+
+    first, second
+
+The following objects are masked from ‘package:base’:
+
+    expand.grid, I, unname
+
+Loading required package: IRanges
+
+Attaching package: ‘IRanges’
+
+The following object is masked from ‘package:data.table’:
+
+    shift
+
+Loading required package: XVector
+Loading required package: GenomeInfoDb
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+
+Attaching package: ‘ape’
+
+The following object is masked from ‘package:Biostrings’:
+
+    complement
+
+Arguments:
+Moshi_arabiensis_PM
+
+
+Warning message:
+In dir.create(study.pop) : 'Moshi_arabiensis_PM' already exists
+Loading SNP data from ~/data/ML/GAARD_SNP/Moshi_arabiensis_PM/csvs/filtered_SNPs.csv.
+Error in `[.data.table`(., , `:=`(MAF, apply(.SD, 1, maf)), .SDcols = sample.names) : 
+  Some items of .SDcols are not column names: [EA18-0193, EA18-0194, EA18-0197, EA18-0198, EA18-0200, EA18-0201, EA18-0202, EA18-0203, EA18-0204, EA18-0206, ...]
+Calls: %>% -> [ -> [.data.table
+Execution halted

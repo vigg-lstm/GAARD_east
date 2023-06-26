@@ -16,10 +16,6 @@ import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 import seaborn as sns
 
-study_pop = 'Moshi_arabiensis_Delta'
-region = '2L'
-repo_folder = '~/data/GAARD_repo/GAARD_east'
-
 if (len(argv) == 4):
 	study_pop = argv[1]
 	region = argv[2]
@@ -45,7 +41,6 @@ stdout.flush()
 
 ag3 = malariagen_data.Ag3('gs://vo_agam_release', pre = True)
 ag3.sample_sets(release = '3.7')
-ag3
 
 # Get the metadata and phenotypes, and drop the males
 meta = pd.merge(
@@ -63,11 +58,12 @@ meta = pd.merge(
     right_index = True
 ).query('sex_call == "F"')
 
-meta.shape
 # Get sib groups and samples with unreliable relatedness, and kick out
 # samples that need excluding
-sib_groups = pd.read_csv(repo_folder + '/NGSrelate/full_relatedness_tanzania/sib_group_table.csv', sep = '\t', index_col = 'sample.name')
-samples_to_exclude = pd.read_csv(repo_folder + '/NGSrelate/full_relatedness_tanzania/samples_to_exclude.csv', sep = '\t', index_col =0)
+sib_groups = pd.read_csv(repo_folder + '/NGSrelate/full_relatedness_tanzania/sib_group_table.csv',
+                         sep = '\t', index_col = 'sample.name')
+samples_to_exclude = pd.read_csv(repo_folder + '/NGSrelate/full_relatedness_tanzania/samples_to_exclude.csv',
+                                 sep = '\t', index_col =0, header = None)
 kick_out = np.concatenate([
 	sib_groups.query('keep == False').index,
 	samples_to_exclude.index
