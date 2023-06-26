@@ -24,6 +24,27 @@ focal.window.ranges <- h12.table[is.peak == T & pval < c(h12.p.thresh)] %>%
                        .[, name := paste(chromosome, round(midpoint), sep = ':')] %>%
                        .[, .(name, chromosome, startpoint, endpoint)] %>%
                        setkey(name)
+fwrite(focal.window.ranges, file = paste(study.pop, '/focal_window_ranges.csv', sep = ''), sep = '\t')
+
+# If there were no significant windows, produce empty output files and kill the analysis
+if (nrow(focal.window.ranges) == 0) {
+	sig.snps.annotated <- data.table(Chrom	= character(),
+	                                 Pos = numeric(),
+	                                 Window.name = character(),
+	                                 In.window	= logical(),
+	                                 logregP = numeric(),
+	                                 direction = numeric(),
+	                                 ref = character(),
+	                                 alts = character(),
+	                                 major.alt = character(),
+	                                 snpEff = character(),
+	                                 genes = character(),
+	                                 effects = character()
+	                      )
+	fwrite(sig.snps.annotated, file = paste(study.pop, '/sig_snps_annotated.csv', sep = ''), sep = '\t')
+	stop('No focal windows founds, ending analysis.')
+}
+
 
 # Load the sib groups information
 sib.groups <- fread('../../NGSrelate/full_relatedness_tanzania/sib_group_table.csv', sep = '\t')
@@ -386,6 +407,5 @@ mapply(
 )
 
 system(paste('rm', vcf.output.file))
-fwrite(focal.window.ranges, file = paste(study.pop, '/focal_window_ranges.csv', sep = ''), sep = '\t')
 fwrite(sig.snps.annotated, file = paste(study.pop, '/sig_snps_annotated.csv', sep = ''), sep = '\t')
 

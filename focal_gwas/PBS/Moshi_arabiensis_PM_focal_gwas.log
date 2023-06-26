@@ -63,8 +63,5 @@ Moshi_arabiensis_PM
 
 Warning message:
 In dir.create(study.pop) : 'Moshi_arabiensis_PM' already exists
-Loading SNP data from ~/data/ML/GAARD_SNP/Moshi_arabiensis_PM/csvs/filtered_SNPs.csv.
-Error in `[.data.table`(., , `:=`(MAF, apply(.SD, 1, maf)), .SDcols = sample.names) : 
-  Some items of .SDcols are not column names: [EA18-0193, EA18-0194, EA18-0197, EA18-0198, EA18-0200, EA18-0201, EA18-0202, EA18-0203, EA18-0204, EA18-0206, ...]
-Calls: %>% -> [ -> [.data.table
+Error: No focal windows founds, ending analysis.
 Execution halted
