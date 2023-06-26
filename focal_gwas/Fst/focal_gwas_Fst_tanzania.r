@@ -70,14 +70,40 @@ get.window.start.end <- function(chrom, pos, window.pos){
 	))
 }
 
+# If there were no significant windows, produce empty output files and kill the analysis
+if (nrow(filtered.table) == 0) {
+	focal.window.ranges <- data.table(chrom = character(),
+	                                  start = numeric(),
+	                                  end = numeric(),
+	                                  name = character()
+	                       )
+	fwrite(focal.window.ranges, file = paste(study.pop, '/focal_window_ranges.csv', sep = ''), sep = '\t')
+	sig.snps.annotated <- data.table(Chrom	= character(),
+	                                 Pos = numeric(),
+	                                 Window.name = character(),
+	                                 In.window	= logical(),
+	                                 logregP = numeric(),
+	                                 direction = numeric(),
+	                                 ref = character(),
+	                                 alts = character(),
+	                                 major.alt = character(),
+	                                 snpEff = character(),
+	                                 genes = character(),
+	                                 effects = character()
+	                      )
+	fwrite(sig.snps.annotated, file = paste(study.pop, '/sig_snps_annotated.csv', sep = ''), sep = '\t')
+	stop('No focal windows founds, ending analysis.')
+}
+
 focal.window.ranges <- mapply(get.window.start.end,
-                              filtered.table$window.chrom, 
-                              filtered.table$window.pos, 
-                              MoreArgs = list(window.pos = window.pos),
-                              SIMPLIFY = F
-                       ) %>%
-                       rbindlist() %>%
-                       setkey(name)
+							  filtered.table$window.chrom, 
+							  filtered.table$window.pos, 
+							  MoreArgs = list(window.pos = window.pos),
+							  SIMPLIFY = F
+					   ) %>%
+					   rbindlist() %>%
+					   setkey(name)
+fwrite(focal.window.ranges, file = paste(study.pop, '/focal_window_ranges.csv', sep = ''), sep = '\t')
 
 # Load the sib groups information
 sib.groups <- fread('../../NGSrelate/full_relatedness_tanzania/sib_group_table.csv', sep = '\t')
@@ -421,6 +447,5 @@ mapply(
 )
 
 system(paste('rm', vcf.output.file))
-fwrite(focal.window.ranges, file = paste(study.pop, '/focal_window_ranges.csv', sep = ''), sep = '\t')
 fwrite(sig.snps.annotated, file = paste(study.pop, '/sig_snps_annotated.csv', sep = ''), sep = '\t')
 

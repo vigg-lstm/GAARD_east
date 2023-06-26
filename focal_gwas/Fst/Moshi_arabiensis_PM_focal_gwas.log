@@ -63,7 +63,5 @@ Moshi_arabiensis_PM
 
 Warning message:
 In dir.create(study.pop) : 'Moshi_arabiensis_PM' already exists
-Error in setkeyv(x, cols, verbose = verbose, physical = physical) : 
-  some columns are not in the data.table: name
-Calls: %>% -> setkey -> setkeyv
+Error: No focal windows founds, ending analysis.
 Execution halted
