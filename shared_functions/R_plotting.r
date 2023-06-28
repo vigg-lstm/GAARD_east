@@ -1,7 +1,9 @@
 # A function to lighten the tone of the colour
-lighten.col <- function(color, lightness = 1, alpha = alpha){
-	col.rgb <- col2rgb(color)/255
-	rgb(t(1-(1-col.rgb)*lightness), alpha = alpha)
+lighten.col <- function(colour, lightness = 1, alpha = alpha){
+	if (length(colour) > 1)
+		stop('This only works for one colour at a time')
+	col.rgb <- col2rgb(colour)/255
+	rgb(t(1-(1-col.rgb) %*% lightness), alpha = alpha)
 }
 
 # Write a function to draw the chromosomes on an existing plotting device

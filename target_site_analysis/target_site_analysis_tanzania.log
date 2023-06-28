@@ -1,0 +1,109 @@
+Warning message:
+In checkDepPackageVersion(dep_pkg = "TMB") :
+  Package version inconsistency detected.
+glmmTMB was built with TMB version 1.8.0
+Current TMB version is 1.8.1
+Please re-install glmmTMB from source or restore original ‘TMB’ package (see '?reinstalling' for more information)
+
+
+Moshi Delta:
+Using the following string to control for confounding factors: 
+
+Detecting invariable and nearly invariable markers.
+
+Fail. None of the markers provided were sufficiently variable.
+NULL
+
+All markers too rare
+
+
+Muleba Delta:
+Using the following string to control for confounding factors: 
+
+Detecting invariable and nearly invariable markers.
+
+Fail. None of the markers provided were sufficiently variable.
+NULL
+
+All markers too rare.
+
+
+Moshi PM:
+Using the following string to control for confounding factors: 
+
+Detecting invariable and nearly invariable markers.
+
+Fail. None of the markers provided were sufficiently variable.
+NULL
+
+All markers too rare.
+
+
+All populations Delta:
+Using the following string to control for confounding factors:  + (1|location)
+
+Detecting invariable and nearly invariable markers.
+
+Analysing markers independently.
+
+Running commentary on model optimisation:
+
+Building model: glmmTMB(phenotype ~ 1  + (1|location), data = delta.table, family = binomial) 
+	No further markers are significant, keeping final model:
+Formula:          phenotype ~ 1 + (1 | location)
+Data: delta.table
+      AIC       BIC    logLik  df.resid 
+ 406.8960  414.2563 -201.4480       291 
+Random-effects (co)variances:
+
+Conditional model:
+ Groups   Name        Std.Dev.
+ location (Intercept) 0.1492  
+
+Number of obs: 293 / Conditional model: location, 2
+
+Fixed Effects:
+
+Conditional model:
+(Intercept)  
+    -0.2102  
+Final model was the null model.
+
+
+   P deviance
+1 NA       NA
+$invariable.markers
+[1] "Vgsc.1507I_T" "Vgsc.995F_T"  "Cyp4j5.43F_A"
+
+$correlated.markers
+character(0)
+
+$sig.alone
+                   P pseudo.R2
+Rdl.296S_T 0.9771978        NA
+
+$final.model
+Formula:          phenotype ~ 1 + (1 | location)
+Data: delta.table
+      AIC       BIC    logLik  df.resid 
+ 406.8960  414.2563 -201.4480       291 
+Random-effects (co)variances:
+
+Conditional model:
+ Groups   Name        Std.Dev.
+ location (Intercept) 0.1492  
+
+Number of obs: 293 / Conditional model: location, 2
+
+Fixed Effects:
+
+Conditional model:
+(Intercept)  
+    -0.2102  
+
+$final.sig
+   P deviance
+1 NA       NA
+
+
+No significant markers.
