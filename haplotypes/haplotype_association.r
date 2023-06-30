@@ -107,6 +107,7 @@ snp.tables <- lapply(setNames(nm = sig.tests$pop.window), load.snps)
 # size should be indicated, as should p-value
 gff.path <- '../data/VectorBase-57_AgambiaePEST.gff'
 gff <- as.data.table(read.gff(gff.path, GFF3 = T))
+gff[, seqid := sub('AgamP4_', '', seqid)]
 
 source('../shared_functions/R_plotting.r')
 
@@ -129,7 +130,7 @@ plot.hap.cluster <- function(pop.win, filename, point.cex, remove.background.snp
 	gene.gff <- gff[seqid == chrom & 
 	                start < end.pos & 
 	                end > start.pos &
-	                type == 'gene', ]
+	                type == 'protein_coding_gene', ]
 	
 	gene.gff[, gene.id := unique(str_extract(attributes, 'AGAP\\d{6}'))]
 	gene.gff[, gene.name := str_extract(attributes, '(?<=Name=)[^;]+') %>%
