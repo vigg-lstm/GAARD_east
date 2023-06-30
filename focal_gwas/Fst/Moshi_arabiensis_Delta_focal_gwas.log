@@ -74,10 +74,10 @@ Warning messages:
 4: In `[.data.table`(all.snps, , `:=`(c(samples.to.remove), NULL)) :
   Column 'EA18-0234' does not exist to remove
             used   (Mb) gc trigger    (Mb)   max used    (Mb)
-Ncells   3854182  205.9   13949940   745.1   14688361   784.5
-Vcells 216842086 1654.4 1341172558 10232.4 2076051572 15839.1
+Ncells   3854179  205.9   13949940   745.1   14688358   784.5
+Vcells 216842084 1654.4 1341172558 10232.4 2076051572 15839.1
 Loading phenotype data from ../../data/sample_phenotypes_EA.csv.
-Running ../extract_zarr_region.py at 21:54 on 26/06/2023 using machine neptune2
+Running ../extract_zarr_region.py at 11:05 on 30/06/2023 using machine neptune2
 
 
 Script was run using the following arguments:

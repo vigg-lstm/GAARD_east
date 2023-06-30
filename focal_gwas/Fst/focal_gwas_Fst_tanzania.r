@@ -278,6 +278,7 @@ sig.snps.annotated[, effects := sapply(snpEff, pull.out.effect.types)]
 # therein.
 gff.path <- '../../data/VectorBase-57_AgambiaePEST.gff'
 gff <- as.data.table(read.gff(gff.path, GFF3 = T))
+gff[, seqid := sub('AgamP4_', '', seqid)]
 
 lighten.col <- function(color, lightness, alpha = alpha){
 	col.rgb <- col2rgb(color)/255
@@ -335,7 +336,7 @@ plot.focal.window <- function(window.name, filename, sig.snps.only = T, true.pos
 	gene.gff <- gff[seqid == chrom & 
 	                start < end.pos & 
 	                end > start.pos &
-	                type == 'gene', ]
+	                type == 'protein_coding_gene', ]
 	
 	gene.gff[, gene.id := unique(str_extract(attributes, 'AGAP\\d{6}'))]
 	gene.gff[, gene.name := str_extract(attributes, '(?<=Name=)[^;]+') %>%

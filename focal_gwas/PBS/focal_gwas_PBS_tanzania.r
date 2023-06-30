@@ -15,7 +15,7 @@ dir.create(study.pop)
 chrom.sizes <- c('2R' = 61545105, '2L' = 49364325, '3R' = 53200684, '3L' = 41963435, 'X' = 24393108)
 
 # Load the results of PBS-based window selection
-pbs.table <- readRDS('../../randomisations/PBS/pbs_filtered_windows.RDS')[[gsub('_', '.', study.pop)]]
+pbs.table <- readRDS('../../randomisations/PBS/pbs_filtered_windows_tanzania.RDS')[[gsub('_', '.', study.pop)]]
 
 # Identify the windows we want to focus on 
 pbs.p.thresh <- 0.01
@@ -217,6 +217,7 @@ sig.snps.annotated[, effects := sapply(snpEff, pull.out.effect.types)]
 # therein.
 gff.path <- '../../data/VectorBase-57_AgambiaePEST.gff'
 gff <- as.data.table(read.gff(gff.path, GFF3 = T))
+gff[, seqid := sub('AgamP4_', '', seqid)]
 
 lighten.col <- function(color, lightness, alpha = alpha){
 	col.rgb <- col2rgb(color)/255
@@ -274,7 +275,7 @@ plot.focal.window <- function(window.name, filename, sig.snps.only = T, true.pos
 	gene.gff <- gff[seqid == chrom & 
 	                start < end.pos & 
 	                end > start.pos &
-	                type == 'gene', ]
+	                type == 'protein_coding_gene', ]
 	
 	gene.gff[, gene.id := unique(str_extract(attributes, 'AGAP\\d{6}'))]
 	gene.gff[, gene.name := str_extract(attributes, '(?<=Name=)[^;]+') %>%
