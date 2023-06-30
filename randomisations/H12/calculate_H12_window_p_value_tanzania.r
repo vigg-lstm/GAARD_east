@@ -168,6 +168,6 @@ for (pop in names(h12.tables))
 	              p.thresh = p.threshold,
 	              plot.title = pop)
 
-saveRDS(h12.tables, 'h12_filtered_windows.RDS')
+saveRDS(h12.tables, 'h12_filtered_windows_tanzania.RDS')
 
 
