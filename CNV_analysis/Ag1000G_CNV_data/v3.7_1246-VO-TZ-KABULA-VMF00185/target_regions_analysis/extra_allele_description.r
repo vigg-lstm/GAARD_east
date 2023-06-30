@@ -1,3 +1,7 @@
+# This script identifies the 7 new Cyp6aap CNV alleles identified in this dataset. It cannot be run
+# from the GitHub repo because it requires an output from the Ag1000G CNV pipeline that is too large
+# to include ('target_regions_analysis.Rdata')
+
 library('Biostrings')
 library('stringr')
 library('stringi')
