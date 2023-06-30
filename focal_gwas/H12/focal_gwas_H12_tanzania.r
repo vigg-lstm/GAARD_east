@@ -16,7 +16,7 @@ chrom.sizes <- c('2R' = 61545105, '2L' = 49364325, '3R' = 53200684, '3L' = 41963
 
 
 # Load the results of H12-based window selection
-h12.table <- readRDS('../../randomisations/H12/h12_filtered_windows.RDS')[[gsub('_', '.', study.pop)]]$diff
+h12.table <- readRDS('../../randomisations/H12/h12_filtered_windows_tanzania.RDS')[[gsub('_', '.', study.pop)]]$diff
 
 # Identify the windows we want to focus on 
 h12.p.thresh <- 0.01
@@ -219,6 +219,7 @@ sig.snps.annotated[, effects := sapply(snpEff, pull.out.effect.types)]
 # therein.
 gff.path <- '../../data/VectorBase-57_AgambiaePEST.gff'
 gff <- as.data.table(read.gff(gff.path, GFF3 = T))
+gff[, seqid := sub('AgamP4_', '', seqid)]
 
 lighten.col <- function(color, lightness, alpha = alpha){
 	col.rgb <- col2rgb(color)/255
@@ -276,7 +277,7 @@ plot.focal.window <- function(window.name, filename, sig.snps.only = T, true.pos
 	gene.gff <- gff[seqid == chrom & 
 	                start < end.pos & 
 	                end > start.pos &
-	                type == 'gene', ]
+	                type == 'protein_coding_gene', ]
 	
 	gene.gff[, gene.id := unique(str_extract(attributes, 'AGAP\\d{6}'))]
 	gene.gff[, gene.name := str_extract(attributes, '(?<=Name=)[^;]+') %>%
