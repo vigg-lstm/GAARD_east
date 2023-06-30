@@ -1,0 +1,68 @@
+import os
+import re
+import numpy as np
+import pandas as pd
+
+populations = ['Moshi_arabiensis_Delta',
+               'Muleba_arabiensis_Delta',
+               'Moshi_arabiensis_PM']
+
+populations_italics = {p: re.sub('_(.+)_', r'\_*\1*\_', p) for p in populations}
+
+all_files = {p: np.sort(os.listdir(f'../../focal_gwas/PBS/{p}')) for p in populations}
+
+output_file = 'window_PBS_summary.md'
+
+f = open(output_file, 'w')
+
+f.write('# PBS windows of interest\n\n')
+
+f.write(
+'For each sample set, we first provide a summary plot of PBS across the genome, '\
+'with PBS shown in blue and the results of the 200 randomisations shown behind '\
+'in grey. Windows identified as peaks are highlighted by points, colour-coded by '\
+'whether they are significantly higher than expected based on the simulations '\
+'(green) or not (purple). For each significant window (green points), we then '\
+'provide its own plot showing the significant (*P* < 0.01) SNPs found in the '\
+'region of that window, and their -log10(Pvalue) of association with phenotype. '\
+'Red points indicate non-synonymous SNPs, blue points indicate all other SNPs. Point '\
+'shape indicates whether the mutant allele at that SNP is associated with increased '\
+'(circle) or decreased (triangle) resistance. Dark points in the centre of the plot '\
+'show SNPs within the significant window, light points on the sides show SNPs in the '\
+'region 10,000 bp either side of the window. \n\n'
+)
+
+f.write('[Legend](#Plot_legend)  \n')
+for pop in populations:
+	f.write(f'[{populations_italics[pop]}](#{pop.lower()})  \n')
+
+f.write('\n___\n\n')
+
+f.write('## Plot legend\n\n')
+f.write('<a id="Plot_legend">\n\n')
+f.write('![legend](./PBS_example.svg)\n\n')
+
+f.write('\n___\n\n')
+
+for pop in populations:
+	f.write(f'## {populations_italics[pop]}\n\n')
+	f.write(f'![{pop}_peak_filter](../../randomisations/PBS/{re.sub("_", ".", pop)}_peak_filter_plot.png)\n\n&nbsp;\n\n')
+
+	overview_files = [w for w in all_files[pop] if re.search('.png', w)]
+	window_code = [re.sub(".png", "", w) for w in overview_files]
+	pop_windows = [f'{pop}_{re.sub("_", ":", re.sub(".png", "", w))}' for w in window_code]
+	pop_windows_link = [re.sub(':', '%3A', w) for w in pop_windows]
+	pop_windows_section = [re.sub(':', '_', w) for w in pop_windows]
+
+	for i in range(len(pop_windows)):
+		f.write(f'[{pop_windows[i]}](#{pop_windows_section[i].lower()})  \n')
+
+	f.write('\n')
+
+	for i in range(len(pop_windows)):
+		f.write(f'### {pop_windows_section[i]}\n\n&nbsp;\n\n')
+		f.write(f'![{pop_windows[i]}_overview](../../focal_gwas/PBS/{pop}/{overview_files[i]})\n\n&nbsp;\n\n')
+
+	f.write('___\n\n')
+
+f.close()
