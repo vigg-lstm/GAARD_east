@@ -683,9 +683,10 @@ print(moshi.delta.model)
 # Dup33 is significant
 
 # Muleba:
-korlebu.delta.samples <- phen[location == 'Muleba' & insecticide == 'Delta', specimen]
-korlebu.delta.allele.table <- as.data.frame(target.CNV.table[korlebu.delta.samples])
-muleba.delta.model <- glm.up(korlebu.delta.allele.table, c('Cyp6aap_Dup33'), 'phenotype')
+cat('\n\nCyp6aap alleles in Muleba:\n')
+muleba.delta.samples <- phen[location == 'Muleba' & insecticide == 'Delta', specimen]
+muleba.delta.allele.table <- as.data.frame(target.CNV.table[muleba.delta.samples])
+muleba.delta.model <- glm.up(muleba.delta.allele.table, c('Cyp6aap_Dup33'), 'phenotype')
 print(muleba.delta.model)
 # Again, Dup33 is significant
 
