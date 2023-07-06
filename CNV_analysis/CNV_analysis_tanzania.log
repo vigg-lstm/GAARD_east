@@ -403,6 +403,9 @@ $final.sig
                        P deviance
 Cyp6aap_Dup33 0.01677072 5.720211
 
+
+
+Cyp6aap alleles in Muleba:
 Using the following string to control for confounding factors: 
 
 Detecting invariable and nearly invariable markers.
@@ -411,7 +414,7 @@ Analysing markers independently.
 
 Running commentary on model optimisation:
 
-Building model: glm(phenotype ~ 1 , data = korlebu.delta.allele.table, family = binomial) 
+Building model: glm(phenotype ~ 1 , data = muleba.delta.allele.table, family = binomial) 
 	Adding marker Cyp6aap_Dup33 as the lowest significant marker (P = 2.730821e-05).
 
 	No markers left to add.
@@ -432,7 +435,7 @@ Cyp6aap_Dup33 2.730821e-05        NA
 
 $final.model
 
-Call:  glm(formula = phenotype ~ Cyp6aap_Dup33, family = binomial, data = korlebu.delta.allele.table)
+Call:  glm(formula = phenotype ~ Cyp6aap_Dup33, family = binomial, data = muleba.delta.allele.table)
 
 Coefficients:
       (Intercept)  Cyp6aap_Dup33TRUE  
