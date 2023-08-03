@@ -650,17 +650,6 @@ for (insecticide in c('Delta', 'PM')){
 	}
 }
 
-location = 'Muleba'
-insecticide = 'Delta'
-		index <- list(location, insecticide)
-		# Keep genes where CNV exists in at least 5% of samples. 
-		genes.to.model <- (detox.gene.freq[paste(index, collapse = '.'), ] >= 0.05) %>%
-		                  colnames(.)[.]
-		cat('\n\tModal copy number test for ', paste(index, collapse = '_'), ':\n\n', sep = '')
-		cat('Analysing genes with CNV at >= 5% freq (', paste(genes.to.model, collapse = ', '), ').\n\n', sep = '')
-		test.table <- as.data.frame(modal.copy.number[index])
-		bob <- glm.up(test.table, genes.to.model, 'phenotype')
-
 # Let's try a glm that includes population as a random factor. 
 delta.table <- as.data.frame(modal.copy.number[insecticide == 'Delta'])
 cat('\n\nAll populations Delta:\n')

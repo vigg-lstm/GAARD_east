@@ -219,42 +219,6 @@ $final.sig
 1 NA       NA
 
 
-	Modal copy number test for Muleba_Delta:
-
-Analysing genes with CNV at >= 5% freq (Cyp6aa1, Cyp6aa2, Cyp6p1, Cyp6p2, Cyp6p3, Cyp6p4, Cyp6p5, Cyp6z2, Cyp9k1).
-
-Using the following string to control for confounding factors: 
-
-Detecting invariable and nearly invariable markers.
-
-Analysing markers independently.
-
-Running commentary on model optimisation:
-
-Building model: glm(phenotype ~ 1 , data = test.table, family = binomial) 
-	Adding marker Cyp6p2 as the lowest significant marker (P = 8.384433e-06).
-
-Building model: glm(phenotype ~ Cyp6p2, data = test.table, family = binomial) 
-	Could not calculate p-value for marker Cyp6p3.
-
-	No further markers are significant, keeping final model:
-
-Call:  glm(formula = phenotype ~ Cyp6p2, family = binomial, data = test.table)
-
-Coefficients:
-(Intercept)       Cyp6p2  
-     0.2364     -17.8025  
-
-Degrees of Freedom: 148 Total (i.e. Null);  147 Residual
-Null Deviance:	    206.5 
-Residual Deviance: 186.6 	AIC: 190.6
-Final model contained 1 parameters: Cyp6p2.
-
-
-                  P deviance
-Cyp6p2 8.384433e-06 19.84814
-
-
 All populations Delta:
 Using the following string to control for confounding factors:  + (1|location)
 
