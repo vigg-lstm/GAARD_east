@@ -429,7 +429,7 @@ contable(c(Dup.clusters$Coeaexf, Dup.clusters$Coeaexg),
 dev.off()
 
 # We can also plot a histogram of model copy numbers for coeaexg
-png('Coeae3g_copy_number_histogram.png', width = 3.5, height = 4, units = 'in', res = 300)
+png('Coeaexg_copy_number_histogram.png', width = 3.5, height = 4, units = 'in', res = 300)
 par(mar = c(1.5,2.6,0.5,0.5), mgp = c(1.6,0.4,0), tcl = -0.3, lwd = 1.5, cex = 0.7)
 num.bins <- max(modal.copy.number$Coeaexg + 1)
 bin.pos <- c(0, seq(5, num.bins, 5))
