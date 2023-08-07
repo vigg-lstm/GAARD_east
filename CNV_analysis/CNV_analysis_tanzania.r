@@ -2,7 +2,9 @@ library(data.table)
 library(magrittr)
 library(stringr)
 library(glmmTMB)
+library(abind)
 
+source('../shared_functions/R_plotting.r')
 study.ids.table <- fread('../data/study_ids.csv')
 study.ids.table[, study_id := paste('v3.7_', study_id, sep = '')]
 meta <- fread('../data/tanzania.samples.meta.csv', key = 'sample_id')
@@ -18,7 +20,7 @@ samples.to.exclude = readLines('../NGSrelate/full_relatedness_tanzania/samples_t
 samples.to.remove <- c(sibs.to.remove, males, samples.to.exclude)
 
 load.target.cnv.table <- function(study.id){
-	target.cnv.table <- fread(paste('Ag1000G_CNV_data', study.id, 'target_regions_analysis/focal_region_CNV_table_extra_alleles.csv', sep = '/'))
+	target.cnv.table <- fread(paste('Ag1000G_CNV_data', study.id, 'target_regions_analysis/focal_region_CNV_table_extras.csv', sep = '/'))
 	these.sample.names <- meta[target.cnv.table$V1, partner_sample_id]
 	target.cnv.table$sample.id <- these.sample.names
 	target.cnv.table$V1 <- NULL
@@ -38,11 +40,11 @@ known.Dups <- Dup.names[!grepl('Dup0', Dup.names)]
 sample.names <- target.CNV.table$sample.id
 good.var.sample.names <- target.CNV.table[High.var.sample == F]$sample.id
 # The "Any" category is where any of the known CNVs are present
-Dups.any <- c('Ace1_Any', 'Cyp6aap_Any', 'Cyp6mz_Any', 'Gstue_Any', 'Cyp9k1_Any')
+Dups.any <- c('Ace1_Any', 'Cyp6aap_Any', 'Cyp6mz_Any', 'Gstue_Any', 'Cyp9k1_Any', 'Coeaexf_Any', 'Coeaexg_Any')
 for (D in Dups.any){
 	this.region <- sub('_Any', '', D)
 	these.cnvs <- known.Dups[grepl(this.region, known.Dups)]
-	target.CNV.table[[D]] <- apply(subset(target.CNV.table[, ..these.cnvs]), 1, any)
+	target.CNV.table[[D]] <- apply(target.CNV.table[, ..these.cnvs, drop = F], 1, any)
 }
 
 target.CNV.table$phenotype <- as.factor(phen[sample.names, phenotype])
@@ -98,14 +100,28 @@ load.modal.cnv.table <- function(study.id){
 	modal.cnv.table
 }
 
-modal.copy.number <- lapply(unique(study.ids.table$study_id), load.modal.cnv.table) %>%
-                     rbindlist() %>%
-                     .[!(sample.id %in% samples.to.remove)] %>%
-                     .[high_variance == F, -c('sex_call', 'high_variance')]
+modal.copy.number.all <- lapply(unique(study.ids.table$study_id), load.modal.cnv.table) %>%
+                         rbindlist() %>%
+                         .[!(sample.id %in% samples.to.remove)] %>%
+                         .[high_variance == F, -c('sex_call', 'high_variance')]
 
-modal.CNV.table <- copy(modal.copy.number) %>%
+# Since the HMM only goes up to 12 (10 extra copies), we need to recalculate the copy number state using raw
+# coverge values for Coeaexg
+load.coeaexg.copy.numbers <- function(study.id){
+	cn.table <- readRDS(paste('Ag1000G_CNV_data', study.id, 'target_regions_analysis/Coeaexg_cnv_coverage.RDS', sep = '/'))
+	these.sample.names <- meta[dimnames(cn.table)[[2]], partner_sample_id]
+	dimnames(cn.table)[[2]] <- these.sample.names
+	cn.table
+}
+
+coeaexg.copy.numbers <- lapply(unique(study.ids.table$study_id), load.coeaexg.copy.numbers) %>%
+                        abind(along = 2) %>%
+                        .[,!(dimnames(.)[[2]] %in% samples.to.remove),]
+coeaexg.median.cn <- round(apply(coeaexg.copy.numbers[, , 'Normalised_coverage'], 2, median)) - 2
+modal.copy.number.all[, Coeaexg := ..coeaexg.median.cn[sample.id]]
+
+modal.CNV.table <- copy(modal.copy.number.all) %>%
                    .[, colnames(.)[-1] := lapply(.SD, `>`, 0), .SDcols = colnames(.)[-1]]
-
 # For a smaller table, we only keep genes where a CNV was present. 
 no.cnv <- names(which(apply(modal.CNV.table[, -1], 2, sum, na.rm = T) < 1))
 modal.CNV.table <- modal.CNV.table[, -c(..no.cnv)]
@@ -117,6 +133,8 @@ population.modal.CNVs <- aggregate(modal.CNV.table[, -c('sample.id')],
 )
 
 detox.genes <- c('Ace1',
+                 paste('Coeae', 1:2, 'f', sep = ''),
+                 'Coeaexg',
                  paste('Cyp6aa', 1:2, sep = ''),
                  paste('Cyp6p', 1:5, sep = ''),
                  paste('Cyp6m', 2:4, sep = ''),
@@ -126,20 +144,26 @@ detox.genes <- c('Ace1',
 
 # Get the names of the detox genes
 gene.table <- fread('Ag1000G_CNV_data/gene_annotation_fullgenetable.csv', key = 'Gene_stable_ID', check.names = T)
+# Coeae1f is absent from the gff, so add it manually
+gene.table['AGAP006227', Gene.name := 'COEAE1F']
+# We also add a special entry for the Coeaexg cluster, for subsequent functions to work
+gene.table <- rbind(gene.table, data.table(Gene_stable_ID = 'Coeaexg', Gene.name = 'COEAEXG', Descriptions = '', GO_terms = ''))
 detox.gene.conversion <- gene.table[Gene.name %in% toupper(detox.genes), 
                                     .(Gene.id = Gene_stable_ID, Gene.name = str_to_title(Gene.name))]
 
 # We shrink the modal copy number table to be just the genes we are interested in. These are the detox 
 # genes and also some of the ones in the Ace1 deletion in order to get the copy number of that. 
+# We also add the cluster Coeaexg
 ace1.del.genes <- c('AGAP001358', 'AGAP001360', 'AGAP001361', 'AGAP001362', 'AGAP001363', 'AGAP001364', 'AGAP001365', 'AGAP001366')
 genes.of.interest <- c(detox.gene.conversion$Gene.id, ace1.del.genes)
-modal.copy.number <- modal.copy.number[, c('sample.id', genes.of.interest), with = F] %>%
+modal.copy.number <- modal.copy.number.all[, c('sample.id', genes.of.interest), with = F] %>%
+                     setnames(detox.gene.conversion$Gene.id, detox.gene.conversion$Gene.name) %>%
+                     # Add the calculated copy number for Coeaexg
                      merge(phen[good.var.sample.names],
                            by.x = 'sample.id', by.y = 'specimen',
                            all = F
                      ) %>%
                      .[, phenotype := as.factor(phenotype)] %>%
-                     setnames(detox.gene.conversion$Gene.id, detox.gene.conversion$Gene.name) %>%
                      setkey(location, insecticide)
 
 source('../shared_functions/R_plotting.r')
@@ -324,33 +348,33 @@ contable <- function(x, ...){
 		modal.contable(x, ...)
 }
 
-png('detox_gene_modal_CNVs.png', width = 4.5, height = 0.8, units = 'in', res = 300)
+png('detox_gene_modal_CNVs.png', width = 4.5, height = 0.7, units = 'in', res = 300)
 par(family = 'Arial')
 contable(detox.genes, 
          text.cell.cex = 0.35,
          pop.cex = 0.35,
          gene.cex = 0.35,
-         mai = c(0,0.13,0.18,0)
+         mai = c(0,0.15,0.2,0)
 )
 dev.off()
 
 # And a pdf version 
-pdf('detox_gene_modal_CNVs.pdf', width = 4.5, height = 0.8)
+pdf('detox_gene_modal_CNVs.pdf', width = 4.5, height = 0.6)
 contable(detox.genes, 
          text.cell.cex = 0.35,
          pop.cex = 0.35,
          gene.cex = 0.35,
-         mai = c(0,0.13,0.18,0)
+         mai = c(0,0.13,0.25,0)
 )
 dev.off()
 
-png('Ace1_diagnostic_read_CNVs.png', width = 2, height = 0.8, units = 'in', res = 300)
+png('Ace1_diagnostic_read_CNVs.png', width = 2, height = 0.7, units = 'in', res = 300)
 par(family = 'Arial')
 contable(Dup.clusters$Ace1, 
          text.cell.cex = 0.35,
          pop.cex = 0.35,
          dup.cex = 0.35,
-         mai = c(0,0.23,0.23,0.05)
+         mai = c(0,0.25,0.23,0.05)
 )
 dev.off()
 
@@ -370,7 +394,7 @@ contable(Dup.clusters$Cyp6mz,
          text.cell.cex = 0.35,
          pop.cex = 0.35,
          dup.cex = 0.35,
-         mai = c(0,0.21,0.33,0.18)
+         mai = c(0,0.23,0.35,0.18)
 )
 dev.off()
 
@@ -384,16 +408,36 @@ contable(Dup.clusters$Gstue,
 )
 dev.off()
 
-png('Cyp9k1_diagnostic_read_CNVs.png', width = 6, height = 1.5, units = 'in', res = 300)
+png('Cyp9k1_diagnostic_read_CNVs.png', width = 6, height = 0.8, units = 'in', res = 300)
 par(family = 'Arial')
 contable(Dup.clusters$Cyp9k1, 
          text.cell.cex = 0.35,
          pop.cex = 0.35,
          dup.cex = 0.35,
-         mai = c(0,0.09,0.33,0.05)
+         mai = c(0,0.09,0.32,0)
 )
 dev.off()
 
+png('Coeae_diagnostic_read_CNVs.png', width = 2, height = 0.8, units = 'in', res = 300)
+par(family = 'Arial')
+contable(c(Dup.clusters$Coeaexf, Dup.clusters$Coeaexg), 
+         text.cell.cex = 0.35,
+         pop.cex = 0.35,
+         dup.cex = 0.35,
+         mai = c(0,0.25,0.33,0.18)
+)
+dev.off()
+
+# We can also plot a histogram of model copy numbers for coeaexg
+png('Coeae3g_copy_number_histogram.png', width = 3.5, height = 4, units = 'in', res = 300)
+par(mar = c(1.5,2.6,0.5,0.5), mgp = c(1.6,0.4,0), tcl = -0.3, lwd = 1.5, cex = 0.7)
+num.bins <- max(modal.copy.number$Coeaexg + 1)
+bin.pos <- c(0, seq(5, num.bins, 5))
+hist(modal.copy.number$Coeaexg, right = F, main = '', 
+     breaks = num.bins, xaxt = 'n', col = lighten.col('#E7B800', alpha = 0.25) , border = '#E7B800')
+axis(1, at = bin.pos + 0.5, labels = bin.pos, lwd = 0, mgp = c(0,-0.6,0))
+mtext('Copy number', 1, line = 0.5, cex = 0.7)
+dev.off()
 
 glm.up <- function(input.table, list.of.markers = markers, rescolumn = 'phenotype', control.for = character(), glm.function = NULL, verbose = T){
 	# Check whether the markers and random effects are present in the data.frame
@@ -615,9 +659,6 @@ glm.up <- function(input.table, list.of.markers = markers, rescolumn = 'phenotyp
 	list('invariable.markers' = invariable.markers, 'correlated.markers' = correlated.markers, 'sig.alone' = individual.markers, 'final.model' = final.model, 'final.sig' = final.model.sig)
 }
 
-genes.to.model <- c('Ace1', 'Cyp6aa1', 'Cyp6z1', 'Cyp6z2', 'Cyp6z3', 'Cyp6p3','Gste2', 'Cyp9k1')
-
-
 # Let's test things using copy number in each population independently
 cat('\n\t#######################')
 cat('\n\t# Copy number testing #')
@@ -632,7 +673,6 @@ detox.gene.freq <- aggregate(modal.CNV.table[, dtx.gene.conversion$Gene.id, with
                    setnames(dtx.gene.conversion$Gene.id, dtx.gene.conversion$Gene.name)
 rownames(detox.gene.freq) <- paste(detox.gene.freq$location, detox.gene.freq$insecticide, sep = '.')
 detox.gene.freq <- detox.gene.freq[sort(dtx.gene.conversion$Gene.name)]
-
 
 for (insecticide in c('Delta', 'PM')){
 	for (location in c('Moshi', 'Muleba')){
@@ -651,11 +691,12 @@ for (insecticide in c('Delta', 'PM')){
 }
 
 # Let's try a glm that includes population as a random factor. 
+genes.to.model <- c('Cyp6aa1', 'Cyp6z2', 'Cyp6p3','Gste2', 'Cyp9k1', 'Coeae2f', 'Coeaexg')
 delta.table <- as.data.frame(modal.copy.number[insecticide == 'Delta'])
 cat('\n\nAll populations Delta:\n')
 delta.model <- glm.up(delta.table, genes.to.model, 'phenotype', control.for = 'location', glm.function = 'glmmTMB')
 print(delta.model)
-# Cyp6p5 is significant
+# Cyp6aa1 is significant
 
 cat('\n\t##############################')
 cat('\n\t# Cyp6aap Dup allele testing #')

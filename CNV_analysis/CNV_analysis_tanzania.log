@@ -4,6 +4,12 @@ In checkDepPackageVersion(dep_pkg = "TMB") :
 glmmTMB was built with TMB version 1.8.0
 Current TMB version is 1.8.1
 Please re-install glmmTMB from source or restore original ‘TMB’ package (see '?reinstalling' for more information)
+Warning message:
+package ‘abind’ was built under R version 4.1.3 
+null device 
+          1 
+null device 
+          1 
 null device 
           1 
 null device 
@@ -25,7 +31,7 @@ null device
 
 	Modal copy number test for Moshi_Delta:
 
-Analysing genes with CNV at >= 5% freq (Cyp6aa1, Cyp6aa2, Cyp6p1, Cyp6p2, Cyp6p3, Cyp6p4, Cyp6p5, Cyp9k1).
+Analysing genes with CNV at >= 5% freq (Coeae1f, Coeae2f, Coeaexg, Cyp6aa1, Cyp6aa2, Cyp6p1, Cyp6p2, Cyp6p3, Cyp6p4, Cyp6p5, Cyp9k1).
 
 Using the following string to control for confounding factors: 
 
@@ -60,6 +66,9 @@ character(0)
 
 $sig.alone
                 P pseudo.R2
+Coeae1f 0.9622830        NA
+Coeae2f 0.8308911        NA
+Coeaexg 0.9355562        NA
 Cyp6aa1 0.5060073        NA
 Cyp6aa2 0.7832236        NA
 Cyp6p1  0.4063366        NA
@@ -157,7 +166,7 @@ Cyp6p2 8.384433e-06 19.84814
 
 	Modal copy number test for Moshi_PM:
 
-Analysing genes with CNV at >= 5% freq (Cyp6aa1, Cyp6aa2, Cyp6p1, Cyp6p2, Cyp6p3, Cyp6p4, Cyp6p5, Cyp6z2, Cyp9k1).
+Analysing genes with CNV at >= 5% freq (Coeae1f, Coeae2f, Coeaexg, Cyp6aa1, Cyp6aa2, Cyp6p1, Cyp6p2, Cyp6p3, Cyp6p4, Cyp6p5, Cyp6z2, Cyp9k1).
 
 Using the following string to control for confounding factors: 
 
@@ -192,6 +201,9 @@ character(0)
 
 $sig.alone
                 P pseudo.R2
+Coeae1f 0.2810160        NA
+Coeae2f 0.2857651        NA
+Coeaexg 0.3784018        NA
 Cyp6aa1 0.1692708        NA
 Cyp6aa2 0.3879121        NA
 Cyp6p1  0.6524383        NA
@@ -219,6 +231,7 @@ $final.sig
 1 NA       NA
 
 
+
 All populations Delta:
 Using the following string to control for confounding factors:  + (1|location)
 
@@ -229,37 +242,32 @@ Analysing markers independently.
 Running commentary on model optimisation:
 
 Building model: glmmTMB(phenotype ~ 1  + (1|location), data = delta.table, family = binomial) 
-	Adding marker Cyp6p5 as the lowest significant marker (P = 0.0004702676).
+	Adding marker Cyp6aa1 as the lowest significant marker (P = 0.001558982).
 
-Building model: glmmTMB(phenotype ~ Cyp6p5 + (1|location), data = delta.table, family = binomial) 
-	Could not calculate p-value for marker Cyp6p1.
-
+Building model: glmmTMB(phenotype ~ Cyp6aa1 + (1|location), data = delta.table, family = binomial) 
 	No further markers are significant, keeping final model:
-Formula:          phenotype ~ Cyp6p5 + (1 | location)
+Formula:          phenotype ~ Cyp6aa1 + (1 | location)
 Data: delta.table
       AIC       BIC    logLik  df.resid 
- 349.8783  360.6062 -171.9392       261 
+ 352.1008  362.8286 -173.0504       261 
 Random-effects (co)variances:
 
 Conditional model:
  Groups   Name        Std.Dev. 
- location (Intercept) 2.667e-05
+ location (Intercept) 2.694e-05
 
 Number of obs: 264 / Conditional model: location, 2
 
 Fixed Effects:
 
 Conditional model:
-(Intercept)       Cyp6p5  
-    0.07136     -0.71440  
-Final model contained 1 parameters: Cyp6p5.
+(Intercept)      Cyp6aa1  
+     0.1012      -0.5516  
+Final model contained 1 parameters: Cyp6aa1.
 
 
                   P deviance
-Cyp6p5 0.0004702676       NA
-Warning message:
-In fitTMB(TMBStruc) :
-  Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+Cyp6aa1 0.001558982       NA
 $invariable.markers
 character(0)
 
@@ -267,39 +275,37 @@ $correlated.markers
 character(0)
 
 $sig.alone
-                   P pseudo.R2
-Cyp6aa1 0.0015589821        NA
-Cyp6aa2 0.0033848860        NA
-Cyp6p1  0.0031860298        NA
-Cyp6p2  0.0008064625        NA
-Cyp6p3  0.0029033006        NA
-Cyp6p4  0.0012285397        NA
-Cyp6p5  0.0004702676        NA
-Cyp6z2  0.5171041397        NA
-Cyp9k1  0.4664352289        NA
+                  P pseudo.R2
+Cyp6aa1 0.001558982        NA
+Cyp6z2  0.517104140        NA
+Cyp6p3  0.002903301        NA
+Gste2   0.221948815        NA
+Cyp9k1  0.466435229        NA
+Coeae2f 0.212203050        NA
+Coeaexg 0.321794046        NA
 
 $final.model
-Formula:          phenotype ~ Cyp6p5 + (1 | location)
+Formula:          phenotype ~ Cyp6aa1 + (1 | location)
 Data: delta.table
       AIC       BIC    logLik  df.resid 
- 349.8783  360.6062 -171.9392       261 
+ 352.1008  362.8286 -173.0504       261 
 Random-effects (co)variances:
 
 Conditional model:
  Groups   Name        Std.Dev. 
- location (Intercept) 2.667e-05
+ location (Intercept) 2.694e-05
 
 Number of obs: 264 / Conditional model: location, 2
 
 Fixed Effects:
 
 Conditional model:
-(Intercept)       Cyp6p5  
-    0.07136     -0.71440  
+(Intercept)      Cyp6aa1  
+     0.1012      -0.5516  
 
 $final.sig
                   P deviance
-Cyp6p5 0.0004702676       NA
+Cyp6aa1 0.001558982       NA
 
 
 	##############################
@@ -317,7 +323,7 @@ Analysing markers independently.
 Running commentary on model optimisation:
 
 Building model: glm(phenotype ~ 1 , data = moshi.delta.allele.table, family = binomial) 
-	Adding marker Cyp6aap_Dup33 as the lowest significant marker (P = 0.01677072).
+	Adding marker Cyp6aap_Dup33 as the lowest significant marker (P = 0.03663738).
 
 Building model: glm(phenotype ~ Cyp6aap_Dup33, data = moshi.delta.allele.table, family = binomial) 
 	No further markers are significant, keeping final model:
@@ -326,17 +332,17 @@ Call:  glm(formula = phenotype ~ Cyp6aap_Dup33, family = binomial, data = moshi.
 
 Coefficients:
       (Intercept)  Cyp6aap_Dup33TRUE  
-           0.2097            -0.6737  
+           0.1542            -0.5943  
 
 Degrees of Freedom: 281 Total (i.e. Null);  280 Residual
   (5 observations deleted due to missingness)
 Null Deviance:	    384.7 
-Residual Deviance: 378.9 	AIC: 382.9
+Residual Deviance: 380.3 	AIC: 384.3
 Final model contained 1 parameters: Cyp6aap_Dup33.
 
 
                        P deviance
-Cyp6aap_Dup33 0.01677072 5.720211
+Cyp6aap_Dup33 0.03663738 4.367189
 $invariable.markers
 character(0)
 
@@ -347,7 +353,7 @@ $sig.alone
                        P pseudo.R2
 Cyp6aap_Dup31 0.49364244        NA
 Cyp6aap_Dup32 0.49364244        NA
-Cyp6aap_Dup33 0.01677072        NA
+Cyp6aap_Dup33 0.03663738        NA
 Cyp9k1_Dup18  0.53719689        NA
 
 $final.model
@@ -356,16 +362,16 @@ Call:  glm(formula = phenotype ~ Cyp6aap_Dup33, family = binomial, data = moshi.
 
 Coefficients:
       (Intercept)  Cyp6aap_Dup33TRUE  
-           0.2097            -0.6737  
+           0.1542            -0.5943  
 
 Degrees of Freedom: 281 Total (i.e. Null);  280 Residual
   (5 observations deleted due to missingness)
 Null Deviance:	    384.7 
-Residual Deviance: 378.9 	AIC: 382.9
+Residual Deviance: 380.3 	AIC: 384.3
 
 $final.sig
                        P deviance
-Cyp6aap_Dup33 0.01677072 5.720211
+Cyp6aap_Dup33 0.03663738 4.367189
 
 
 
