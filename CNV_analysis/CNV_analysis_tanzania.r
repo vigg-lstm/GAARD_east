@@ -359,12 +359,12 @@ contable(detox.genes,
 dev.off()
 
 # And a pdf version 
-pdf('detox_gene_modal_CNVs.pdf', width = 4.5, height = 0.6)
+pdf('detox_gene_modal_CNVs.pdf', width = 4.5, height = 0.7)
 contable(detox.genes, 
          text.cell.cex = 0.35,
          pop.cex = 0.35,
          gene.cex = 0.35,
-         mai = c(0,0.13,0.25,0)
+         mai = c(0,0.15,0.2,0)
 )
 dev.off()
 
@@ -733,6 +733,7 @@ output.table <- merge(phen[, .(specimen, species, location, insecticide)],
                 merge(., modal.copy.number[, c('sample.id', detox.genes), with = F], by = 'sample.id', all = T) %>%
 				.[order(location, insecticide)]
 
+fwrite(data.table(sample_id = names(coeaexg.median.cn), copy_number = coeaexg.median.cn), 'Coeaexg_copy_number.csv', sep = '\t')
 fwrite(output.table, 'CNV_calls.csv', sep = '\t')
 
 
