@@ -1,0 +1,28 @@
+WARNING: unknown option '-n10'
+
+
+R version 4.1.2 (2021-11-01) -- "Bird Hippie"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: x86_64-conda-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library('HardyWeinberg'); HWExact(c(220, 27, 13))
+Haldane Exact test for Hardy-Weinberg equilibrium (autosomal)
+using SELOME p-value
+sample counts: n =  220 n =  27 n =  13 
+H0: HWE (D==0), H1: D <> 0 
+D =  -10.29904 p-value =  0.00000002633827 
+> 

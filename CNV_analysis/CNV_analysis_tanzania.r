@@ -359,12 +359,12 @@ contable(detox.genes,
 dev.off()
 
 # And a pdf version 
-pdf('detox_gene_modal_CNVs.pdf', width = 4.5, height = 0.6)
+pdf('detox_gene_modal_CNVs.pdf', width = 4.5, height = 0.7)
 contable(detox.genes, 
          text.cell.cex = 0.35,
          pop.cex = 0.35,
          gene.cex = 0.35,
-         mai = c(0,0.13,0.25,0)
+         mai = c(0,0.15,0.2,0)
 )
 dev.off()
 
@@ -429,7 +429,7 @@ contable(c(Dup.clusters$Coeaexf, Dup.clusters$Coeaexg),
 dev.off()
 
 # We can also plot a histogram of model copy numbers for coeaexg
-png('Coeae3g_copy_number_histogram.png', width = 3.5, height = 4, units = 'in', res = 300)
+png('Coeaexg_copy_number_histogram.png', width = 3.5, height = 4, units = 'in', res = 300)
 par(mar = c(1.5,2.6,0.5,0.5), mgp = c(1.6,0.4,0), tcl = -0.3, lwd = 1.5, cex = 0.7)
 num.bins <- max(modal.copy.number$Coeaexg + 1)
 bin.pos <- c(0, seq(5, num.bins, 5))
@@ -733,6 +733,7 @@ output.table <- merge(phen[, .(specimen, species, location, insecticide)],
                 merge(., modal.copy.number[, c('sample.id', detox.genes), with = F], by = 'sample.id', all = T) %>%
 				.[order(location, insecticide)]
 
+fwrite(data.table(sample_id = names(coeaexg.median.cn), copy_number = coeaexg.median.cn), 'Coeaexg_copy_number.csv', sep = '\t')
 fwrite(output.table, 'CNV_calls.csv', sep = '\t')
 
 
