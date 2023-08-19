@@ -420,3 +420,67 @@ $final.sig
                          P deviance
 Cyp6aap_Dup33 2.730821e-05 17.59656
 
+
+
+Cyp6aap alleles in Moshi, controlling for sweep:
+Using the following string to control for confounding factors: 
+
+Detecting invariable and nearly invariable markers.
+
+Analysing markers independently.
+
+Running commentary on model optimisation:
+
+Building model: glm(phenotype ~ 1 , data = moshi.delta.allele.table, family = binomial) 
+	Adding marker Cyp6aap_Dup33 as the lowest significant marker (P = 0.03663738).
+
+Building model: glm(phenotype ~ Cyp6aap_Dup33, data = moshi.delta.allele.table, family = binomial) 
+	No further markers are significant, keeping final model:
+
+Call:  glm(formula = phenotype ~ Cyp6aap_Dup33, family = binomial, data = moshi.delta.allele.table)
+
+Coefficients:
+      (Intercept)  Cyp6aap_Dup33TRUE  
+           0.1542            -0.5943  
+
+Degrees of Freedom: 281 Total (i.e. Null);  280 Residual
+  (5 observations deleted due to missingness)
+Null Deviance:	    384.7 
+Residual Deviance: 380.3 	AIC: 384.3
+Final model contained 1 parameters: Cyp6aap_Dup33.
+
+
+                       P deviance
+Cyp6aap_Dup33 0.03663738 4.367189
+
+
+Cyp6aap alleles in Muleba, controlling for sweep:
+Using the following string to control for confounding factors: 
+
+Detecting invariable and nearly invariable markers.
+
+Analysing markers independently.
+
+Running commentary on model optimisation:
+
+Building model: glm(phenotype ~ 1 , data = muleba.delta.allele.table, family = binomial) 
+	Adding marker Cyp6aap_Dup33 as the lowest significant marker (P = 2.730821e-05).
+
+Building model: glm(phenotype ~ Cyp6aap_Dup33, data = muleba.delta.allele.table, family = binomial) 
+	No further markers are significant, keeping final model:
+
+Call:  glm(formula = phenotype ~ Cyp6aap_Dup33, family = binomial, data = muleba.delta.allele.table)
+
+Coefficients:
+      (Intercept)  Cyp6aap_Dup33TRUE  
+           0.1603           -17.7264  
+
+Degrees of Freedom: 161 Total (i.e. Null);  160 Residual
+  (18 observations deleted due to missingness)
+Null Deviance:	    224.6 
+Residual Deviance: 207 	AIC: 211
+Final model contained 1 parameters: Cyp6aap_Dup33.
+
+
+                         P deviance
+Cyp6aap_Dup33 2.730821e-05 17.59656

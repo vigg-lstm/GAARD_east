@@ -720,6 +720,19 @@ muleba.delta.model <- glm.up(muleba.delta.allele.table, c('Cyp6aap_Dup33'), 'phe
 print(muleba.delta.model)
 # Again, Dup33 is significant
 
+# Now do that again, but include the presence / absence of the sweep:
+cat('\n\nCyp6aap alleles in Moshi, controlling for sweep:\n')
+moshi.haps <- fread('../haplotypes/Moshi_arabiensis_Delta_Cyp6.csv', key = 'sample_name')
+moshi.delta.allele.table <- cbind(moshi.delta.allele.table, moshi.haps[moshi.delta.allele.table$sample.id, -c(1,2)])
+moshi.delta.haps.model <- glm.up(moshi.delta.allele.table, c('Cyp6aap_Dup33', 'cluster_1'), 'phenotype')
+# Still just Dup33
+
+cat('\n\nCyp6aap alleles in Muleba, controlling for sweep:\n')
+muleba.haps <- fread('../haplotypes/Muleba_arabiensis_Delta_Cyp6.csv', key = 'sample_name')
+muleba.delta.allele.table <- cbind(muleba.delta.allele.table, muleba.haps[muleba.delta.allele.table$sample.id, -c(1,2)])
+muleba.delta.haps.model <- glm.up(muleba.delta.allele.table, c('Cyp6aap_Dup33', 'cluster_1', 'cluster_2'), 'phenotype')
+# Still just Dup33
+
 # Write tables to file
 # Find the Dups found at least once in the data
 Dups.present <- known.Dups[apply(target.CNV.table[, ..known.Dups], 2, sum) > 0]
