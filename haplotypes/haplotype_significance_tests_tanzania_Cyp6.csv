@@ -1,0 +1,4 @@
+population	cluster.name	cluster.size	logregP	direction	window
+Moshi_arabiensis_Delta	cluster_1	251	0.0836374630775081	alive	Cyp6
+Muleba_arabiensis_Delta	cluster_1	185	0.0796187091676822	alive	Cyp6
+Muleba_arabiensis_Delta	cluster_2	125	0.125942284550789	dead	Cyp6
