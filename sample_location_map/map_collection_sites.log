@@ -1,0 +1,38 @@
+Loading required package: sp
+rgdal: version: 1.5-23, (SVN revision 1121)
+Geospatial Data Abstraction Library extensions to R successfully loaded
+Loaded GDAL runtime: GDAL 3.0.4, released 2020/01/28
+Path to GDAL shared files: /usr/share/gdal
+GDAL binary built with GEOS: TRUE 
+Loaded PROJ runtime: Rel. 6.3.1, February 10th, 2020, [PJ_VERSION: 631]
+Path to PROJ shared files: /usr/share/proj
+Linking to sp version:1.4-5
+To mute warnings of possible GDAL/OSR exportToProj4() degradation,
+use options("rgdal_show_exportToProj4_warnings"="none") before loading rgdal.
+rgeos version: 0.5-5, (SVN revision 640)
+ GEOS runtime version: 3.8.0-CAPI-1.13.1 
+ Linking to sp version: 1.4-5 
+ Polygon checking: TRUE 
+
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:raster’:
+
+    shift
+
+
+Attaching package: ‘magrittr’
+
+The following object is masked from ‘package:raster’:
+
+    extract
+
+OGR data source with driver: ESRI Shapefile 
+Source: "/Data/Liverpool/GAARD_repo/GAARD_east/sample_location_map/Africa_SHP", layer: "Africa"
+with 762 features
+It has 3 fields
+null device 
+          1 
+null device 
+          1 
