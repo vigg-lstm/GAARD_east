@@ -12,7 +12,6 @@ populations_italics = {p: re.sub('_(.+)_', r'\_*\1*\_', p) for p in populations}
 all_files = os.listdir('../../haplotypes')
 
 all_windows = np.unique([re.findall('^[^.]+(?=.vcf)', x)[0] for x in all_files if '.vcf' in x])
-
 output_file = 'window_Fst_haplotype_summary.md'
 
 f = open(output_file, 'w')
@@ -54,12 +53,11 @@ f.write('![legend](./Fst_example.svg)\n\n')
 
 f.write('\n___\n\n')
 
-
 for pop in populations:
 	f.write(f'## {populations_italics[pop]}\n\n')
 	f.write(f'![{pop}_peak_filter](../../randomisations/Fst/{pop}_peak_filter_plot.png)\n\n&nbsp;\n\n')
 
-	pop_windows = [w for w in all_windows if re.search(pop, w)]
+	pop_windows = [w for w in all_windows if re.search(f'{pop}.+:', w)]
 	pop_windows_link = [re.sub(':', '%3A', w) for w in pop_windows]
 	pop_windows_section = [re.sub(':', '_', w) for w in pop_windows]
 	window_code = [re.sub('.*_([23]?[LRX]):', r'\1_', w) for w in pop_windows]

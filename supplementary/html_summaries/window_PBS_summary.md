@@ -29,7 +29,6 @@ ___
 [Moshi_arabiensis_Delta_2R:28650798](#moshi_arabiensis_delta_2r_28650798)  
 [Moshi_arabiensis_Delta_2R:28709379](#moshi_arabiensis_delta_2r_28709379)  
 [Moshi_arabiensis_Delta_2R:28768446](#moshi_arabiensis_delta_2r_28768446)  
-[Moshi_arabiensis_Delta_2R:28818887](#moshi_arabiensis_delta_2r_28818887)  
 [Moshi_arabiensis_Delta_3L:33374272](#moshi_arabiensis_delta_3l_33374272)  
 
 ### Moshi_arabiensis_Delta_2L_3276066
@@ -72,14 +71,6 @@ ___
 
 &nbsp;
 
-### Moshi_arabiensis_Delta_2R_28818887
-
-&nbsp;
-
-![Moshi_arabiensis_Delta_2R:28818887_overview](../../focal_gwas/PBS/Moshi_arabiensis_Delta/2R_28818887.png)
-
-&nbsp;
-
 ### Moshi_arabiensis_Delta_3L_33374272
 
 &nbsp;
@@ -106,6 +97,7 @@ ___
 [Muleba_arabiensis_Delta_2R:28174246](#muleba_arabiensis_delta_2r_28174246)  
 [Muleba_arabiensis_Delta_2R:28264928](#muleba_arabiensis_delta_2r_28264928)  
 [Muleba_arabiensis_Delta_2R:28307853](#muleba_arabiensis_delta_2r_28307853)  
+[Muleba_arabiensis_Delta_2R:28347791](#muleba_arabiensis_delta_2r_28347791)  
 [Muleba_arabiensis_Delta_2R:56761889](#muleba_arabiensis_delta_2r_56761889)  
 
 ### Muleba_arabiensis_Delta_2R_27108686
@@ -188,6 +180,14 @@ ___
 
 &nbsp;
 
+### Muleba_arabiensis_Delta_2R_28347791
+
+&nbsp;
+
+![Muleba_arabiensis_Delta_2R:28347791_overview](../../focal_gwas/PBS/Muleba_arabiensis_Delta/2R_28347791.png)
+
+&nbsp;
+
 ### Muleba_arabiensis_Delta_2R_56761889
 
 &nbsp;
@@ -204,6 +204,24 @@ ___
 
 &nbsp;
 
+[Moshi_arabiensis_PM_2R:24644689](#moshi_arabiensis_pm_2r_24644689)  
+[Moshi_arabiensis_PM_2R:24668375](#moshi_arabiensis_pm_2r_24668375)  
+
+### Moshi_arabiensis_PM_2R_24644689
+
+&nbsp;
+
+![Moshi_arabiensis_PM_2R:24644689_overview](../../focal_gwas/PBS/Moshi_arabiensis_PM/2R_24644689.png)
+
+&nbsp;
+
+### Moshi_arabiensis_PM_2R_24668375
+
+&nbsp;
+
+![Moshi_arabiensis_PM_2R:24668375_overview](../../focal_gwas/PBS/Moshi_arabiensis_PM/2R_24668375.png)
+
+&nbsp;
 
 ___
 

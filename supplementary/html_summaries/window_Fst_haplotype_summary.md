@@ -938,6 +938,53 @@ ___
 
 &nbsp;
 
+[Moshi_arabiensis_PM_3R:46657236-46697631](#moshi_arabiensis_pm_3r_46657236-46697631)  
+
+### Moshi_arabiensis_PM_3R_46657236-46697631
+
+&nbsp;
+
+![Moshi_arabiensis_PM_3R:46657236-46697631_overview](../../focal_gwas/Fst/Moshi_arabiensis_PM/3R_46681253.png)
+
+&nbsp;
+
+![Moshi_arabiensis_PM_3R:46657236-46697631_dendrogram](../../haplotypes/Moshi_arabiensis_PM_3R%3A46657236-46697631_dendrogram.png)
+
+&nbsp;
+
+![Moshi_arabiensis_PM_3R:46657236-46697631_haplotypes](../../haplotypes/Moshi_arabiensis_PM_3R%3A46657236-46697631.png)
+
+&nbsp;
+
+#### Contingency table for cluster_1:
+
+| &nbsp;&nbsp;&nbsp;  phenotype  &nbsp;&nbsp;&nbsp; |  &nbsp;&nbsp;&nbsp;  wt  &nbsp;&nbsp;&nbsp;  |  &nbsp;&nbsp;&nbsp;  het  &nbsp;&nbsp;&nbsp;  |  &nbsp;&nbsp;&nbsp;  hom  &nbsp;&nbsp;&nbsp;  |
+| :---:     | :---: | :---: | :---: |
+|  alive    | 52 | 26 | 4 |
+|  dead     | 54 | 15 | 0 |
+
+
+&nbsp;
+
+#### Contingency table for cluster_2:
+
+| &nbsp;&nbsp;&nbsp;  phenotype  &nbsp;&nbsp;&nbsp; |  &nbsp;&nbsp;&nbsp;  wt  &nbsp;&nbsp;&nbsp;  |  &nbsp;&nbsp;&nbsp;  het  &nbsp;&nbsp;&nbsp;  |  &nbsp;&nbsp;&nbsp;  hom  &nbsp;&nbsp;&nbsp;  |
+| :---:     | :---: | :---: | :---: |
+|  alive    | 69 | 12 | 1 |
+|  dead     | 57 | 12 | 0 |
+
+
+&nbsp;
+
+#### Contingency table for cluster_3:
+
+| &nbsp;&nbsp;&nbsp;  phenotype  &nbsp;&nbsp;&nbsp; |  &nbsp;&nbsp;&nbsp;  wt  &nbsp;&nbsp;&nbsp;  |  &nbsp;&nbsp;&nbsp;  het  &nbsp;&nbsp;&nbsp;  |  &nbsp;&nbsp;&nbsp;  hom  &nbsp;&nbsp;&nbsp;  |
+| :---:     | :---: | :---: | :---: |
+|  alive    | 71 | 11 | 0 |
+|  dead     | 61 | 5 | 3 |
+
+
+&nbsp;
 
 ___
 
