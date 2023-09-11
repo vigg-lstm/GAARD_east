@@ -67,7 +67,7 @@ load.and.combine.data <- function(pop, find.peaks = T, calculate.P.values = T){
 		if(find.peaks){
 			diff.data[is.peak == T, pval := apply(.SD - H12, 
 			                                      1, 
-			                                      function(x) sum(x > 0)/length(x)
+			                                      function(x) sum(x >= 0)/length(x)
 			                                ), 
 			                                .SDcols = randomisation.ids
 			] 
@@ -75,7 +75,7 @@ load.and.combine.data <- function(pop, find.peaks = T, calculate.P.values = T){
 		else {
 			diff.data[, pval := apply(.SD - H12, 
 			                          1, 
-			                          function(x) sum(x > 0)/length(x)
+			                          function(x) sum(x >= 0)/length(x)
 			                    ), 
 			                    .SDcols = randomisation.ids
 			] 

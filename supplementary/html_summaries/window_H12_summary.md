@@ -107,7 +107,6 @@ ___
 
 [Muleba_arabiensis_Delta_2R:19368988](#muleba_arabiensis_delta_2r_19368988)  
 [Muleba_arabiensis_Delta_2R:19709283](#muleba_arabiensis_delta_2r_19709283)  
-[Muleba_arabiensis_Delta_2R:19852744](#muleba_arabiensis_delta_2r_19852744)  
 [Muleba_arabiensis_Delta_2R:19865728](#muleba_arabiensis_delta_2r_19865728)  
 [Muleba_arabiensis_Delta_2R:20325777](#muleba_arabiensis_delta_2r_20325777)  
 [Muleba_arabiensis_Delta_2R:26914367](#muleba_arabiensis_delta_2r_26914367)  
@@ -149,14 +148,6 @@ ___
 &nbsp;
 
 ![Muleba_arabiensis_Delta_2R:19709283_overview](../../focal_gwas/H12/Muleba_arabiensis_Delta/2R_19709283.png)
-
-&nbsp;
-
-### Muleba_arabiensis_Delta_2R_19852744
-
-&nbsp;
-
-![Muleba_arabiensis_Delta_2R:19852744_overview](../../focal_gwas/H12/Muleba_arabiensis_Delta/2R_19852744.png)
 
 &nbsp;
 

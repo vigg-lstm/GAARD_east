@@ -66,7 +66,7 @@ Loading SNP data from ~/data/ML/GAARD_SNP/Moshi_arabiensis_PM/csvs/filtered_SNPs
 Ncells   3824131  204.3    7243540   386.9    4652199   248.5
 Vcells 155239326 1184.4 1397875741 10665.0 1652728668 12609.4
 Loading phenotype data from ../../data/sample_phenotypes_EA.csv.
-Running ../extract_zarr_region.py at 10:52 on 11/09/2023 using machine neptune2
+Running ../extract_zarr_region.py at 14:09 on 11/09/2023 using machine neptune2
 
 
 Script was run using the following arguments:

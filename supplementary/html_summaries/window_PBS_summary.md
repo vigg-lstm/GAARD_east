@@ -26,7 +26,6 @@ ___
 
 [Moshi_arabiensis_Delta_2L:3276066](#moshi_arabiensis_delta_2l_3276066)  
 [Moshi_arabiensis_Delta_2R:28595065](#moshi_arabiensis_delta_2r_28595065)  
-[Moshi_arabiensis_Delta_2R:28650798](#moshi_arabiensis_delta_2r_28650798)  
 [Moshi_arabiensis_Delta_2R:28709379](#moshi_arabiensis_delta_2r_28709379)  
 [Moshi_arabiensis_Delta_2R:28768446](#moshi_arabiensis_delta_2r_28768446)  
 [Moshi_arabiensis_Delta_3L:33374272](#moshi_arabiensis_delta_3l_33374272)  
@@ -44,14 +43,6 @@ ___
 &nbsp;
 
 ![Moshi_arabiensis_Delta_2R:28595065_overview](../../focal_gwas/PBS/Moshi_arabiensis_Delta/2R_28595065.png)
-
-&nbsp;
-
-### Moshi_arabiensis_Delta_2R_28650798
-
-&nbsp;
-
-![Moshi_arabiensis_Delta_2R:28650798_overview](../../focal_gwas/PBS/Moshi_arabiensis_Delta/2R_28650798.png)
 
 &nbsp;
 

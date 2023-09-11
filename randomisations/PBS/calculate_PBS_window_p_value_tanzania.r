@@ -46,7 +46,7 @@ load.and.combine.data <- function(pop, peak.function = NULL, calculate.P.values 
 		if (!is.null(peak.function)) {
 			pbs.data[is.peak == T, pval := apply(.SD - PBS, 
 			                                     1, 
-			                                     function(x) sum(x > 0)/length(x)
+			                                     function(x) sum(x >= 0)/length(x)
 			                               ), 
 			                               .SDcols = randomisation.ids
 			] 
@@ -54,7 +54,7 @@ load.and.combine.data <- function(pop, peak.function = NULL, calculate.P.values 
 		else {
 			pbs.data[, pval := apply(.SD - PBS, 
 			                         1, 
-			                         function(x) sum(x > 0)/length(x)
+			                         function(x) sum(x >= 0)/length(x)
 			                   ), 
 			                   .SDcols = randomisation.ids
 			] 
