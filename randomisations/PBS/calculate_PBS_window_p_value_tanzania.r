@@ -146,6 +146,6 @@ for (pop in names(pbs.tables))
 	         p.thresh = p.threshold,
 	         plot.title = pop)
 
-saveRDS(pbs.tables, 'pbs_filtered_windows.RDS')
+saveRDS(pbs.tables, 'pbs_filtered_windows_tanzania.RDS')
 
 
