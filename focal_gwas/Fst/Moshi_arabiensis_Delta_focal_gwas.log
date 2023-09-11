@@ -61,8 +61,6 @@ Arguments:
 Moshi_arabiensis_Delta
 
 
-Warning message:
-In dir.create(study.pop) : 'Moshi_arabiensis_Delta' already exists
 Loading SNP data from ~/data/ML/GAARD_SNP/Moshi_arabiensis_Delta/csvs/filtered_SNPs.csv.
 Warning messages:
 1: In `[.data.table`(all.snps, , `:=`(c(samples.to.remove), NULL)) :
@@ -74,10 +72,10 @@ Warning messages:
 4: In `[.data.table`(all.snps, , `:=`(c(samples.to.remove), NULL)) :
   Column 'EA18-0234' does not exist to remove
             used   (Mb) gc trigger    (Mb)   max used    (Mb)
-Ncells   3854179  205.9   13949940   745.1   14688358   784.5
-Vcells 216842084 1654.4 1341172558 10232.4 2076051572 15839.1
+Ncells   3855680  206.0   13949984   745.1   14690466   784.6
+Vcells 224189086 1710.5 1341172460 10232.4 2076051444 15839.1
 Loading phenotype data from ../../data/sample_phenotypes_EA.csv.
-Running ../extract_zarr_region.py at 11:05 on 30/06/2023 using machine neptune2
+Running ../extract_zarr_region.py at 11:11 on 11/09/2023 using machine neptune2
 
 
 Script was run using the following arguments:

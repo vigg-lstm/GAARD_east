@@ -1,6 +1,9 @@
 population	window	cluster.name	cluster.size	logregP	direction
 Moshi_arabiensis_Delta	2R:30957775-30988675	cluster_1	44	0.147007040050089	alive
 Moshi_arabiensis_Delta	2R:30957775-30988675	cluster_2	31	0.00114621651918448	dead
+Moshi_arabiensis_PM	3R:46657236-46697631	cluster_1	49	0.018403562443592	alive
+Moshi_arabiensis_PM	3R:46657236-46697631	cluster_2	26	0.960657910101769	dead
+Moshi_arabiensis_PM	3R:46657236-46697631	cluster_3	22	0.703092179042253	dead
 Muleba_arabiensis_Delta	2R:27638426-27662872	cluster_1	104	0.00244670116960592	alive
 Muleba_arabiensis_Delta	2R:27638426-27662872	cluster_2	54	0.13010716778384	dead
 Muleba_arabiensis_Delta	2R:27685539-27705619	cluster_1	101	0.00701007170606496	alive
