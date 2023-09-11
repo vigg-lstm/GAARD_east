@@ -88,7 +88,7 @@ draw.gene.model <- function(start.pos, end.pos, gene.positions, exon.positions, 
 			col = 'grey95',
 			border = 'black',
 			lwd = lwd,
-			xpd = F
+			xpd = NA
 		)
 		# Draw the exons
 		exon.v.adj = ifelse(exon.positions$strand == '+', 0, -gene.thickness)
@@ -99,7 +99,7 @@ draw.gene.model <- function(start.pos, end.pos, gene.positions, exon.positions, 
 			y + gene.thickness + exon.v.adj, 
 			col = 'black',
 			border = NA,
-			xpd = F
+			xpd = NA
 		)
 		# Label the genes
 		if (include.gene.names){
