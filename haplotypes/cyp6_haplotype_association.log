@@ -1,31 +1,0 @@
-Loading required package: Matrix
-Running assign_haplotypes_tanzania.py at 23:32 on 19/08/2023 using machine eric-NVlaptop
-
-
-Script was run using the following arguments:
-
-	study_pop = Moshi_arabiensis_Delta
-	region = 2R:28462725-28500939
-	repo_folder = ..
-	output_filename = Moshi_arabiensis_Delta_Cyp6.csv
-
-Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:01<00:13,  1.67s/it]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:03<00:11,  1.67s/it]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:05<00:10,  1.72s/it]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:06<00:08,  1.70s/it]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:08<00:06,  1.68s/it]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:10<00:05,  1.74s/it]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:12<00:03,  1.93s/it]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:14<00:01,  1.92s/it]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:16<00:00,  1.88s/it]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:16<00:00,  1.81s/it]There were 1 clusters larger than 20 haplotypes.
-
-Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Moshi_arabiensis_Delta_Cyp6_temp.vcf > Moshi_arabiensis_Delta_Cyp6.vcf
-
-
-Running assign_haplotypes_tanzania.py at 23:33 on 19/08/2023 using machine eric-NVlaptop
-
-
-Script was run using the following arguments:
-
-	study_pop = Muleba_arabiensis_Delta
-	region = 2R:28462725-28500939
-	repo_folder = ..
-	output_filename = Muleba_arabiensis_Delta_Cyp6.csv
-
-Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:01<00:13,  1.74s/it]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:03<00:12,  1.77s/it]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:05<00:10,  1.77s/it]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:07<00:08,  1.79s/it]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:08<00:07,  1.76s/it]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:10<00:05,  1.80s/it]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:13<00:04,  2.03s/it]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:15<00:02,  2.04s/it]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:17<00:00,  2.03s/it]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:17<00:00,  1.92s/it]There were 2 clusters larger than 20 haplotypes.
-
-Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_Cyp6_temp.vcf > Muleba_arabiensis_Delta_Cyp6.vcf
-
-

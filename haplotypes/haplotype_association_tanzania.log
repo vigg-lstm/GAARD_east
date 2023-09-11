@@ -1,0 +1,305 @@
+Loading required package: Matrix
+Running assign_haplotypes_tanzania.py at 10:36 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Moshi_arabiensis_Delta
+	region = 2R:30957775-30988675
+	repo_folder = ..
+	output_filename = Moshi_arabiensis_Delta_2R:30957775-30988675.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:06,  1.26it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:05,  1.24it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:04,  1.22it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:03<00:04,  1.20it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:04<00:03,  1.22it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:04<00:02,  1.23it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:05<00:01,  1.22it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:06<00:00,  1.27it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:07<00:00,  1.30it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:07<00:00,  1.26it/s]There were 2 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Moshi_arabiensis_Delta_2R:30957775-30988675_temp.vcf > Moshi_arabiensis_Delta_2R:30957775-30988675.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:37 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Moshi_arabiensis_PM
+	region = 3R:46657236-46697631
+	repo_folder = ..
+	output_filename = Moshi_arabiensis_PM_3R:46657236-46697631.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:06,  1.28it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:06,  1.11it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:05,  1.12it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:03<00:04,  1.13it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:04<00:03,  1.17it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:05<00:02,  1.08it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:06<00:01,  1.09it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:07<00:00,  1.14it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:07<00:00,  1.18it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:07<00:00,  1.15it/s]There were 3 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Moshi_arabiensis_PM_3R:46657236-46697631_temp.vcf > Moshi_arabiensis_PM_3R:46657236-46697631.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:37 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:27638426-27662872
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:27638426-27662872.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:01<00:08,  1.00s/it]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:02<00:07,  1.00s/it]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:03<00:06,  1.09s/it]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:04<00:05,  1.17s/it]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:05<00:04,  1.02s/it]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:06<00:03,  1.06s/it]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:07<00:02,  1.11s/it]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:09<00:01,  1.24s/it]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:09<00:00,  1.10s/it]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:09<00:00,  1.10s/it]There were 2 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:27638426-27662872_temp.vcf > Muleba_arabiensis_Delta_2R:27638426-27662872.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:38 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:27685539-27705619
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:27685539-27705619.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:07,  1.10it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:06,  1.15it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:05,  1.16it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:03<00:04,  1.18it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:04<00:03,  1.24it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:04<00:02,  1.26it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:05<00:01,  1.22it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:06<00:00,  1.22it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:07<00:00,  1.27it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:07<00:00,  1.22it/s]There were 2 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:27685539-27705619_temp.vcf > Muleba_arabiensis_Delta_2R:27685539-27705619.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:38 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:27816983-27842983
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:27816983-27842983.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:06,  1.20it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:02<00:07,  1.11s/it]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:03<00:06,  1.15s/it]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:04<00:06,  1.23s/it]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:05<00:04,  1.14s/it]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:06<00:03,  1.05s/it]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:07<00:02,  1.03s/it]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:08<00:00,  1.06it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:09<00:00,  1.14it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:09<00:00,  1.00s/it]There were 3 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:27816983-27842983_temp.vcf > Muleba_arabiensis_Delta_2R:27816983-27842983.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:39 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:27842983-27881640
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:27842983-27881640.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:05,  1.45it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:05,  1.36it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:04,  1.31it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:03<00:03,  1.31it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:03<00:02,  1.35it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:04<00:02,  1.39it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:05<00:01,  1.35it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:05<00:00,  1.38it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.38it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.36it/s]There were 2 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:27842983-27881640_temp.vcf > Muleba_arabiensis_Delta_2R:27842983-27881640.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:39 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:27881639-27914408
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:27881639-27914408.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:06,  1.28it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:05,  1.23it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:05,  1.15it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:03<00:04,  1.15it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:04<00:03,  1.17it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:05<00:02,  1.19it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:05<00:01,  1.20it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:06<00:00,  1.24it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:07<00:00,  1.25it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:07<00:00,  1.21it/s]There were 4 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:27881639-27914408_temp.vcf > Muleba_arabiensis_Delta_2R:27881639-27914408.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:40 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:27914407-27940942
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:27914407-27940942.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:05,  1.35it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:05,  1.33it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:04,  1.31it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:03<00:03,  1.29it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:03<00:02,  1.34it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:04<00:02,  1.39it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:05<00:01,  1.37it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:05<00:00,  1.40it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.42it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.38it/s]There were 2 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:27914407-27940942_temp.vcf > Muleba_arabiensis_Delta_2R:27914407-27940942.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:40 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:28053952-28093398
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:28053952-28093398.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:05,  1.49it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:04,  1.41it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:04,  1.36it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:03<00:03,  1.29it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:03<00:03,  1.30it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:04<00:02,  1.30it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:05<00:01,  1.30it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:05<00:00,  1.36it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.40it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.36it/s]There were 4 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:28053952-28093398_temp.vcf > Muleba_arabiensis_Delta_2R:28053952-28093398.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:41 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:28093397-28143756
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:28093397-28143756.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:07,  1.14it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:05,  1.24it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:05,  1.10it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:03<00:04,  1.16it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:04<00:03,  1.26it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:04<00:02,  1.34it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:05<00:01,  1.31it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:06<00:00,  1.34it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.38it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.29it/s]There were 4 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:28093397-28143756_temp.vcf > Muleba_arabiensis_Delta_2R:28093397-28143756.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:41 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:28143756-28184032
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:28143756-28184032.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:05,  1.39it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:05,  1.33it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:04,  1.23it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:03<00:04,  1.23it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:03<00:03,  1.25it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:04<00:02,  1.27it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:05<00:01,  1.28it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:06<00:00,  1.33it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.36it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.31it/s]There were 3 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:28143756-28184032_temp.vcf > Muleba_arabiensis_Delta_2R:28143756-28184032.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:42 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:28184031-28228003
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:28184031-28228003.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:05,  1.50it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:05,  1.39it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:04,  1.33it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:02<00:03,  1.32it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:03<00:02,  1.37it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:04<00:02,  1.41it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:05<00:01,  1.38it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:05<00:00,  1.41it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.44it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.40it/s]There were 4 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:28184031-28228003_temp.vcf > Muleba_arabiensis_Delta_2R:28184031-28228003.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:42 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:28228002-28259252
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:28228002-28259252.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:06,  1.28it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:05,  1.30it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:04,  1.20it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:03<00:04,  1.18it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:04<00:03,  1.22it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:04<00:02,  1.26it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:05<00:01,  1.28it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:06<00:00,  1.34it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.39it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.30it/s]There were 3 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:28228002-28259252_temp.vcf > Muleba_arabiensis_Delta_2R:28228002-28259252.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:42 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:28259251-28286905
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:28259251-28286905.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:05,  1.47it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:05,  1.39it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:04,  1.35it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:02<00:03,  1.32it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:03<00:02,  1.38it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:04<00:02,  1.41it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:05<00:01,  1.38it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:05<00:00,  1.41it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.44it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.40it/s]There were 3 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:28259251-28286905_temp.vcf > Muleba_arabiensis_Delta_2R:28259251-28286905.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:43 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:28286905-28322651
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:28286905-28322651.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:06,  1.16it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:06,  1.06it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:05,  1.15it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:03<00:04,  1.17it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:04<00:03,  1.23it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:05<00:02,  1.19it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:06<00:01,  1.15it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:06<00:00,  1.20it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:07<00:00,  1.24it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:07<00:00,  1.20it/s]There were 3 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:28286905-28322651_temp.vcf > Muleba_arabiensis_Delta_2R:28286905-28322651.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:43 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:28322651-28359439
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:28322651-28359439.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:05,  1.44it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:04,  1.40it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:04,  1.34it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:02<00:03,  1.31it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:03<00:02,  1.37it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:04<00:02,  1.40it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:05<00:01,  1.36it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:05<00:00,  1.40it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.43it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.39it/s]There were 3 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:28322651-28359439_temp.vcf > Muleba_arabiensis_Delta_2R:28322651-28359439.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:44 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:28861167-28883982
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:28861167-28883982.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:05,  1.39it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:05,  1.33it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:04,  1.31it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:03<00:03,  1.31it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:03<00:02,  1.35it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:04<00:02,  1.39it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:05<00:01,  1.36it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:05<00:00,  1.38it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.42it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.37it/s]There were 2 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:28861167-28883982_temp.vcf > Muleba_arabiensis_Delta_2R:28861167-28883982.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:44 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:56192837-56228671
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:56192837-56228671.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:05,  1.40it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:05,  1.37it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:04,  1.33it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:02<00:03,  1.32it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:03<00:02,  1.34it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:04<00:02,  1.35it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:05<00:01,  1.29it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:05<00:00,  1.36it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.37it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.35it/s]There were 6 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:56192837-56228671_temp.vcf > Muleba_arabiensis_Delta_2R:56192837-56228671.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
+Running assign_haplotypes_tanzania.py at 10:45 on 11/09/2023 using machine neptune2
+
+
+Script was run using the following arguments:
+
+	study_pop = Muleba_arabiensis_Delta
+	region = 2R:56720537-56789287
+	repo_folder = ..
+	output_filename = Muleba_arabiensis_Delta_2R:56720537-56789287.csv
+
+Load sample metadata:   0%|                                                                           | 0/9 [00:00<?, ?it/s]Load sample metadata:  11%|███████▍                                                           | 1/9 [00:00<00:05,  1.47it/s]Load sample metadata:  22%|██████████████▉                                                    | 2/9 [00:01<00:05,  1.35it/s]Load sample metadata:  33%|██████████████████████▎                                            | 3/9 [00:02<00:04,  1.33it/s]Load sample metadata:  44%|█████████████████████████████▊                                     | 4/9 [00:03<00:03,  1.29it/s]Load sample metadata:  56%|█████████████████████████████████████▏                             | 5/9 [00:03<00:02,  1.34it/s]Load sample metadata:  67%|████████████████████████████████████████████▋                      | 6/9 [00:04<00:02,  1.38it/s]Load sample metadata:  78%|████████████████████████████████████████████████████               | 7/9 [00:05<00:01,  1.36it/s]Load sample metadata:  89%|███████████████████████████████████████████████████████████▌       | 8/9 [00:05<00:00,  1.40it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.44it/s]Load sample metadata: 100%|███████████████████████████████████████████████████████████████████| 9/9 [00:06<00:00,  1.39it/s]There were 7 clusters larger than 20 haplotypes.
+
+Running snpEff on haplotype SNPs, using command java -jar ~/software/snpEff/snpEff.jar eff Anopheles_gambiae -noStats Muleba_arabiensis_Delta_2R:56720537-56789287_temp.vcf > Muleba_arabiensis_Delta_2R:56720537-56789287.vcf
+
+qt.qpa.xcb: X server does not support XInput 2
+
