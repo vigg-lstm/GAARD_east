@@ -59,7 +59,7 @@ load.and.combine.data <- function(pop, find.peaks = T, calculate.P.values = T){
 	
 	# Look for peaks in the diff data
 	if (find.peaks){
-		diff.data[, is.peak := find.peaks(H12)]
+		diff.data[, is.peak := find.peaks(H12, centile = 0.98)]
 		setcolorder(diff.data, c('chromosome', 'startpoint', 'endpoint', 'midpoint', 'H12', 'is.peak'))
 	}
 	
