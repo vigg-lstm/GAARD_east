@@ -20,7 +20,7 @@ samples.to.exclude = readLines('../NGSrelate/full_relatedness_tanzania/samples_t
 samples.to.remove <- c(sibs.to.remove, males, samples.to.exclude)
 
 load.target.cnv.table <- function(study.id){
-	target.cnv.table <- fread(paste('Ag1000G_CNV_data', study.id, 'target_regions_analysis/focal_region_CNV_table_extras.csv', sep = '/'))
+	target.cnv.table <- fread(paste('Ag1000G_CNV_data', study.id, 'target_regions_analysis/focal_region_CNV_table.csv', sep = '/'))
 	these.sample.names <- meta[target.cnv.table$V1, partner_sample_id]
 	target.cnv.table$sample.id <- these.sample.names
 	target.cnv.table$V1 <- NULL

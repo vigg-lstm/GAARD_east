@@ -1,7 +1,7 @@
 library(abind)
 library(magrittr)
 
-load('target_regions_analysis_extras.Rdata')
+load('target_regions_analysis.Rdata')
 
 cnv.pos <- c(37282000, 37295000)
 
