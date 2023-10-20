@@ -1,0 +1,22 @@
+
+Sample sizes before removing males and sibs:
+
+   location insecticide dead alive
+1:    Moshi       Delta   51    81
+2:    Moshi          PM   72    83
+3:   Muleba       Delta   88    92
+
+Sample sizes after removing males:
+
+   location insecticide dead alive
+1:    Moshi       Delta   51    81
+2:    Moshi          PM   72    83
+3:   Muleba       Delta   88    92
+
+
+Sample sizes after removing males and sibs:
+
+   location insecticide dead alive
+1:    Moshi       Delta   51    80
+2:    Moshi          PM   69    82
+3:   Muleba       Delta   81    81
