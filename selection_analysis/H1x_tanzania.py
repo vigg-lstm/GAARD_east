@@ -29,10 +29,10 @@ metadata = metadata.query("partner_sample_id not in @exclude").reset_index(drop=
 # Identify the samples from the correct cohort
 phenotypes = pd.read_csv('../data/sample_phenotypes_EA.csv', sep = '\t', na_filter = False)
 phenotypes['population'] = phenotypes[['location', 'species', 'insecticide']].agg('.'.join, axis = 1)
-phen1 = phenotypes.query(f"population == @cohort1")
+phen1 = phenotypes.loc[phenotypes['population'].str.contains(cohort1), :]
 meta1 = metadata.query(f"partner_sample_id in {phen1['specimen'].to_list()}")
 cohort1_ids = meta1['partner_sample_id'].to_list()
-phen2 = phenotypes.query(f"population == @cohort2")
+phen2 = phenotypes.loc[phenotypes['population'].str.contains(cohort2), :]
 meta2 = metadata.query(f"partner_sample_id in {phen2['specimen'].to_list()}")
 cohort2_ids = meta2['partner_sample_id'].to_list()
 

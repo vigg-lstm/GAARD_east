@@ -1,9 +1,6 @@
 Loading required package: future
 Loading H12 data
-Moshi.arabiensis.Delta 
-Moshi.arabiensis.PM 
-Muleba.arabiensis.Delta 
+Moshi 
+Muleba 
 Loading data
-[1] "Moshi.arabiensis.Delta" "Moshi.arabiensis.PM"   
-[1] "Moshi.arabiensis.Delta"  "Muleba.arabiensis.Delta"
-[1] "Moshi.arabiensis.PM"     "Muleba.arabiensis.Delta"
+[1] "Moshi"  "Muleba"

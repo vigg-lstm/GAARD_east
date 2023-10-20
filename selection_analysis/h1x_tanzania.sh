@@ -1,9 +1,14 @@
 #!/bin/bash
 
+# Could run it by sample set, but there is no reason to expect Moshi PM to be different to Moshi Delta
+#pops=(
+#	Moshi.arabiensis.Delta
+#	Moshi.arabiensis.PM
+#	Muleba.arabiensis.Delta
+#)
 pops=(
-	Moshi.arabiensis.Delta
-	Moshi.arabiensis.PM
-	Muleba.arabiensis.Delta
+	Moshi
+	Muleba
 )
 numpops=${#pops[@]}
 

@@ -7,9 +7,11 @@ plan(tweak(multisession, workers = 20))
 # Load all of the H12 tables
 h12.filenames <- list.files('.', 'H12_.*.csv', full.names = T)
 
-study.pops <- setNames(nm = c('Moshi.arabiensis.Delta',
-                              'Moshi.arabiensis.PM',
-                              'Muleba.arabiensis.Delta'))
+#study.pops <- setNames(nm = c('Moshi.arabiensis.Delta',
+#                              'Moshi.arabiensis.PM',
+#                              'Muleba.arabiensis.Delta'))
+study.pops <- setNames(nm = c('Moshi',
+                              'Muleba'))
 
 # A function to load and combine all data for a given randomisation id
 load.and.combine.h12 <- function(pop){
@@ -92,9 +94,10 @@ for (pop in names(h12.tables))
 # Load all of the H12 tables
 h1x.filenames <- list.files('.', 'H1x_.*.csv', full.names = T)
 
-pop.pairs <- setNames(nm = c('Moshi.arabiensis.Delta_vs_Moshi.arabiensis.PM',
-                             'Moshi.arabiensis.Delta_vs_Muleba.arabiensis.Delta',
-                             'Moshi.arabiensis.PM_vs_Muleba.arabiensis.Delta'))
+#pop.pairs <- setNames(nm = c('Moshi.arabiensis.Delta_vs_Moshi.arabiensis.PM',
+#                             'Moshi.arabiensis.Delta_vs_Muleba.arabiensis.Delta',
+#                             'Moshi.arabiensis.PM_vs_Muleba.arabiensis.Delta'))
+pop.pairs <- setNames(nm = c('Moshi_vs_Muleba'))
 
 # A function to load and combine all data for a given randomisation id
 load.and.combine.h1x <- function(pop1, pop2){
