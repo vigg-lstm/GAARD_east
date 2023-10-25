@@ -1,8 +1,8 @@
 library(stringi)
+library(stringr)
 library(data.table)
 library(magrittr)
-library(future.apply)
-plan(tweak(multisession, workers = 20))
+library(ape)
 
 # Load all of the H12 tables
 h12.filenames <- list.files('.', 'H12_.*.csv', full.names = T)
@@ -124,13 +124,13 @@ h1x.tables <- lapply(strsplit(pop.pairs, '_vs_'),
 )
 
 # Function to plot the H12 data
-plot.h12 <- function(h12.table, 
+plot.h1x <- function(h1x.table, 
                      filename = NULL, 
                      plot.title = '', 
                      gaps = 5000000, 
-                     h12.column = 'H12',
-                     h12.colour = 'darkgreen',
-                     y.label = 'H12'){
+                     h1x.column = 'H1x',
+                     h1x.colour = 'darkgreen',
+                     y.label = 'H1X'){
 	# Create the plot
 	if (!missing(filename)){
 		file.width = 6.5
@@ -147,20 +147,20 @@ plot.h12 <- function(h12.table,
 	cs <- ce - chrom.sizes
 	layout(matrix(c(rep(1,4),rep(2,1)), nrow = 5, ncol = 1))
 	par(mar = c(0,4,1,2), mgp = c(2, 0.7, 0), family = 'Arial', xpd = NA) 
-	max.y <- max(c(max(h12.table[, ..h12.column]), 0.05))
-	min.y <- min(h12.table[, ..h12.column])
+	max.y <- max(c(max(h1x.table[, ..h1x.column]), 0.05))
+	min.y <- min(h1x.table[, ..h1x.column])
 	# Create the empty plot.
 	plot(c(cs[1], ce[5]), c(min.y, max.y), xlim = c(cs[1] + gaps/2, ce[5] - gaps/2), 
 	     type = 'n', bty = 'n', xaxt = 'n', yaxt = 'n', xlab = '', ylab = '', 
 	     main = plot.title, cex.main = 1.2)
 	
 	# Get plotting positions for windows
-	h12.table$genome.pos <- h12.table$midpoint + cs[as.character(h12.table$chromosome)]
+	h1x.table$genome.pos <- h1x.table$midpoint + cs[as.character(h1x.table$chromosome)]
 	# Add the data
-	h12.table[, lines(genome.pos, get(h12.column), col = h12.colour, lwd = 1.2), by = chromosome]
+	h1x.table[, lines(genome.pos, get(h1x.column), col = h1x.colour, lwd = 1.2), by = chromosome]
 	# Add y axis
-	h12.step.size <- ifelse(max.y > 0.2, 0.1, 0.05)
-	axis(2, at = seq(0, max.y, h12.step.size))
+	h1x.step.size <- ifelse(max.y > 0.2, 0.1, 0.05)
+	axis(2, at = seq(0, max.y, h1x.step.size))
 	mtext(y.label, 2, 2, cex = 0.8)
 	
 	# Now plot all chromosomes with, the position of each of the four detox gene regions and Ace1
@@ -172,10 +172,129 @@ plot.h12 <- function(h12.table,
 }
 
 for (pop.pair in names(h1x.tables))
-	plot.h12(h1x.tables[[pop.pair]], 
+	plot.h1x(h1x.tables[[pop.pair]], 
 	         filename = paste(pop.pair, 'H1x.png', sep = '_'),
 	         plot.title = pop.pair,
-	         h12.column = 'H1x',
-	         h12.colour = 'purple',
+	         h1x.column = 'H1x',
+	         h1x.colour = 'purple',
 	         y.label = 'H1x')
 
+# Now plot specific regions in H12. Start by manually defining regions of interest. These are
+# just indexes that we determined subjectively
+regions.of.interest.moshi <- list(region1 = 1075:1150, 
+                                  region2 = 1525:1600, 
+                                  region3 = 3475:3600, 
+                                  region4 = 3690:3850, 
+                                  region5 = 7175:7250)
+regions.of.interest.muleba <- list(region1 = 3260:3350, 
+                                   region2 = 3700:3825)
+
+# Load the gff
+gff.path <- '../data/VectorBase-57_AgambiaePEST.gff'
+gff <- as.data.table(read.gff(gff.path, GFF3 = T))
+gff[, seqid := sub('AgamP4_', '', seqid)]
+
+
+plot.h12.region <- function(h12.table, 
+                            filename = NULL, 
+                            genes.filename = NULL, 
+                            chrom = NULL, 
+                            plot.title = '', 
+	                        h12.col = 'darkgreen'){
+	if (is.null(chrom)){
+		chrom <- unique(h12.table$chromosome)
+		if (length(chrom) != 1)
+			stop('Region should include exactly one chromosome')
+	}
+		
+	start.pos <- min(h12.table$midpoint)
+	end.pos <- max(h12.table$midpoint)
+	
+	# Get the list of genes present in the window
+	gene.gff <- gff[seqid == chrom & 
+	                start < end.pos & 
+	                end > start.pos &
+	                type == 'protein_coding_gene', ] %>%
+	            .[order(start)]
+	gene.gff[, gene.id := unique(str_extract(attributes, 'AGAP\\d{6}'))]
+	gene.gff[, gene.name := str_extract(attributes, '(?<=Name=)[^;]+') %>%
+	                        str_to_title]
+	gene.gff$gene.name[is.na(gene.gff$gene.name)] <- gene.gff$gene.id[is.na(gene.gff$gene.name)]
+	if (!is.null(genes.filename))
+		fwrite(gene.gff[, .(seqid, start, end, gene.id, gene.name, attributes)], genes.filename, sep = '\t')
+	# Now the list of Exons
+	exon.gff <- gff[seqid == chrom & 
+	                start < end.pos & 
+	                end > start.pos &
+	                type == 'exon', ]
+	
+	# Create the plot
+	if (!is.null(filename)){
+		file.width = 6.5
+		file.height = 3.5
+		if (grepl('\\.eps', filename))
+			postscript(filename, width = file.width, height = file.height, horizontal = F, onefile = FALSE, paper = "special")
+		else if (grepl('\\.png', filename))
+			png(filename, width = file.width, height = file.height, units = 'in', res = 600)
+		else if (grepl('\\.tif', filename))
+			tiff(filename, width = file.width, height = file.height, units = 'in', res = 600)
+	}
+	layout(matrix(c(rep(1,4),rep(2,1)), nrow = 5, ncol = 1))
+	par(mar = c(0,4,1,1), mgp = c(2, 0.7, 0), family = 'Arial', xpd = NA) 
+	# This odd way of getting a sequence is to make sure we get the right outcome if num.randomisations == 0
+	max.y <- max(c(max(h12.table[, 'H12']), 0.05))
+	min.y <- min(h12.table[, 'H12'])
+	# Create the empty plot.
+	plot(c(start.pos, end.pos), c(min.y, max.y), type = 'n', 
+	     bty = 'n', xaxt = 'n', yaxt = 'n', xlab = '', ylab = '', 
+	     main = plot.title, cex.main = 1.2)
+	
+	# Add data
+	h12.table[, lines(midpoint, H12, col = h12.col, lwd = 1.2)]
+	# Add y axis
+	h12.step.size <- ifelse(max.y > 0.2, 0.1, 0.05)
+	axis(2, at = seq(0, max.y, h12.step.size))
+	mtext('H12', 2, 2, cex = 0.8)
+	
+	# Now add the beadplot
+	par(mar = c(2,4,0,1), mgp = c(1, 0.3, 0), tcl = -0.15) 
+	plot(c(start.pos, end.pos), c(-2, 0), type = 'n', 
+	     bty = 'n', xaxt = 'n', yaxt = 'n', 
+	     xlab = paste('Position on', chrom), ylab = '')
+    axis(1, at = signif(seq(signif(start.pos, 4), signif(end.pos, 4), length.out = 4), 5))
+	draw.gene.model(
+		start.pos, 
+		end.pos, 
+		gene.gff, 
+		exon.gff, 
+		y = 0, 
+		text.cex = 0.5,
+		gene.thickness.fraction = 15
+	)
+	#mtext(paste('Position on', chrom), 1, outer = T)
+	
+	if (!is.null(filename))
+		dev.off()
+}
+
+for (r in regions.of.interest.moshi){
+	chrom = unique(h12.tables$Moshi[r, chromosome])
+	start.point = h12.tables$Moshi[r[1], midpoint]
+	end.point = h12.tables$Moshi[r[length(r)], midpoint]
+	fn.root <- paste('Moshi', chrom, start.point, end.point, sep = '_')
+	plot.h12.region(h12.tables$Moshi[r], 
+	                paste(fn.root, '.png', sep = ''),
+	                paste(fn.root, '_genes.csv', sep = '')
+	)
+}
+
+for (r in regions.of.interest.muleba){
+	chrom = unique(h12.tables$Muleba[r, chromosome])
+	start.point = floor(h12.tables$Muleba[r[1], midpoint])
+	end.point = floor(h12.tables$Muleba[r[length(r)], midpoint])
+	fn.root <- paste('Muleba', chrom, start.point, end.point, sep = '_')
+	plot.h12.region(h12.tables$Muleba[r], 
+	                paste(fn.root, '.png', sep = ''),
+	                paste(fn.root, '_genes.csv', sep = '')
+	)
+}

@@ -418,7 +418,7 @@ contable(Dup.clusters$Cyp9k1,
 )
 dev.off()
 
-png('Coeae_diagnostic_read_CNVs.png', width = 2, height = 0.8, units = 'in', res = 300)
+png('Coeae_diagnostic_read_CNVs.png', width = 5, height = 0.8, units = 'in', res = 300)
 par(family = 'Arial')
 contable(c(Dup.clusters$Coeaexf, Dup.clusters$Coeaexg), 
          text.cell.cex = 0.35,
