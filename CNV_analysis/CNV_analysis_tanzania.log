@@ -452,6 +452,34 @@ Final model contained 1 parameters: Cyp6aap_Dup33.
 
                        P deviance
 Cyp6aap_Dup33 0.03663738 4.367189
+$invariable.markers
+character(0)
+
+$correlated.markers
+character(0)
+
+$sig.alone
+                       P pseudo.R2
+Cyp6aap_Dup33 0.03663738        NA
+cluster_1     0.08363746        NA
+
+$final.model
+
+Call:  glm(formula = phenotype ~ Cyp6aap_Dup33, family = binomial, data = moshi.delta.allele.table)
+
+Coefficients:
+      (Intercept)  Cyp6aap_Dup33TRUE  
+           0.1542            -0.5943  
+
+Degrees of Freedom: 281 Total (i.e. Null);  280 Residual
+  (5 observations deleted due to missingness)
+Null Deviance:	    384.7 
+Residual Deviance: 380.3 	AIC: 384.3
+
+$final.sig
+                       P deviance
+Cyp6aap_Dup33 0.03663738 4.367189
+
 
 
 Cyp6aap alleles in Muleba, controlling for sweep:
@@ -484,3 +512,32 @@ Final model contained 1 parameters: Cyp6aap_Dup33.
 
                          P deviance
 Cyp6aap_Dup33 2.730821e-05 17.59656
+$invariable.markers
+character(0)
+
+$correlated.markers
+character(0)
+
+$sig.alone
+                         P pseudo.R2
+Cyp6aap_Dup33 2.730821e-05        NA
+cluster_1     7.961871e-02        NA
+cluster_2     1.259423e-01        NA
+
+$final.model
+
+Call:  glm(formula = phenotype ~ Cyp6aap_Dup33, family = binomial, data = muleba.delta.allele.table)
+
+Coefficients:
+      (Intercept)  Cyp6aap_Dup33TRUE  
+           0.1603           -17.7264  
+
+Degrees of Freedom: 161 Total (i.e. Null);  160 Residual
+  (18 observations deleted due to missingness)
+Null Deviance:	    224.6 
+Residual Deviance: 207 	AIC: 211
+
+$final.sig
+                         P deviance
+Cyp6aap_Dup33 2.730821e-05 17.59656
+
