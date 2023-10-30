@@ -3,6 +3,7 @@ library(magrittr)
 library(stringr)
 library(glmmTMB)
 
+source('../shared_functions/R_plotting.r')
 git.folder <- 'https://raw.githubusercontent.com/vigg-lstm/GAARD_work/v2.0'
 get.git.path <- function(filepath){
 	filepath <- paste(filepath, collapse = '/')
@@ -159,14 +160,6 @@ modal.copy.number <- modal.copy.number[, c('sample.id', genes.of.interest), with
                      setnames(detox.gene.conversion$Gene.id, detox.gene.conversion$Gene.name) %>%
                      setkey(location, insecticide)
 
-# A function that will lighten the colour by a given proportion
-lighten.col <- function(color, lightness){
-	col.rgb <- col2rgb(color)/255
-	red <- 1-(1-col.rgb[1])*lightness
-	blue <- 1-(1-col.rgb[2])*lightness
-	green <- 1-(1-col.rgb[3])*lightness
-	rgb(cbind(red, blue, green))
-}
 
 # A function that will round to x significant digits, unless the number is small, then just take
 # one
@@ -366,6 +359,24 @@ contable(c(Dup.clusters$Coeaexf, Dup.clusters$Coeaexg),
          mai = c(0,0.25,0.3,0.13)
 )
 dev.off()
+
+# We can also plot a histogram of modal copy numbers for coeaexg
+png('Coeaexg_copy_number_histogram_West.png', width = 1.5, height = 4, units = 'in', res = 300)
+par(mar = c(1.5,2.6,0.5,0.5), mgp = c(1.6,0.4,0), tcl = -0.3, lwd = 1.5, cex = 0.7)
+breaks <- seq(min(modal.copy.number$Coeae6g), max(modal.copy.number$Coeae6g) + 1)
+bin.pos <- c(0, seq(5, max(breaks), 5))
+hist(modal.copy.number$Coeae6g, right = F, main = '', 
+     breaks = breaks, xaxt = 'n', col = lighten.col('#E7B800', alpha = 0.25) , border = '#E7B800')
+axis(1, at = bin.pos + 0.5, labels = bin.pos, lwd = 0, mgp = c(0,-0.6,0))
+mtext('Copy number', 1, line = 0.5, cex = 0.7)
+dev.off()
+
+# What is the median copy number among samples that actually carry a CNV
+cat('Median copy number of samples that have a CNV in Coeae6g:\n\n')
+modal.copy.number$Coeae6g %>%
+{.[. > 0]} %>%
+median() %>%
+print()
 
 glm.up <- function(input.table, list.of.markers = markers, rescolumn = 'phenotype', control.for = character(), glm.function = NULL, verbose = T){
 	# Check whether the markers and random effects are present in the data.frame

@@ -437,6 +437,13 @@ axis(1, at = bin.pos + 0.5, labels = bin.pos, lwd = 0, mgp = c(0,-0.6,0))
 mtext('Copy number', 1, line = 0.5, cex = 0.7)
 dev.off()
 
+# What is the median copy number among samples that actually carry a CNV
+cat('Median copy number of samples that have a CNV in Coeaexg:\n\n')
+modal.copy.number$Coeaexg %>%
+{.[. > 0]} %>%
+median() %>%
+print()
+
 glm.up <- function(input.table, list.of.markers = markers, rescolumn = 'phenotype', control.for = character(), glm.function = NULL, verbose = T){
 	# Check whether the markers and random effects are present in the data.frame
 	if (sum(list.of.markers %in% colnames(input.table)) != length(list.of.markers))
