@@ -325,22 +325,22 @@ plot.implicated.regions <- function(gwas.regions,
 fst.regions[['Muleba_arabiensis_Delta']][chrom == '2R' & start == 28322651, label := 'Cyp6aa1 (-120Kb)']
 fst.regions[['Muleba_arabiensis_Delta']][chrom == '2R' & start == 56192837, label := 'Gstd4 (+700Kb)']
 #
-pbs.regions[['Moshi_arabiensis_Delta']][chrom == '2R' & start == 28560507, label := 'Cyp6aa1 (+80Kb)']
-pbs.regions[['Moshi_arabiensis_Delta']][chrom == '2L' & start == 3157513, label := 'Vgsc (+700Kb)']
-pbs.regions[['Muleba_arabiensis_Delta']][chrom == '2R' & start == 28327171, label := 'Cyp6aa1 (-110Kb)']
-pbs.regions[['Muleba_arabiensis_Delta']][chrom == '2R' & start == 56707016, label := 'Gstd4 (+1.2Mb)']
+pbs.regions[['Moshi.arabiensis.Delta']][chrom == '2R' & start == 28560507, label := 'Cyp6aa1 (+80Kb)']
+pbs.regions[['Moshi.arabiensis.Delta']][chrom == '2L' & start == 3157513, label := 'Vgsc (+700Kb)']
+pbs.regions[['Muleba.arabiensis.Delta']][chrom == '2R' & start == 28327171, label := 'Cyp6aa1 (-110Kb)']
+pbs.regions[['Muleba.arabiensis.Delta']][chrom == '2R' & start == 56707016, label := 'Gstd4 (+1.2Mb)']
 #
-h12.regions[['Moshi_arabiensis_Delta']][chrom == '2R' & start == 28536270, label := 'Cyp6aa1']
-h12.regions[['Moshi_arabiensis_Delta']][chrom == '2R' & start == 40837427, label := 'Keap1 (-65Kb)']
-h12.regions[['Moshi_arabiensis_Delta']][chrom == '2L' & start == 28491089, label := 'Coeae1f (-6Kb)']
-h12.regions[['Moshi_arabiensis_Delta']][chrom == '2L' & start == 36821514, label := 'Coeae2g (-440Kb)']
-h12.regions[['Muleba_arabiensis_Delta']][chrom == '2R' & start == 28416418, label := 'Cyp6aa1']
-h12.regions[['Muleba_arabiensis_Delta']][chrom == '2R' & start == 20316806, label := 'Cyp4k2 (-700Kb)']
+h12.regions[['Moshi.arabiensis.Delta']][chrom == '2R' & start == 28536270, label := 'Cyp6aa1']
+h12.regions[['Moshi.arabiensis.Delta']][chrom == '2R' & start == 40837427, label := 'Keap1 (-65Kb)']
+h12.regions[['Moshi.arabiensis.Delta']][chrom == '2L' & start == 28491089, label := 'Coeae1f (-6Kb)']
+h12.regions[['Moshi.arabiensis.Delta']][chrom == '2L' & start == 36821514, label := 'Coeae2g (-440Kb)']
+h12.regions[['Muleba.arabiensis.Delta']][chrom == '2R' & start == 28416418, label := 'Cyp6aa1']
+h12.regions[['Muleba.arabiensis.Delta']][chrom == '2R' & start == 20316806, label := 'Cyp4k2 (-700Kb)']
 #
-h12.regions[['Muleba_arabiensis_PM']][chrom == '2R' & start == 3050000, label := 'Ace1 (-340Kb)']
-h12.regions[['Muleba_arabiensis_Delta']][chrom == '2R' & start == 28650000, label := 'Cyp6aa1 (+170Kb)']
-h12.regions[['Muleba_arabiensis_Delta']][chrom == '3R' & start == 9150000, label := 'Cyp4h16 (-600Kb)']
-h12.regions[['Moshi_arabiensis_Delta']][chrom == '3R' & start == 5050000, label := 'Cyp12f1 (+800Kb)']
+gwas.regions[['Muleba_arabiensis_Delta']][chrom == '2R' & start == 28650000, label := 'Cyp6aa1 (+170Kb)']
+gwas.regions[['Muleba_arabiensis_Delta']][chrom == '3R' & start == 9150000, label := 'Cyp4h16 (-600Kb)']
+gwas.regions[['Moshi_arabiensis_Delta']][chrom == '3R' & start == 5050000, label := 'Cyp12f1 (+800Kb)']
+gwas.regions[['Moshi_arabiensis_PM']][chrom == '2R' & start == 3050000, label := 'Ace1 (-340Kb)']
 
 for (pop in study.pops){
 	filename <- paste(pop, 'implicated_regions.png', sep = '_')
