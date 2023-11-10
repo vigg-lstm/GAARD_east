@@ -185,7 +185,8 @@ regions.of.interest.moshi <- list(region1 = 1075:1150,
                                   region2 = 1525:1600, 
                                   region3 = 3475:3600, 
                                   region4 = 3690:3850, 
-                                  region5 = 7175:7250)
+                                  region5 = 4310:4360, 
+                                  region6 = 7175:7250)
 regions.of.interest.muleba <- list(region1 = 3260:3350, 
                                    region2 = 3700:3825)
 

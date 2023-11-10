@@ -1,0 +1,4 @@
+Error in fread("~/data/ML/GAARD_SNP/summary_figures/classical_analysis_snp_clump_regions_tanzania.csv") : 
+  File '~/data/ML/GAARD_SNP/summary_figures/classical_analysis_snp_clump_regions_tanzania.csv' does not exist or is non-readable. getwd()=='/Data/Liverpool/GAARD_repo/GAARD_east/supplementary/supplementary_implicated_regions'
+Calls: %>% -> split -> fread
+Execution halted
