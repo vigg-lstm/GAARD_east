@@ -146,7 +146,7 @@ plot.h12.diff.region <- function(h12.table,
 # Create all the plots
 lapply(study.pops, 
        function(pop) 
-           h12.tables[[pop]]$diff[,
+           h12.tables[[pop]]$diff[peak.region != 0,
                plot.h12.diff.region(.SD, 
                                     filename = paste(pop, '_region_', .BY$peak.region, '.png', sep = ''),
                                     chrom = .BY$chromosome,
