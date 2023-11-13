@@ -1,11 +1,4 @@
-Warning message:
-In checkDepPackageVersion(dep_pkg = "TMB") :
-  Package version inconsistency detected.
-glmmTMB was built with TMB version 1.8.0
-Current TMB version is 1.8.1
-Please re-install glmmTMB from source or restore original ‘TMB’ package (see '?reinstalling' for more information)
-Warning message:
-package ‘abind’ was built under R version 4.1.3 
+integer(0)
 null device 
           1 
 null device 
@@ -34,7 +27,7 @@ Median copy number of samples that have a CNV in Coeaexg:
 
 	Modal copy number test for Moshi_Delta:
 
-Analysing genes with CNV at >= 5% freq (Coeae1f, Coeae2f, Coeaexg, Cyp6aa1, Cyp6aa2, Cyp6p1, Cyp6p2, Cyp6p3, Cyp6p4, Cyp6p5, Cyp9k1).
+Analysing genes Coeae1f, Coeae2f, Coeaexg, Cyp6aa1, Cyp6aa2, Cyp6p1, Cyp6p2, Cyp6p3, Cyp6p4, Cyp6p5, Cyp6z1, Cyp6z2, Cyp6z3, Cyp9k1, Gstd3, Gste1, Gste2, Gste3, Gste4, Gste5, Gste6, Gste7, Gste8.
 
 Using the following string to control for confounding factors: 
 
@@ -62,7 +55,8 @@ Final model was the null model.
    P deviance
 1 NA       NA
 $invariable.markers
-character(0)
+ [1] "Cyp6z1" "Cyp6z3" "Gste1"  "Gste2"  "Gste3"  "Gste4"  "Gste5"  "Gste6" 
+ [9] "Gste7"  "Gste8" 
 
 $correlated.markers
 character(0)
@@ -79,7 +73,9 @@ Cyp6p2  0.3105041        NA
 Cyp6p3  0.5330028        NA
 Cyp6p4  0.3882261        NA
 Cyp6p5  0.1971082        NA
+Cyp6z2  0.5939725        NA
 Cyp9k1  0.9503528        NA
+Gstd3   0.5013810        NA
 
 $final.model
 
@@ -100,7 +96,7 @@ $final.sig
 
 	Modal copy number test for Muleba_Delta:
 
-Analysing genes with CNV at >= 5% freq (Cyp6aa1, Cyp6aa2, Cyp6p1, Cyp6p2, Cyp6p3, Cyp6p4, Cyp6p5, Cyp6z2, Cyp9k1).
+Analysing genes Coeae1f, Coeae2f, Coeaexg, Cyp6aa1, Cyp6aa2, Cyp6p1, Cyp6p2, Cyp6p3, Cyp6p4, Cyp6p5, Cyp6z1, Cyp6z2, Cyp6z3, Cyp9k1, Gstd3, Gste1, Gste2, Gste3, Gste4, Gste5, Gste6, Gste7, Gste8.
 
 Using the following string to control for confounding factors: 
 
@@ -133,13 +129,16 @@ Final model contained 1 parameters: Cyp6p2.
                   P deviance
 Cyp6p2 8.384433e-06 19.84814
 $invariable.markers
-character(0)
+[1] "Cyp6z1" "Gste4"  "Gste5"  "Gste6"  "Gste8" 
 
 $correlated.markers
 character(0)
 
 $sig.alone
                    P pseudo.R2
+Coeae1f 5.328286e-01        NA
+Coeae2f 5.328286e-01        NA
+Coeaexg 6.051503e-01        NA
 Cyp6aa1 2.019443e-04        NA
 Cyp6aa2 2.019443e-04        NA
 Cyp6p1  1.247164e-03        NA
@@ -148,7 +147,13 @@ Cyp6p3  8.384433e-06        NA
 Cyp6p4  4.114429e-05        NA
 Cyp6p5  9.166209e-05        NA
 Cyp6z2  2.586683e-01        NA
+Cyp6z3  9.771277e-01        NA
 Cyp9k1  4.217397e-01        NA
+Gstd3   5.193395e-02        NA
+Gste1   9.916111e-02        NA
+Gste2   4.292190e-02        NA
+Gste3   9.916111e-02        NA
+Gste7   9.916111e-02        NA
 
 $final.model
 
@@ -169,7 +174,7 @@ Cyp6p2 8.384433e-06 19.84814
 
 	Modal copy number test for Moshi_PM:
 
-Analysing genes with CNV at >= 5% freq (Coeae1f, Coeae2f, Coeaexg, Cyp6aa1, Cyp6aa2, Cyp6p1, Cyp6p2, Cyp6p3, Cyp6p4, Cyp6p5, Cyp6z2, Cyp9k1).
+Analysing genes Coeae1f, Coeae2f, Coeaexg, Cyp6aa1, Cyp6aa2, Cyp6p1, Cyp6p2, Cyp6p3, Cyp6p4, Cyp6p5, Cyp6z1, Cyp6z2, Cyp6z3, Cyp9k1, Gstd3, Gste1, Gste2, Gste3, Gste4, Gste5, Gste6, Gste7, Gste8.
 
 Using the following string to control for confounding factors: 
 
@@ -197,7 +202,7 @@ Final model was the null model.
    P deviance
 1 NA       NA
 $invariable.markers
-character(0)
+[1] "Cyp6z1" "Gste1"  "Gste2"  "Gste3"  "Gste5"  "Gste6"  "Gste7"  "Gste8" 
 
 $correlated.markers
 character(0)
@@ -215,7 +220,10 @@ Cyp6p3  0.7099005        NA
 Cyp6p4  0.6395486        NA
 Cyp6p5  0.6362650        NA
 Cyp6z2  0.9215513        NA
+Cyp6z3  0.8306351        NA
 Cyp9k1  0.2417921        NA
+Gstd3   0.3938593        NA
+Gste4   0.7604976        NA
 
 $final.model
 
@@ -286,6 +294,7 @@ Gste2   0.221948815        NA
 Cyp9k1  0.466435229        NA
 Coeae2f 0.212203050        NA
 Coeaexg 0.321794046        NA
+Gstd3   0.045948018        NA
 
 $final.model
 Formula:          phenotype ~ Cyp6aa1 + (1 | location)

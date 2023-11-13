@@ -140,6 +140,7 @@ detox.genes <- c('Ace1',
                  paste('Cyp6m', 2:4, sep = ''),
                  paste('Cyp6z', 1:3, sep = ''),
                  paste('Gste', 1:8, sep = ''),
+                 'Gstd3',
                  'Cyp9k1')
 
 # Get the names of the detox genes
@@ -150,6 +151,12 @@ gene.table['AGAP006227', Gene.name := 'COEAE1F']
 gene.table <- rbind(gene.table, data.table(Gene_stable_ID = 'Coeaexg', Gene.name = 'COEAEXG', Descriptions = '', GO_terms = ''))
 detox.gene.conversion <- gene.table[Gene.name %in% toupper(detox.genes), 
                                     .(Gene.id = Gene_stable_ID, Gene.name = str_to_title(Gene.name))]
+
+# Since there was a signal of association with resistance around Cyp12f, we have a quick look to see if
+# there is a CNV there. 
+cyp12.cluster <- gene.table[Gene.name %in% c('CYP12F1', 'CYP12F2', 'CYP12F3', 'CYP12F4')]$Gene_stable_ID
+which(cyp12.cluster %in% names(modal.CNV.table))
+# There are no CNVs in that cluster. 
 
 # We shrink the modal copy number table to be just the genes we are interested in. These are the detox 
 # genes and also some of the ones in the Ace1 deletion in order to get the copy number of that. 
@@ -685,18 +692,16 @@ for (insecticide in c('Delta', 'PM')){
 			next
 		# For some reason, this doesn't work if I do the indexing directly. I have to create this object first
 		index <- list(location, insecticide)
-		# Keep genes where CNV exists in at least 5% of samples. 
-		genes.to.model <- (detox.gene.freq[paste(index, collapse = '.'), ] >= 0.05) %>%
-		                  colnames(.)[.]
+		genes.to.model <- colnames(detox.gene.freq)
 		cat('\n\tModal copy number test for ', paste(index, collapse = '_'), ':\n\n', sep = '')
-		cat('Analysing genes with CNV at >= 5% freq (', paste(genes.to.model, collapse = ', '), ').\n\n', sep = '')
+		cat('Analysing genes ', paste(genes.to.model, collapse = ', '), '.\n\n', sep = '')
 		test.table <- as.data.frame(modal.copy.number[index])
 		print(glm.up(test.table, genes.to.model, 'phenotype'))
 	}
 }
 
 # Let's try a glm that includes population as a random factor. 
-genes.to.model <- c('Cyp6aa1', 'Cyp6z2', 'Cyp6p3','Gste2', 'Cyp9k1', 'Coeae2f', 'Coeaexg')
+genes.to.model <- c('Cyp6aa1', 'Cyp6z2', 'Cyp6p3','Gste2', 'Cyp9k1', 'Coeae2f', 'Coeaexg', 'Gstd3')
 delta.table <- as.data.frame(modal.copy.number[insecticide == 'Delta'])
 cat('\n\nAll populations Delta:\n')
 delta.model <- glm.up(delta.table, genes.to.model, 'phenotype', control.for = 'location', glm.function = 'glmmTMB')
