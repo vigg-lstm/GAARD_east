@@ -290,11 +290,12 @@ plot.regions.on.chromosome <- function(regions,
 		text((cs['3L'] + ce['3L'])/2, chrom.y, '3L', adj = 0.5, xpd = NA, cex = chrom.cex)
 		text((cs['X'] + ce['X'])/2, chrom.y, 'X', adj = 0.5, xpd = NA, cex = chrom.cex)
 	}
-	# Add any required labels
-	if (!is.null(regions$label))
+	# Add any required labels. We can't use regions$label here, because if the the "label.below" column is
+	# present, then "label" will be interpreted as that, and it will think the column is present. Wow. 
+	if (!is.null(regions[['label']]))
 		regions[, text(genome.end-1e6, 1.5, label, col = rect.col, srt = 35, xpd = NA, adj = 0, cex = label.cex, font = 2)]
 	# Add any required labels
-	if (!is.null(regions$label.below))
+	if (!is.null(regions[['label.below']]))
 		regions[, text(genome.end-1e6, -1.7, label.below, col = rect.col, srt = 35, xpd = NA, adj = 1, cex = label.cex, font = 2)]
 }
 
@@ -333,13 +334,14 @@ pbs.regions[['Muleba.arabiensis.Delta']][chrom == '2R' & start == 56707016, labe
 h12.regions[['Moshi.arabiensis.Delta']][chrom == '2R' & start == 28536270, label := 'Cyp6aa1']
 h12.regions[['Moshi.arabiensis.Delta']][chrom == '2R' & start == 40837427, label := 'Keap1 (-65Kb)']
 h12.regions[['Moshi.arabiensis.Delta']][chrom == '2L' & start == 28491089, label := 'Coeae1f (-6Kb)']
-h12.regions[['Moshi.arabiensis.Delta']][chrom == '2L' & start == 36821514, label := 'Coeae2g (-440Kb)']
+h12.regions[['Moshi.arabiensis.Delta']][chrom == '2L' & start == 36821514, label.below := '\nCoeae2g-6g\n(-440Kb)']
 h12.regions[['Muleba.arabiensis.Delta']][chrom == '2R' & start == 28416418, label := 'Cyp6aa1']
 h12.regions[['Muleba.arabiensis.Delta']][chrom == '2R' & start == 20316806, label := 'Cyp4k2 (-700Kb)']
 #
 gwas.regions[['Muleba_arabiensis_Delta']][chrom == '2R' & start == 28650000, label := 'Cyp6aa1 (+170Kb)']
-gwas.regions[['Muleba_arabiensis_Delta']][chrom == '3R' & start == 9150000, label := 'Cyp4h16 (-600Kb)']
-gwas.regions[['Moshi_arabiensis_Delta']][chrom == '3R' & start == 5050000, label := 'Cyp12f1 (+800Kb)']
+gwas.regions[['Muleba_arabiensis_Delta']][chrom == '3R' & start == 9150000, label.below := 'Cyp4h16 (-600Kb)']
+
+gwas.regions[['Moshi_arabiensis_Delta']][chrom == '3R' & start == 5050000, label.below := '\nCyp12f1\n(+800Kb)']
 gwas.regions[['Moshi_arabiensis_PM']][chrom == '2R' & start == 3050000, label := 'Ace1 (-340Kb)']
 
 for (pop in study.pops){
