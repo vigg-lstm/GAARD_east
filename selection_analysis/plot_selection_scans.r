@@ -47,7 +47,7 @@ plot.h12 <- function(h12.table,
 	# Create the plot
 	if (!missing(filename)){
 		file.width = 6.5
-		file.height = 3.5
+		file.height = 2.7
 		if (grepl('\\.eps', filename))
 			postscript(filename, width = file.width, height = file.height, horizontal = F, onefile = FALSE, paper = "special")
 		else if (grepl('\\.png', filename))
@@ -78,7 +78,7 @@ plot.h12 <- function(h12.table,
 	
 	# Now plot all chromosomes with, the position of each of the four detox gene regions and Ace1
 	par(mar = c(1,4,0,2), mgp = c(2, 0.7, 0)) 
-	add.chromosomes(chrom.sizes, gaps = gaps, gene.cex = 0.7, point.cex = 1, chrom.offset = -1.2, chrom.cex = 1.2)
+	add.chromosomes(chrom.sizes, gaps = gaps, gene.cex = 0.6, point.cex = 1, chrom.offset = -1.2, chrom.cex = 1.2)
 	
 	if (!missing(filename))
 		dev.off()
@@ -134,7 +134,7 @@ plot.h1x <- function(h1x.table,
 	# Create the plot
 	if (!missing(filename)){
 		file.width = 6.5
-		file.height = 3.5
+		file.height = 2.7
 		if (grepl('\\.eps', filename))
 			postscript(filename, width = file.width, height = file.height, horizontal = F, onefile = FALSE, paper = "special")
 		else if (grepl('\\.png', filename))
@@ -165,7 +165,7 @@ plot.h1x <- function(h1x.table,
 	
 	# Now plot all chromosomes with, the position of each of the four detox gene regions and Ace1
 	par(mar = c(1,4,0,2), mgp = c(2, 0.7, 0)) 
-	add.chromosomes(chrom.sizes, gaps = gaps, gene.cex = 0.7, point.cex = 1, chrom.offset = -1.2, chrom.cex = 1.2)
+	add.chromosomes(chrom.sizes, gaps = gaps, gene.cex = 0.6, point.cex = 1, chrom.offset = -1.2, chrom.cex = 1.2)
 	
 	if (!missing(filename))
 		dev.off()
