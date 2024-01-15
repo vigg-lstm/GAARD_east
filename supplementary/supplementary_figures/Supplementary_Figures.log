@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.2)  10 JAN 2024 22:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.2)  15 JAN 2024 08:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -474,7 +474,6 @@ File: ../../CNV_analysis/Cyp9k1_diagnostic_read_CNVs.png Graphic file (type png
 Package pdftex.def Info: ../../CNV_analysis/Cyp9k1_diagnostic_read_CNVs.png  us
 ed on input line 93.
 (pdftex.def)             Requested size: 108.40472pt x 57.81584pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 212.
  [4
 
 
@@ -483,38 +482,159 @@ ysis/Ace1_diagnostic_read_CNVs.png (PNG copy)> <../../CNV_analysis/Cyp6aap_diag
 nostic_read_CNVs.png (PNG copy)> <../../CNV_analysis/Cyp6mz_diagnostic_read_CNV
 s.png (PNG copy)> <../../CNV_analysis/Gste_diagnostic_read_CNVs.png (PNG copy)>
  <../../CNV_analysis/Cyp9k1_diagnostic_read_CNVs.png (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 212.
+<../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering.png, id=68, 1084.05pt x
+ 361.35pt>
+File: ../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering.png Graphic file (
+type png)
+<use ../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering.png>
+Package pdftex.def Info: ../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering
+.png  used on input line 102.
+(pdftex.def)             Requested size: 483.69684pt x 161.23306pt.
+
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 102--103
+[][] 
+ []
+
+<../../CNV_analysis/sweeps/Coeaexg_haplotype_clustering.png, id=70, 1084.05pt x
+ 361.35pt>
+File: ../../CNV_analysis/sweeps/Coeaexg_haplotype_clustering.png Graphic file (
+type png)
+<use ../../CNV_analysis/sweeps/Coeaexg_haplotype_clustering.png>
+Package pdftex.def Info: ../../CNV_analysis/sweeps/Coeaexg_haplotype_clustering
+.png  used on input line 104.
+(pdftex.def)             Requested size: 483.69684pt x 161.23306pt.
+
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 104--105
+[][] 
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+05.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 105.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 105.
+ [5
+
+ <../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering.png> <../../CNV_analys
+is/sweeps/Coeaexg_haplotype_clustering.png>]
+<../../kdr_origins/kdr_haplotype_clustering.png, id=85, 1084.05pt x 578.16pt>
+File: ../../kdr_origins/kdr_haplotype_clustering.png Graphic file (type png)
+<use ../../kdr_origins/kdr_haplotype_clustering.png>
+Package pdftex.def Info: ../../kdr_origins/kdr_haplotype_clustering.png  used o
+n input line 114.
+(pdftex.def)             Requested size: 483.69684pt x 257.97292pt.
+<../../kdr_origins/kdr_haplotype_clustering_arabiensis.png, id=87, 1084.05pt x 
+578.16pt>
+File: ../../kdr_origins/kdr_haplotype_clustering_arabiensis.png Graphic file (t
+ype png)
+<use ../../kdr_origins/kdr_haplotype_clustering_arabiensis.png>
+Package pdftex.def Info: ../../kdr_origins/kdr_haplotype_clustering_arabiensis.
+png  used on input line 115.
+(pdftex.def)             Requested size: 483.69684pt x 257.97292pt.
+<../../kdr_origins/kdr_haplotype_clustering_arabiensis_reduced.png, id=89, 1084
+.05pt x 578.16pt>
+File: ../../kdr_origins/kdr_haplotype_clustering_arabiensis_reduced.png Graphic
+ file (type png)
+<use ../../kdr_origins/kdr_haplotype_clustering_arabiensis_reduced.png>
+Package pdftex.def Info: ../../kdr_origins/kdr_haplotype_clustering_arabiensis_
+reduced.png  used on input line 116.
+(pdftex.def)             Requested size: 483.69684pt x 257.97292pt.
+
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 114--117
+ [] 
+ []
+
+
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 114--117
+ [] 
+ []
+
+
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 114--117
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 189.8029pt on input line 120.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6 <../../kdr_origins/kdr_haplotype_clustering.png> <../../kdr_origins/kdr_hapl
+otype_clustering_arabiensis.png> <../../kdr_origins/kdr_haplotype_clustering_ar
+abiensis_reduced.png>]
+<../supplementary_implicated_regions/Moshi_arabiensis_Delta_implicated_regions.
+png, id=102, 650.43pt x 325.215pt>
+File: ../supplementary_implicated_regions/Moshi_arabiensis_Delta_implicated_reg
+ions.png Graphic file (type png)
+<use ../supplementary_implicated_regions/Moshi_arabiensis_Delta_implicated_regi
+ons.png>
+Package pdftex.def Info: ../supplementary_implicated_regions/Moshi_arabiensis_D
+elta_implicated_regions.png  used on input line 126.
+(pdftex.def)             Requested size: 369.88582pt x 184.94771pt.
+<../supplementary_implicated_regions/Moshi_arabiensis_PM_implicated_regions.png
+, id=104, 650.43pt x 325.215pt>
+File: ../supplementary_implicated_regions/Moshi_arabiensis_PM_implicated_region
+s.png Graphic file (type png)
+<use ../supplementary_implicated_regions/Moshi_arabiensis_PM_implicated_regions
+.png>
+Package pdftex.def Info: ../supplementary_implicated_regions/Moshi_arabiensis_P
+M_implicated_regions.png  used on input line 128.
+(pdftex.def)             Requested size: 369.88582pt x 184.94771pt.
+<../supplementary_implicated_regions/Muleba_arabiensis_Delta_implicated_regions
+.png, id=106, 650.43pt x 325.215pt>
+File: ../supplementary_implicated_regions/Muleba_arabiensis_Delta_implicated_re
+gions.png Graphic file (type png)
+<use ../supplementary_implicated_regions/Muleba_arabiensis_Delta_implicated_reg
+ions.png>
+Package pdftex.def Info: ../supplementary_implicated_regions/Muleba_arabiensis_
+Delta_implicated_regions.png  used on input line 130.
+(pdftex.def)             Requested size: 369.88582pt x 184.94771pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 219.
+[7 <../supplementary_implicated_regions/Moshi_arabiensis_Delta_implicated_regio
+ns.png (PNG copy)> <../supplementary_implicated_regions/Moshi_arabiensis_PM_imp
+licated_regions.png (PNG copy)> <../supplementary_implicated_regions/Muleba_ara
+biensis_Delta_implicated_regions.png (PNG copy)>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 219.
  (./Supplementary_Figures.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 212.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 212.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 219.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 219.
 Package rerunfilecheck Info: File `Supplementary_Figures.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 212.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 219.
  ) 
 Here is how much of TeX's memory you used:
- 7598 strings out of 483183
- 118914 string characters out of 5966293
- 376659 words of memory out of 5000000
- 22483 multiletter control sequences out of 15000+600000
- 539422 words of font info for 34 fonts, out of 8000000 for 9000
+ 7679 strings out of 483183
+ 122797 string characters out of 5966293
+ 380130 words of memory out of 5000000
+ 22543 multiletter control sequences out of 15000+600000
+ 539735 words of font info for 35 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,7n,42p,1091b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600p
+ 41i,7n,42p,1279b,610s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600p
+k> </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600p
 k> </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600p
 k> </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600p
 k> </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600p
 k> </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600p
 k> </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1728.600p
 k> </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600p
-k>
-Output written on Supplementary_Figures.pdf (4 pages, 781762 bytes).
+k></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on Supplementary_Figures.pdf (7 pages, 1849945 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 122 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 393 PDF objects out of 1000 (max. 8388607)
+ 105 compressed objects within 2 object streams
+ 15 named destinations out of 1000 (max. 500000)
+ 210 words of extra memory for PDF output out of 10000 (max. 10000000)
 

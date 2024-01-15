@@ -134,6 +134,7 @@ detox.genes <- c(paste('Coeae', 1:2, 'f', sep = ''),
                  'Ace1',
                  paste('Cyp6aa', 1:2, sep = ''),
                  paste('Cyp6p', 1:5, sep = ''),
+                 paste('Cyp12f', 1:4, sep = ''),
                  paste('Cyp6m', 2:4, sep = ''),
                  paste('Cyp6z', 1:3, sep = ''),
                  paste('Gste', 1:8, sep = ''),
@@ -601,13 +602,15 @@ cat('\n\t#######################')
 cat('\n\t# Copy number testing #')
 cat('\n\t#######################\n')
 
-detox.gene.freq <- aggregate(modal.CNV.table[, detox.gene.conversion$Gene.id, with = F],
+detox.genes.with.cnvs <- intersect(detox.gene.conversion$Gene.id, names(modal.CNV.table))
+dtx.gene.conversion <- detox.gene.conversion[Gene.id %in% detox.genes.with.cnvs]
+detox.gene.freq <- aggregate(modal.CNV.table[, dtx.gene.conversion$Gene.id, with = F],
                              phen[modal.CNV.table$sample.id, .(location, insecticide)], 
                              function(x) sum(x) / length(x)
                    ) %>%
-                   setnames(detox.gene.conversion$Gene.id, detox.gene.conversion$Gene.name)
+                   setnames(dtx.gene.conversion$Gene.id, dtx.gene.conversion$Gene.name)
 rownames(detox.gene.freq) <- paste(detox.gene.freq$location, detox.gene.freq$insecticide, sep = '.')
-detox.gene.freq <- detox.gene.freq[sort(detox.gene.conversion$Gene.name)]
+detox.gene.freq <- detox.gene.freq[sort(dtx.gene.conversion$Gene.name)]
 
 for (insecticide in c('Delta', 'PM')){
 	for (location in c('Avrankou', 'Baguida', 'Korle-Bu', 'Madina', 'Obuasi')){

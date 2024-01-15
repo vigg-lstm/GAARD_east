@@ -20,7 +20,7 @@ Median copy number of samples that have a CNV in Coeae6g:
 
 	Modal copy number test for Avrankou_Delta:
 
-Analysing genes with CNV at >= 10% freq (Cyp6aa1, Cyp6aa2, Gste1, Gste2, Gste3, Gste4, Gste5, Gste7).
+Analysing genes with CNV at >= 10% freq (Cyp12f1, Cyp6aa1, Cyp6aa2, Gste1, Gste2, Gste3, Gste4, Gste5, Gste7).
 
 Using the following string to control for confounding factors: 
 
@@ -55,6 +55,7 @@ character(0)
 
 $sig.alone
                 P pseudo.R2
+Cyp12f1 0.2925863        NA
 Cyp6aa1 0.0749981        NA
 Cyp6aa2 0.1037580        NA
 Gste1   0.4569638        NA
@@ -83,7 +84,7 @@ $final.sig
 
 	Modal copy number test for Baguida_Delta:
 
-Analysing genes with CNV at >= 10% freq (Ace1, Coeae1f, Coeae2f, Cyp9k1).
+Analysing genes with CNV at >= 10% freq (Ace1, Coeae1f, Coeae2f, Cyp12f1, Cyp9k1).
 
 Using the following string to control for confounding factors: 
 
@@ -121,6 +122,7 @@ $sig.alone
 Ace1    0.3953833        NA
 Coeae1f 0.5477154        NA
 Coeae2f 0.5477154        NA
+Cyp12f1 0.6383865        NA
 Cyp9k1  0.7607804        NA
 
 $final.model
@@ -142,7 +144,7 @@ $final.sig
 
 	Modal copy number test for Korle-Bu_Delta:
 
-Analysing genes with CNV at >= 10% freq (Ace1, Coeae2g, Coeae3g, Coeae5g, Coeae6g, Cyp6aa1, Cyp6aa2, Cyp6p3, Cyp9k1, Gste1, Gste2, Gste3, Gste7).
+Analysing genes with CNV at >= 10% freq (Ace1, Coeae2g, Coeae3g, Coeae5g, Coeae6g, Cyp12f1, Cyp12f2, Cyp6aa1, Cyp6aa2, Cyp6p3, Cyp9k1, Gste1, Gste2, Gste3, Gste7).
 
 Using the following string to control for confounding factors: 
 
@@ -187,6 +189,8 @@ Coeae2g 0.89634826        NA
 Coeae3g 0.92139338        NA
 Coeae5g 0.87831554        NA
 Coeae6g 0.87831554        NA
+Cyp12f1 0.94645752        NA
+Cyp12f2 0.55289831        NA
 Cyp6aa1 0.01414258        NA
 Cyp6aa2 0.01414258        NA
 Cyp6p3  0.40097185        NA
@@ -215,7 +219,7 @@ Cyp6aa1 0.01414258 6.020258
 
 	Modal copy number test for Madina_Delta:
 
-Analysing genes with CNV at >= 10% freq (Ace1, Cyp6p3, Cyp6p4, Cyp6p5, Cyp6z1, Cyp6z2, Cyp6z3, Cyp9k1).
+Analysing genes with CNV at >= 10% freq (Ace1, Cyp12f1, Cyp6p3, Cyp6p4, Cyp6p5, Cyp6z1, Cyp6z2, Cyp6z3, Cyp9k1).
 
 Using the following string to control for confounding factors: 
 
@@ -249,15 +253,16 @@ $correlated.markers
 character(0)
 
 $sig.alone
-               P pseudo.R2
-Ace1   0.3405702        NA
-Cyp6p3 0.8607712        NA
-Cyp6p4 0.6128296        NA
-Cyp6p5 0.9433984        NA
-Cyp6z1 0.4757610        NA
-Cyp6z2 0.6956175        NA
-Cyp6z3 0.2507815        NA
-Cyp9k1 0.2663047        NA
+                 P pseudo.R2
+Ace1    0.34057022        NA
+Cyp12f1 0.05226326        NA
+Cyp6p3  0.86077120        NA
+Cyp6p4  0.61282955        NA
+Cyp6p5  0.94339837        NA
+Cyp6z1  0.47576097        NA
+Cyp6z2  0.69561753        NA
+Cyp6z3  0.25078154        NA
+Cyp9k1  0.26630466        NA
 
 $final.model
 
@@ -340,7 +345,7 @@ $final.sig
 
 	Modal copy number test for Baguida_PM:
 
-Analysing genes with CNV at >= 10% freq (Ace1, Coeae1f, Coeae2f, Cyp9k1).
+Analysing genes with CNV at >= 10% freq (Ace1, Coeae1f, Coeae2f, Cyp12f1, Cyp12f2, Cyp12f3, Cyp9k1).
 
 Using the following string to control for confounding factors: 
 
@@ -378,6 +383,9 @@ $sig.alone
 Ace1    0.82184376        NA
 Coeae1f 0.07733222        NA
 Coeae2f 0.07733222        NA
+Cyp12f1 0.59884063        NA
+Cyp12f2 0.58901185        NA
+Cyp12f3 0.49702303        NA
 Cyp9k1  0.33001806        NA
 
 $final.model
@@ -399,7 +407,7 @@ $final.sig
 
 	Modal copy number test for Korle-Bu_PM:
 
-Analysing genes with CNV at >= 10% freq (Ace1, Coeae2g, Coeae3g, Coeae5g, Coeae6g, Cyp6aa1, Cyp6aa2, Cyp6p3, Cyp9k1, Gste1, Gste2, Gste3, Gste7).
+Analysing genes with CNV at >= 10% freq (Ace1, Coeae2g, Coeae3g, Coeae5g, Coeae6g, Cyp12f1, Cyp12f2, Cyp6aa1, Cyp6aa2, Cyp6p3, Cyp9k1, Gste1, Gste2, Gste3, Gste7).
 
 Using the following string to control for confounding factors: 
 
@@ -447,6 +455,8 @@ Coeae2g 4.218671e-02        NA
 Coeae3g 5.552097e-02        NA
 Coeae5g 5.552097e-02        NA
 Coeae6g 5.552097e-02        NA
+Cyp12f1 2.013269e-01        NA
+Cyp12f2 3.575667e-01        NA
 Cyp6aa1 2.166542e-01        NA
 Cyp6aa2 4.068033e-01        NA
 Cyp6p3  9.404487e-01        NA
@@ -477,7 +487,7 @@ Coeae2g 1.535164e-02  5.875658
 
 	Modal copy number test for Madina_PM:
 
-Analysing genes with CNV at >= 10% freq (Ace1, Cyp6p3, Cyp6p4, Cyp6p5, Cyp6z2, Cyp9k1).
+Analysing genes with CNV at >= 10% freq (Ace1, Cyp12f1, Cyp12f2, Cyp12f3, Cyp6p3, Cyp6p4, Cyp6p5, Cyp6z2, Cyp9k1).
 
 Using the following string to control for confounding factors: 
 
@@ -514,13 +524,16 @@ $correlated.markers
 character(0)
 
 $sig.alone
-                  P pseudo.R2
-Ace1   8.185230e-07        NA
-Cyp6p3 8.459457e-01        NA
-Cyp6p4 1.912790e-01        NA
-Cyp6p5 8.293456e-01        NA
-Cyp6z2 5.775627e-01        NA
-Cyp9k1 6.783316e-01        NA
+                   P pseudo.R2
+Ace1    8.185230e-07        NA
+Cyp12f1 9.177812e-01        NA
+Cyp12f2 3.394128e-01        NA
+Cyp12f3 8.560203e-01        NA
+Cyp6p3  8.459457e-01        NA
+Cyp6p4  1.912790e-01        NA
+Cyp6p5  8.293456e-01        NA
+Cyp6z2  5.775627e-01        NA
+Cyp9k1  6.783316e-01        NA
 
 $final.model
 

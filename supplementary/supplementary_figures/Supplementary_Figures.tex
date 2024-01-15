@@ -96,35 +96,42 @@
 	\label{FigS3}
 \end{figure}
 
-%\clearpage
-%
-%\begin{figure}[h]
-%	\includegraphics*[width = 17cm]{../../CNV_analysis/Cyp9k1_Dup10_haplotypes/Cyp9k1_haplotype_clustering.png}
-%	\caption{\footnotesize Haplotypes bearing the CNV allele Cyp9k1\_Dup10 in \textit{An. gambiae} and \textit{An. coluzzii} form a single cluster nested within other \textit{An. coluzzii} haplotypes, indicating that the haplotype is of \textit{ An. coluzzii} origin and thus that introgession of the allele was from \textit{An. coluzzii} to \textit{An. gambiae}. Haplotype clustering was performed using 500 SNPs around \textit{Cyp9k1}. The Cyp9k1\_Dup10 CNV allele was phased by identifying SNPs perfectly correlated with its presence / absence level. Full workings to reproduce this analysis can be found at \url{https://github.com/vigg-lstm/GAARD\_work/blob/main/CNV\_analysis/Cyp9k1\_Dup10\_haplotypes/Cyp9k1\_CNV\_haplotypes.ipynb}.}
-%	\label{FigS3}
-%\end{figure}
-%
-%
-%\clearpage
-%
-%\begin{figure}[h]
-%	\hspace{-0.3cm}\includegraphics*[width = 8.4cm]{../supplementary_implicated_regions/Avrankou_coluzzii_Delta_implicated_regions.png}
-%	\vskip 0.4cm
-%	\hspace{-0.3cm}\includegraphics*[width = 8.4cm]{../supplementary_implicated_regions/Baguida_gambiae_Delta_implicated_regions.png}
-%	\hspace{-0.3cm}\includegraphics*[width = 8.4cm]{../supplementary_implicated_regions/Baguida_gambiae_PM_implicated_regions.png}
-%	\vskip 0.4cm
-%	\hspace{-0.3cm}\includegraphics*[width = 8.4cm]{../supplementary_implicated_regions/Korle-Bu_coluzzii_Delta_implicated_regions.png}
-%	\hspace{-0.3cm}\includegraphics*[width = 8.4cm]{../supplementary_implicated_regions/Korle-Bu_coluzzii_PM_implicated_regions.png}
-%	\vskip 0.4cm
-%	\hspace{-0.3cm}\includegraphics*[width = 8.4cm]{../supplementary_implicated_regions/Madina_gambiae_Delta_implicated_regions.png}
-%	\hspace{-0.3cm}\includegraphics*[width = 8.4cm]{../supplementary_implicated_regions/Madina_gambiae_PM_implicated_regions.png}
-%	\vskip 0.4cm
-%	\hspace{-0.3cm}\includegraphics*[width = 8.4cm]{../supplementary_implicated_regions/Obuasi_gambiae_Delta_implicated_regions.png}
-%	\hspace{-0.3cm}\includegraphics*[width = 8.4cm]{../supplementary_implicated_regions/Obuasi_gambiae_PM_implicated_regions.png}
-%	\caption{\footnotesize Genomic regions implicated in insecticide resistance by each of our four approaches. For the global GWAS method, these are 100,000 bp windows which contained at least 10 of the top 1000 significant SNPs. For $F_{ST}$, these are significant peaks which contained at least one haplotype significantly positively associated with resistance (Supplementary Data S2). For $\Delta H_{12}$ and PBS, these are significant positive peaks (ie: indicating stronger signals of selection in resistant compared to susceptible samples). Regions are annotated with genes discussed in the manuscript as possibly causing the signal. Genomic distances in brackets indicate the distance of the peak either to the left (-) or right (+) of the gene in question.}
-%	\label{FigS4}
-%\end{figure}
-%
+\clearpage
+
+\begin{figure}[h]
+	\makebox{\includegraphics*[width = 17cm]{../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering.png}}
+	\vskip 0.4cm
+	\makebox{\includegraphics*[width = 17cm]{../../CNV_analysis/sweeps/Coeaexg_haplotype_clustering.png}}
+	\caption{\footnotesize Haplotype clustering using 500 SNPs around the \textit{Coeaexf} (top) and \textit{Coeaexg} (bottom) genomic regions. Haplotypes bearing the CNV allele \textit{Coeaexf}\_Dup2 represented a subset of haplotypes from the large swept cluster in \textit{Coeaexf}, whereas haplotypes with the CNV \textit{Coeaexg}\_Dup1 were closely associated with the large swept cluster in \textit{Coeaexg}. The CNV alleles were phased by identifying SNPs that were highly (\textit{Coeaexf}\_Dup2) or perfectly (\textit{Coeaexg}\_Dup1) correlated with their presence / absence level. Full workings to reproduce this analysis can be found at \url{https://github.com/vigg-lstm/GAARD\_east/blob/main/CNV\_analysis/sweeps}.}
+	\label{FigS4}
+\end{figure}
+
+
+\clearpage
+
+\begin{figure}[h]
+	\begin{center}
+		\makebox{\includegraphics*[width = 17cm]{../../kdr_origins/kdr_haplotype_clustering.png}}
+		\makebox{\includegraphics*[width = 17cm]{../../kdr_origins/kdr_haplotype_clustering_arabiensis.png}}
+		\makebox{\includegraphics*[width = 17cm]{../../kdr_origins/kdr_haplotype_clustering_arabiensis_reduced.png}}
+	\end{center}
+	\caption{\footnotesize Clustering of haplotypes around the \textit{Vgsc} genomic region (2L:xxx-xxx, as in clarkson ref) reveals a diversity of \textit{Vgsc}-995 origins in \textit{An. arabiensis}, none of which are introgressed from \textit{An. gambiae} or \textit{An. coluzzii}. Combining our data with all haplotypes from phase 3 of Ag1000G (top) shows \textit{An. arabiensis} haplotypes forming their own cluster, distinct from other species. When keeping only \textit{An. arabiensis} haplotypes (middle), three different \textit{Vgsc}-995F clusters are seen, despite only four such haplotypes exising in the dataset. The bottom plot shows all eight \textit{Vgsc}-995 mutant haplotypes (two from our Tanzanian data, six from phase3 samples from Burkina Faso) and a random sub-sample of wild-type \textit{An. arabiensis}, allowing a closer view of sample set labels for interpretation. The two Tanzanian \textit{Vgsc}-995F haplotypes appear to be independent origins, one of which clusters more closely with haplotypes from Burkina Faso than with other Tanzanian haplotypes. }
+	\label{FigS5}
+\end{figure}
+
+
+\clearpage
+
+\begin{figure}[h]
+	\hspace{2cm}\includegraphics*[width = 13cm]{../supplementary_implicated_regions/Moshi_arabiensis_Delta_implicated_regions.png}
+	\vskip 0.8cm
+	\hspace{2cm}\includegraphics*[width = 13cm]{../supplementary_implicated_regions/Moshi_arabiensis_PM_implicated_regions.png}
+	\vskip 0.8cm
+	\hspace{2cm}\includegraphics*[width = 13cm]{../supplementary_implicated_regions/Muleba_arabiensis_Delta_implicated_regions.png}
+	\caption{\footnotesize Genomic regions implicated in insecticide resistance by each of our four approaches. For the global GWAS method, these are 100,000 bp windows which contained at least 10 of the top 1000 significant SNPs. For $F_{ST}$, these are significant peaks which contained at least one haplotype significantly positively associated with resistance (Supplementary Data S2). For $\Delta H_{12}$ and PBS, these are significant positive peaks (ie: indicating stronger signals of selection in resistant compared to susceptible samples). Regions are annotated with genes discussed in the manuscript as possibly causing the signal. Genomic distances in brackets indicate the distance of the peak either to the left (-) or right (+) of the gene in question.}
+	\label{FigS6}
+\end{figure}
+
 %\clearpage
 %
 %\begin{figure}[h]
