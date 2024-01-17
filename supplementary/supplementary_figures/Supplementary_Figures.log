@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.2)  15 JAN 2024 08:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.2)  17 JAN 2024 10:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -274,7 +274,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip52
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 12.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 13.
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
@@ -284,23 +287,28 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 (./Supplementary_Figures.aux)
 \openout1 = `Supplementary_Figures.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 27
+.
 
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count193
@@ -354,7 +362,7 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box49
-Package hyperref Info: Link coloring ON on input line 26.
+Package hyperref Info: Link coloring ON on input line 27.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -366,115 +374,130 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count199
 )
-LaTeX Info: Redefining \ref on input line 26.
-LaTeX Info: Redefining \pageref on input line 26.
-LaTeX Info: Redefining \nameref on input line 26.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
 
 (./Supplementary_Figures.out) (./Supplementary_Figures.out)
 \@outlinefile=\write3
 \openout3 = `Supplementary_Figures.out'.
 
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 33.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<../../PCA/PCA.png, id=13, 903.375pt x 602.25pt>
+<odd_samples.png, id=13, 578.4009pt x 761.4849pt>
+File: odd_samples.png Graphic file (type png)
+<use odd_samples.png>
+Package pdftex.def Info: odd_samples.png  used on input line 54.
+(pdftex.def)             Requested size: 426.79134pt x 561.89815pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2 <./odd_samples.png>]
+<../../PCA/PCA.png, id=23, 903.375pt x 602.25pt>
 File: ../../PCA/PCA.png Graphic file (type png)
 <use ../../PCA/PCA.png>
-Package pdftex.def Info: ../../PCA/PCA.png  used on input line 53.
+Package pdftex.def Info: ../../PCA/PCA.png  used on input line 66.
 (pdftex.def)             Requested size: 426.79134pt x 284.52786pt.
-<../../PCA/PC_variance.png, id=16, 903.375pt x 401.5pt>
+<../../PCA/PC_variance.png, id=25, 903.375pt x 401.5pt>
 File: ../../PCA/PC_variance.png Graphic file (type png)
 <use ../../PCA/PC_variance.png>
-Package pdftex.def Info: ../../PCA/PC_variance.png  used on input line 55.
+Package pdftex.def Info: ../../PCA/PC_variance.png  used on input line 68.
 (pdftex.def)             Requested size: 426.79134pt x 189.68524pt.
- [2
+ [3
+
 
  <../../PCA/PCA.png> <../../PCA/PC_variance.png>]
-<../../selection_analysis/Moshi_H12.png, id=30, 469.755pt x 195.129pt>
+<../../selection_analysis/Moshi_H12.png, id=36, 469.755pt x 195.129pt>
 File: ../../selection_analysis/Moshi_H12.png Graphic file (type png)
 <use ../../selection_analysis/Moshi_H12.png>
 Package pdftex.def Info: ../../selection_analysis/Moshi_H12.png  used on input 
-line 67.
+line 80.
 (pdftex.def)             Requested size: 469.75386pt x 195.12851pt.
 
-Overfull \hbox (14.50978pt too wide) in paragraph at lines 67--68
+Overfull \hbox (14.50978pt too wide) in paragraph at lines 80--81
  [] 
  []
 
-<../../selection_analysis/Muleba_H12.png, id=32, 469.755pt x 195.129pt>
+<../../selection_analysis/Muleba_H12.png, id=38, 469.755pt x 195.129pt>
 File: ../../selection_analysis/Muleba_H12.png Graphic file (type png)
 <use ../../selection_analysis/Muleba_H12.png>
 Package pdftex.def Info: ../../selection_analysis/Muleba_H12.png  used on input
- line 69.
+ line 82.
 (pdftex.def)             Requested size: 469.75386pt x 195.12851pt.
 
-Overfull \hbox (14.50978pt too wide) in paragraph at lines 69--70
+Overfull \hbox (14.50978pt too wide) in paragraph at lines 82--83
  [][] 
  []
 
-<../../selection_analysis/Moshi_vs_Muleba_H1x.png, id=34, 469.755pt x 195.129pt
+<../../selection_analysis/Moshi_vs_Muleba_H1x.png, id=40, 469.755pt x 195.129pt
 >
 File: ../../selection_analysis/Moshi_vs_Muleba_H1x.png Graphic file (type png)
 <use ../../selection_analysis/Moshi_vs_Muleba_H1x.png>
 Package pdftex.def Info: ../../selection_analysis/Moshi_vs_Muleba_H1x.png  used
- on input line 71.
+ on input line 84.
 (pdftex.def)             Requested size: 469.75386pt x 195.12851pt.
 
-Overfull \hbox (14.50978pt too wide) in paragraph at lines 71--72
+Overfull \hbox (14.50978pt too wide) in paragraph at lines 84--85
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3 <../../selection_analysis/Moshi_H12.png (PNG copy)> <../../selection_analysi
+[4 <../../selection_analysis/Moshi_H12.png (PNG copy)> <../../selection_analysi
 s/Muleba_H12.png (PNG copy)> <../../selection_analysis/Moshi_vs_Muleba_H1x.png 
 (PNG copy)>]
-<../../CNV_analysis/Coeae_diagnostic_read_CNVs.png, id=44, 202.356pt x 57.816pt
+<../../CNV_analysis/Coeae_diagnostic_read_CNVs.png, id=50, 202.356pt x 57.816pt
 >
 File: ../../CNV_analysis/Coeae_diagnostic_read_CNVs.png Graphic file (type png)
 
 <use ../../CNV_analysis/Coeae_diagnostic_read_CNVs.png>
 Package pdftex.def Info: ../../CNV_analysis/Coeae_diagnostic_read_CNVs.png  use
-d on input line 83.
+d on input line 96.
 (pdftex.def)             Requested size: 202.3555pt x 57.81584pt.
-<../../CNV_analysis/Ace1_diagnostic_read_CNVs.png, id=46, 72.27pt x 50.589pt>
+<../../CNV_analysis/Ace1_diagnostic_read_CNVs.png, id=52, 72.27pt x 50.589pt>
 File: ../../CNV_analysis/Ace1_diagnostic_read_CNVs.png Graphic file (type png)
 <use ../../CNV_analysis/Ace1_diagnostic_read_CNVs.png>
 Package pdftex.def Info: ../../CNV_analysis/Ace1_diagnostic_read_CNVs.png  used
- on input line 85.
+ on input line 98.
 (pdftex.def)             Requested size: 72.2698pt x 50.58887pt.
-<../../CNV_analysis/Cyp6aap_diagnostic_read_CNVs.png, id=48, 180.675pt x 57.816
+<../../CNV_analysis/Cyp6aap_diagnostic_read_CNVs.png, id=54, 180.675pt x 57.816
 pt>
 File: ../../CNV_analysis/Cyp6aap_diagnostic_read_CNVs.png Graphic file (type pn
 g)
 <use ../../CNV_analysis/Cyp6aap_diagnostic_read_CNVs.png>
 Package pdftex.def Info: ../../CNV_analysis/Cyp6aap_diagnostic_read_CNVs.png  u
-sed on input line 87.
+sed on input line 100.
 (pdftex.def)             Requested size: 180.67455pt x 57.81584pt.
-<../../CNV_analysis/Cyp6mz_diagnostic_read_CNVs.png, id=50, 72.27pt x 57.816pt>
+<../../CNV_analysis/Cyp6mz_diagnostic_read_CNVs.png, id=56, 72.27pt x 57.816pt>
 
 File: ../../CNV_analysis/Cyp6mz_diagnostic_read_CNVs.png Graphic file (type png
 )
 <use ../../CNV_analysis/Cyp6mz_diagnostic_read_CNVs.png>
 Package pdftex.def Info: ../../CNV_analysis/Cyp6mz_diagnostic_read_CNVs.png  us
-ed on input line 89.
+ed on input line 102.
 (pdftex.def)             Requested size: 72.2698pt x 57.81584pt.
-<../../CNV_analysis/Gste_diagnostic_read_CNVs.png, id=52, 72.27pt x 57.816pt>
+<../../CNV_analysis/Gste_diagnostic_read_CNVs.png, id=58, 72.27pt x 57.816pt>
 File: ../../CNV_analysis/Gste_diagnostic_read_CNVs.png Graphic file (type png)
 <use ../../CNV_analysis/Gste_diagnostic_read_CNVs.png>
 Package pdftex.def Info: ../../CNV_analysis/Gste_diagnostic_read_CNVs.png  used
- on input line 91.
+ on input line 104.
 (pdftex.def)             Requested size: 72.2698pt x 57.81584pt.
-<../../CNV_analysis/Cyp9k1_diagnostic_read_CNVs.png, id=54, 108.405pt x 57.816p
+<../../CNV_analysis/Cyp9k1_diagnostic_read_CNVs.png, id=60, 108.405pt x 57.816p
 t>
 File: ../../CNV_analysis/Cyp9k1_diagnostic_read_CNVs.png Graphic file (type png
 )
 <use ../../CNV_analysis/Cyp9k1_diagnostic_read_CNVs.png>
 Package pdftex.def Info: ../../CNV_analysis/Cyp9k1_diagnostic_read_CNVs.png  us
-ed on input line 93.
+ed on input line 106.
 (pdftex.def)             Requested size: 108.40472pt x 57.81584pt.
- [4
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 108.
+ [5
 
 
  <../../CNV_analysis/Coeae_diagnostic_read_CNVs.png (PNG copy)> <../../CNV_anal
@@ -482,159 +505,154 @@ ysis/Ace1_diagnostic_read_CNVs.png (PNG copy)> <../../CNV_analysis/Cyp6aap_diag
 nostic_read_CNVs.png (PNG copy)> <../../CNV_analysis/Cyp6mz_diagnostic_read_CNV
 s.png (PNG copy)> <../../CNV_analysis/Gste_diagnostic_read_CNVs.png (PNG copy)>
  <../../CNV_analysis/Cyp9k1_diagnostic_read_CNVs.png (PNG copy)>]
-<../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering.png, id=68, 1084.05pt x
+<Supplementary_Figure_Cyp6_haplotypes.png, id=74, 397.0032pt x 158.7531pt>
+File: Supplementary_Figure_Cyp6_haplotypes.png Graphic file (type png)
+<use Supplementary_Figure_Cyp6_haplotypes.png>
+Package pdftex.def Info: Supplementary_Figure_Cyp6_haplotypes.png  used on inpu
+t line 115.
+(pdftex.def)             Requested size: 512.1496pt x 204.79718pt.
+
+Overfull \hbox (31.29822pt too wide) in paragraph at lines 115--116
+[] [] 
+ []
+
+<../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering.png, id=76, 1084.05pt x
  361.35pt>
 File: ../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering.png Graphic file (
 type png)
 <use ../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering.png>
 Package pdftex.def Info: ../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering
-.png  used on input line 102.
-(pdftex.def)             Requested size: 483.69684pt x 161.23306pt.
+.png  used on input line 117.
+(pdftex.def)             Requested size: 512.1496pt x 170.72223pt.
 
-Overfull \hbox (28.45276pt too wide) in paragraph at lines 102--103
-[][] 
- []
-
-<../../CNV_analysis/sweeps/Coeaexg_haplotype_clustering.png, id=70, 1084.05pt x
- 361.35pt>
-File: ../../CNV_analysis/sweeps/Coeaexg_haplotype_clustering.png Graphic file (
-type png)
-<use ../../CNV_analysis/sweeps/Coeaexg_haplotype_clustering.png>
-Package pdftex.def Info: ../../CNV_analysis/sweeps/Coeaexg_haplotype_clustering
-.png  used on input line 104.
-(pdftex.def)             Requested size: 483.69684pt x 161.23306pt.
-
-Overfull \hbox (28.45276pt too wide) in paragraph at lines 104--105
-[][] 
+Overfull \hbox (31.29822pt too wide) in paragraph at lines 117--119
+[] [] 
  []
 
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-05.
+19.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 105.
+(Font)              <7> on input line 119.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 105.
- [5
+(Font)              <5> on input line 119.
+ [6
 
- <../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering.png> <../../CNV_analys
-is/sweeps/Coeaexg_haplotype_clustering.png>]
-<../../kdr_origins/kdr_haplotype_clustering.png, id=85, 1084.05pt x 578.16pt>
+ <./Supplementary_Figure_Cyp6_haplotypes.png> <../../CNV_analysis/sweeps/Coeaex
+f_haplotype_clustering.png>]
+<../../kdr_origins/kdr_haplotype_clustering.png, id=90, 1084.05pt x 433.62pt>
 File: ../../kdr_origins/kdr_haplotype_clustering.png Graphic file (type png)
 <use ../../kdr_origins/kdr_haplotype_clustering.png>
 Package pdftex.def Info: ../../kdr_origins/kdr_haplotype_clustering.png  used o
-n input line 114.
-(pdftex.def)             Requested size: 483.69684pt x 257.97292pt.
-<../../kdr_origins/kdr_haplotype_clustering_arabiensis.png, id=87, 1084.05pt x 
-578.16pt>
+n input line 129.
+(pdftex.def)             Requested size: 483.69684pt x 193.47969pt.
+<../../kdr_origins/kdr_haplotype_clustering_arabiensis.png, id=92, 1084.05pt x 
+433.62pt>
 File: ../../kdr_origins/kdr_haplotype_clustering_arabiensis.png Graphic file (t
 ype png)
 <use ../../kdr_origins/kdr_haplotype_clustering_arabiensis.png>
 Package pdftex.def Info: ../../kdr_origins/kdr_haplotype_clustering_arabiensis.
-png  used on input line 115.
-(pdftex.def)             Requested size: 483.69684pt x 257.97292pt.
-<../../kdr_origins/kdr_haplotype_clustering_arabiensis_reduced.png, id=89, 1084
-.05pt x 578.16pt>
+png  used on input line 130.
+(pdftex.def)             Requested size: 483.69684pt x 193.47969pt.
+<../../kdr_origins/kdr_haplotype_clustering_arabiensis_reduced.png, id=94, 1084
+.05pt x 433.62pt>
 File: ../../kdr_origins/kdr_haplotype_clustering_arabiensis_reduced.png Graphic
  file (type png)
 <use ../../kdr_origins/kdr_haplotype_clustering_arabiensis_reduced.png>
 Package pdftex.def Info: ../../kdr_origins/kdr_haplotype_clustering_arabiensis_
-reduced.png  used on input line 116.
-(pdftex.def)             Requested size: 483.69684pt x 257.97292pt.
+reduced.png  used on input line 131.
+(pdftex.def)             Requested size: 483.69684pt x 193.47969pt.
 
-Overfull \hbox (28.45276pt too wide) in paragraph at lines 114--117
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 129--132
  [] 
  []
 
 
-Overfull \hbox (28.45276pt too wide) in paragraph at lines 114--117
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 129--132
  [] 
  []
 
 
-Overfull \hbox (28.45276pt too wide) in paragraph at lines 114--117
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 129--132
  [] 
  []
-
-
-LaTeX Warning: Float too large for page by 189.8029pt on input line 120.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6 <../../kdr_origins/kdr_haplotype_clustering.png> <../../kdr_origins/kdr_hapl
+[7 <../../kdr_origins/kdr_haplotype_clustering.png> <../../kdr_origins/kdr_hapl
 otype_clustering_arabiensis.png> <../../kdr_origins/kdr_haplotype_clustering_ar
 abiensis_reduced.png>]
 <../supplementary_implicated_regions/Moshi_arabiensis_Delta_implicated_regions.
-png, id=102, 650.43pt x 325.215pt>
+png, id=108, 650.43pt x 325.215pt>
 File: ../supplementary_implicated_regions/Moshi_arabiensis_Delta_implicated_reg
 ions.png Graphic file (type png)
 <use ../supplementary_implicated_regions/Moshi_arabiensis_Delta_implicated_regi
 ons.png>
 Package pdftex.def Info: ../supplementary_implicated_regions/Moshi_arabiensis_D
-elta_implicated_regions.png  used on input line 126.
+elta_implicated_regions.png  used on input line 141.
 (pdftex.def)             Requested size: 369.88582pt x 184.94771pt.
 <../supplementary_implicated_regions/Moshi_arabiensis_PM_implicated_regions.png
-, id=104, 650.43pt x 325.215pt>
+, id=110, 650.43pt x 325.215pt>
 File: ../supplementary_implicated_regions/Moshi_arabiensis_PM_implicated_region
 s.png Graphic file (type png)
 <use ../supplementary_implicated_regions/Moshi_arabiensis_PM_implicated_regions
 .png>
 Package pdftex.def Info: ../supplementary_implicated_regions/Moshi_arabiensis_P
-M_implicated_regions.png  used on input line 128.
+M_implicated_regions.png  used on input line 143.
 (pdftex.def)             Requested size: 369.88582pt x 184.94771pt.
 <../supplementary_implicated_regions/Muleba_arabiensis_Delta_implicated_regions
-.png, id=106, 650.43pt x 325.215pt>
+.png, id=112, 650.43pt x 325.215pt>
 File: ../supplementary_implicated_regions/Muleba_arabiensis_Delta_implicated_re
 gions.png Graphic file (type png)
 <use ../supplementary_implicated_regions/Muleba_arabiensis_Delta_implicated_reg
 ions.png>
 Package pdftex.def Info: ../supplementary_implicated_regions/Muleba_arabiensis_
-Delta_implicated_regions.png  used on input line 130.
+Delta_implicated_regions.png  used on input line 145.
 (pdftex.def)             Requested size: 369.88582pt x 184.94771pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 219.
-[7 <../supplementary_implicated_regions/Moshi_arabiensis_Delta_implicated_regio
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 234.
+[8 <../supplementary_implicated_regions/Moshi_arabiensis_Delta_implicated_regio
 ns.png (PNG copy)> <../supplementary_implicated_regions/Moshi_arabiensis_PM_imp
 licated_regions.png (PNG copy)> <../supplementary_implicated_regions/Muleba_ara
 biensis_Delta_implicated_regions.png (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 219.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 234.
  (./Supplementary_Figures.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 219.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 219.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 234.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 234.
 Package rerunfilecheck Info: File `Supplementary_Figures.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 219.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 234.
  ) 
 Here is how much of TeX's memory you used:
- 7679 strings out of 483183
- 122797 string characters out of 5966293
- 380130 words of memory out of 5000000
- 22543 multiletter control sequences out of 15000+600000
- 539735 words of font info for 35 fonts, out of 8000000 for 9000
+ 7755 strings out of 483183
+ 123820 string characters out of 5966293
+ 383733 words of memory out of 5000000
+ 22605 multiletter control sequences out of 15000+600000
+ 559814 words of font info for 45 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,7n,42p,1279b,610s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,7n,42p,1556b,610s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600p
-k> </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600p
-k> </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600p
-k> </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600p
-k> </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600p
-k> </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600p
-k> </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1728.600p
-k> </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600p
-k></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-Output written on Supplementary_Figures.pdf (7 pages, 1849945 bytes).
+k>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uh
+vbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Supplementary_Figures.pdf (8 pages, 2161024 bytes).
 PDF statistics:
- 393 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
- 15 named destinations out of 1000 (max. 500000)
- 210 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 192 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

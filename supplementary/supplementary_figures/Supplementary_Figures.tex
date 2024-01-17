@@ -9,6 +9,7 @@
 \usepackage[a4paper, top = 2cm, bottom = 2cm]{geometry}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{hyperref}
+\usepackage{helvet}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
 
 \title{Supplementary Figures.}
@@ -18,7 +19,7 @@
 \setlength{\textwidth}{16cm}
 
 
-
+\renewcommand{\familydefault}{\sfdefault}
 \renewcommand{\figurename}{\textbf{Fig.}}
 \renewcommand{\thefigure}{\textbf{S\arabic{figure}}}
 \renewcommand{\thetable}{\textbf{S\arabic{table}}}
@@ -50,12 +51,24 @@
 
 \begin{figure}[h]
 	\begin{center}
+		\includegraphics*[width = 15cm]{odd_samples.png}
+		\caption{\footnotesize \textbf{A} Histogram (zoomed in on the x axis to show right-hand tail) of all pair-wise KING relatedness values across all samples in our dataset. Four samples had universally high relatedness values to all samples. The relatedness values attributables to these four samples have been respectively coloured in pink, yellow, green and red on the histogram. \textbf{B} Histogram of heterozygosity values across all samples, showing that the same four samples (coloured and indicated with arrows) have elevated heterozygosity. As a result, these four samples had aritificially augmented KING values.}
+	\end{center}
+	\label{FigS1}
+\end{figure}
+
+
+\clearpage
+
+
+\begin{figure}[h]
+	\begin{center}
 		\makebox{\includegraphics*[width = 15cm]{../../PCA/PCA.png}}
 		\vskip 0.4cm
 		\makebox{\includegraphics*[width = 15cm]{../../PCA/PC_variance.png}}
 	\caption{\footnotesize PCA (using quality-filtered biallelic SNPs from genomic region 3L:15,000,000-41,000,000, euchromatic and free of chromosomal inverstions). Top panel shows clustering of samples by region. Bottom panel show variance explained by the first 10 PCs, indicating that PCs 3 onwards explain similar levels of variance and are thus likely only capturing noise.}
 	\end{center}
-	\label{FigS1}
+	\label{FigS2}
 \end{figure}
 
 
@@ -71,7 +84,7 @@
 		\makebox{\includegraphics*{../../selection_analysis/Moshi_vs_Muleba_H1x.png}}
 	\end{center}
 	\caption{\footnotesize Selection scans showing genome-wide H12 signal in Moshi (top) and Muleba (middle), as well as shared signals of selection (H1x) between the two sites (bottom).}
-	\label{FigS2}
+	\label{FigS3}
 \end{figure}
 
 
@@ -93,19 +106,21 @@
 		\makebox{\includegraphics*{../../CNV_analysis/Cyp9k1_diagnostic_read_CNVs.png}}
 	\end{center}
 	\caption{\footnotesize Frequency (proportion of samples carrying at least one copy) of known CNV alleles detected using diagnostic reads around the \textit{Coeaexf} cluster, the \textit{Coeaexg} cluster (combined into a single subfigure), \textit{Ace1}, the \textit{Cyp6aa / Cyp6p} cluster, the \textit{Cyp6m / Cyp6z} cluster, the \textit{Gste} cluster and \textit{Cyp9k1}. Only CNV alleles with frequency > 0\% are shown. Cell darkness provided as a visual aid for the magnitude of the value in each cell. The genomic coordinates of each CNV allele can be found in Supplementary Data S@. In each cluster, the ``Dup0'' column indicates the presence of increased copy number in any of the genes in the cluster. Where this is larger than the sum of known alleles, it suggests the presence of uncharacterised CNV alleles. ``Del'' alleles in Ace1 represent secondary deletions within the Ace1-Dup1 CNV.}
-	\label{FigS3}
+	\label{FigS4}
 \end{figure}
 
 \clearpage
 
 \begin{figure}[h]
-	\makebox{\includegraphics*[width = 17cm]{../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering.png}}
+	\hspace{-0.9cm}\makebox{\includegraphics*[width = 18cm]{Supplementary_Figure_Cyp6_haplotypes.png}}
 	\vskip 0.4cm
-	\makebox{\includegraphics*[width = 17cm]{../../CNV_analysis/sweeps/Coeaexg_haplotype_clustering.png}}
-	\caption{\footnotesize Haplotype clustering using 500 SNPs around the \textit{Coeaexf} (top) and \textit{Coeaexg} (bottom) genomic regions. Haplotypes bearing the CNV allele \textit{Coeaexf}\_Dup2 represented a subset of haplotypes from the large swept cluster in \textit{Coeaexf}, whereas haplotypes with the CNV \textit{Coeaexg}\_Dup1 were closely associated with the large swept cluster in \textit{Coeaexg}. The CNV alleles were phased by identifying SNPs that were highly (\textit{Coeaexf}\_Dup2) or perfectly (\textit{Coeaexg}\_Dup1) correlated with their presence / absence level. Full workings to reproduce this analysis can be found at \url{https://github.com/vigg-lstm/GAARD\_east/blob/main/CNV\_analysis/sweeps}.}
-	\label{FigS4}
+	\hspace{-0.9cm}\makebox{\includegraphics*[width = 18cm]{../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering.png}}
+	%\makebox{\includegraphics*[width = 17cm]{../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering.png}}
+	\caption{\footnotesize Haplotype clustering of the genomic region around \textit{Cyp6aa/Cyp6p} (top panel) showing that nearly all haplotypes belong to one of two selective sweeps. The less common cluster (cluster2) is predominantly found in Muleba and is not associated with CNVs. The more common cluster (cluster1), is found in both regions. Both \textit{Cyp6aap}\_Dup31 and \textit{Cyp6aap}\_Dup33 form a subset of haplotypes in cluster1. For \textit{Cyp6aap}\_Dup33, it was possible to assign presence (mauve) or absence (grey) of the CNV for each haplotype. For \textit{Cyp6aap}\_Dup31, it was only possible to determine whether the mosquito to which the haplotype belongs had a single extra copy (yellow), two (purple) or none (grey). A single extra copy indicates the sample is heterozygous for the CNV, and thus haplotypes labelled in yellow may not themselves carry the CNV. Similarly, in the \textit{Coeaexf} region (bottom panel), haplotypes bearing the CNV allele \textit{Coeaexf}\_Dup2 represented a subset of haplotypes from a large swept cluster. Clustering was performed using 500 SNPs in each region, and CNV alleles were phased by identifying SNPs that were highly correlated with their presence / absence.. Full workings to reproduce this analysis can be found at \url{https://github.com/vigg-lstm/GAARD\_east/blob/main/CNV\_analysis/sweeps}.}
+	\label{FigS5}
 \end{figure}
 
+ 
 
 \clearpage
 
@@ -116,7 +131,7 @@
 		\makebox{\includegraphics*[width = 17cm]{../../kdr_origins/kdr_haplotype_clustering_arabiensis_reduced.png}}
 	\end{center}
 	\caption{\footnotesize Clustering of haplotypes around the \textit{Vgsc} genomic region (2L:xxx-xxx, as in clarkson ref) reveals a diversity of \textit{Vgsc}-995 origins in \textit{An. arabiensis}, none of which are introgressed from \textit{An. gambiae} or \textit{An. coluzzii}. Combining our data with all haplotypes from phase 3 of Ag1000G (top) shows \textit{An. arabiensis} haplotypes forming their own cluster, distinct from other species. When keeping only \textit{An. arabiensis} haplotypes (middle), three different \textit{Vgsc}-995F clusters are seen, despite only four such haplotypes exising in the dataset. The bottom plot shows all eight \textit{Vgsc}-995 mutant haplotypes (two from our Tanzanian data, six from phase3 samples from Burkina Faso) and a random sub-sample of wild-type \textit{An. arabiensis}, allowing a closer view of sample set labels for interpretation. The two Tanzanian \textit{Vgsc}-995F haplotypes appear to be independent origins, one of which clusters more closely with haplotypes from Burkina Faso than with other Tanzanian haplotypes. }
-	\label{FigS5}
+	\label{FigS6}
 \end{figure}
 
 
@@ -129,7 +144,7 @@
 	\vskip 0.8cm
 	\hspace{2cm}\includegraphics*[width = 13cm]{../supplementary_implicated_regions/Muleba_arabiensis_Delta_implicated_regions.png}
 	\caption{\footnotesize Genomic regions implicated in insecticide resistance by each of our four approaches. For the global GWAS method, these are 100,000 bp windows which contained at least 10 of the top 1000 significant SNPs. For $F_{ST}$, these are significant peaks which contained at least one haplotype significantly positively associated with resistance (Supplementary Data S2). For $\Delta H_{12}$ and PBS, these are significant positive peaks (ie: indicating stronger signals of selection in resistant compared to susceptible samples). Regions are annotated with genes discussed in the manuscript as possibly causing the signal. Genomic distances in brackets indicate the distance of the peak either to the left (-) or right (+) of the gene in question.}
-	\label{FigS6}
+	\label{FigS7}
 \end{figure}
 
 %\clearpage
