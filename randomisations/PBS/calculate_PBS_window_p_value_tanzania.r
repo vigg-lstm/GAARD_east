@@ -132,7 +132,7 @@ plot.pbs <- function(pbs.table,
 	
 	# Now plot all chromosomes with, the position of each of the four detox gene regions and Ace1
 	par(mar = c(1,4,0,2), mgp = c(2, 0.7, 0)) 
-	add.chromosomes(chrom.sizes, gaps = gaps, gene.cex = 0.7, point.cex = 1, chrom.offset = -1.2, chrom.cex = 1.2)
+	add.chromosomes(gaps = gaps, chrom.sizes, gene.cex = 0.7, point.cex = 1, chrom.offset = -1.2, chrom.cex = 1.2)
 	
 	if (!missing(filename))
 		dev.off()
