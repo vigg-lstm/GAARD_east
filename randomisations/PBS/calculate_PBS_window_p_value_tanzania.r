@@ -94,8 +94,8 @@ plot.pbs <- function(pbs.table,
 	ce <- cumsum(chrom.sizes + c(0, 0, gaps, 0, gaps))
 	cs <- ce - chrom.sizes
 	layout(matrix(c(rep(1,4),rep(2,1)), nrow = 5, ncol = 1))
-	colours <- c(pbs = lighten.col('royalblue1', 0.8),
-                 randomisations = lighten.col('grey50', 0.2))
+	colours <- c(pbs = lighten.col('royalblue1', alpha = 0.8),
+                 randomisations = lighten.col('grey50', alpha = 0.2))
 	par(mar = c(0,4,1,2), mgp = c(2, 0.7, 0), family = 'Arial', xpd = NA) 
 	num.randomisations <- ifelse(is.null(num.randomisations), 
 	                             length(randomisation.ids),

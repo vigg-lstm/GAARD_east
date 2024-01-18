@@ -1,5 +1,5 @@
 # A function to lighten the tone of the colour
-lighten.col <- function(color, lightness, alpha = alpha){
+lighten.col <- function(color, lightness = 1, alpha = alpha){
 	col.rgb <- col2rgb(color)/255
 	rgb(t(1-(1-col.rgb)*lightness), alpha = alpha)
 }
