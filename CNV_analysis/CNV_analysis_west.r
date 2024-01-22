@@ -130,7 +130,7 @@ population.modal.CNVs <- aggregate(modal.CNV.table[, -c('sample.id')],
 )
 
 detox.genes <- c(paste('Coeae', 1:2, 'f', sep = ''),
-                 paste('Coeae', c(2,3,5,6), 'g', sep = ''),
+                 paste('Coeae', c(2,3,5,6,7), 'g', sep = ''),
                  'Ace1',
                  paste('Cyp6aa', 1:2, sep = ''),
                  paste('Cyp6p', 1:5, sep = ''),
