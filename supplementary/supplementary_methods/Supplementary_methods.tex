@@ -1,0 +1,96 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{graphicx}
+\usepackage[small]{caption}
+\usepackage{subcaption}
+\captionsetup[subfigure]{labelformat=simple, font={bf,small}, skip=1pt, margin=-0.7cm, singlelinecheck=false, margin={3pt,3pt}}
+\usepackage{tabularx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage[outdir=./]{epstopdf}
+\usepackage[a4paper, top = 2cm, bottom = 2cm]{geometry}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+
+\usepackage[style=authoryear,backend=biber,firstinits=true,doi=false,url=false,sorting=nyt]{biblatex}
+% This removes quotes from bibliography entry titles
+\DeclareFieldFormat[article, inbook]{title}{#1} 
+% This stops the bibliography from writing ``In'' before the name of the journal
+\renewbibmacro{in:}{}
+%-- no punctuation after volume
+\DeclareFieldFormat[article]
+{volume}{{#1}} 
+%-- puts number/issue between brackets
+\DeclareFieldFormat[article, inbook, incollection, inproceedings, misc, thesis, unpublished]
+{number}{(#1)} 
+%-- and then for articles directly the pages w/o any "pages" or "pp." 
+\DeclareFieldFormat[article]
+{pages}{#1}
+%-- for some types replace "pages" by "p."
+\DeclareFieldFormat[inproceedings, incollection, inbook]
+{pages}{p. #1}
+%-- format 16(4):224--225 for articles
+\renewbibmacro*{volume+number+eid}{
+  \printfield{volume}\printfield{number}
+  \printunit{\addcolon}
+}
+
+\addbibresource{refs.bib}
+
+\title{Supplementary methods.}
+
+
+\setlength{\oddsidemargin}{-0cm}
+\setlength{\textwidth}{16cm}
+
+\newcommand{\fst}{F\textsubscript{ST}}
+
+\renewcommand{\figurename}{\textbf{Fig.}}
+\renewcommand{\thefigure}{\textbf{M\arabic{figure}}}
+\renewcommand{\tablename}{\textbf{Table}}
+\renewcommand{\thetable}{\textbf{M\arabic{table}}}
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+\begin{document}
+
+\onehalfspacing
+
+\begin{center}
+	\Large
+	\noindent \textbf{Copy number variants underlie the major selective sweeps in insecticide resistance genes in \textit{Anopheles arabiensis} from Tanzania.}
+
+	\normalsize
+
+	\vskip 3cm
+
+\end{center}
+
+\noindent Eric R. Lucas, Sanjay C. Nagi, Bilali Kabula, Arjen E. Van’t Hof, Emily J. Rippon, Dimitra Pipini, Nicholas J. Harding, Naomi A. Dyer, Chris S. Clarkson, Alistair Miles, Martin J. Donnelly, David Weetman
+ 
+\vskip 2cm 
+
+
+\section*{Electronic Supplementary Material \\ Supplementary methods}
+
+\clearpage
+
+\subsection{Choice of kinship treshold}
+
+We calculated pairwise kinship between all samples using the KING statistic \parencite{Man10} implemented in NGSRelate \parencite{Kor15} using SNP data across the whole genome after masking inversions. Results indicated a positive bias in kinship, with the mode of the distribution above 0 (Fig. \ref{FigM1}). Because of this positive bias in kinship values, we sought to empirically establish the most parsimonious threshold to identify full siblings in our data, instead of the threshold of 0.177 suggested in the manual (\url{https://www.kingrelatedness.com/manual.shtml}). For all possible threshhold between 0.15 and 0.35, in increments of 0.005, we identified all full siblings and counted the proportion of full sib groups that contained inconsistencies (where siblings of siblings were not themselves classed as siblings). We chose the threshold 0.185 as the most stringent threshold that did not result in incomplete sib groups (where two individuals are both sibs of a third individual, but not sibs of each-other). 
+
+\begin{figure}[h]
+	\hspace*{-1cm}
+	\includegraphics*[width = 7in]{../../NGSrelate/full_relatedness_tanzania/king_histogram.png}
+	\caption{\footnotesize Histograms of kinship values (KING scores, expected score between full sibs = 0.25, expected score between unrelated individuals = 0) across all sample pairs.}
+	\label{FigM1}
+\end{figure}
+
+\clearpage
+
+
+\printbibliography
+
+\end{document}
