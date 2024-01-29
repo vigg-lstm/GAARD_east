@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.2)  29 JAN 2024 11:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.2)  29 JAN 2024 11:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -626,9 +626,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
 [9 <../supplementary_implicated_regions/Moshi_arabiensis_Delta_implicated_regio
-ns.png> <../supplementary_implicated_regions/Moshi_arabiensis_PM_implicated_reg
-ions.png (PNG copy)> <../supplementary_implicated_regions/Muleba_arabiensis_Del
-ta_implicated_regions.png (PNG copy)>]
+ns.png (PNG copy)> <../supplementary_implicated_regions/Moshi_arabiensis_PM_imp
+licated_regions.png (PNG copy)> <../supplementary_implicated_regions/Muleba_ara
+biensis_Delta_implicated_regions.png (PNG copy)>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
  (./Supplementary_Figures.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
@@ -654,9 +654,9 @@ ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uh
 vbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Supplementary_Figures.pdf (9 pages, 1718250 bytes).
+Output written on Supplementary_Figures.pdf (9 pages, 1894189 bytes).
 PDF statistics:
- 247 PDF objects out of 1000 (max. 8388607)
+ 246 PDF objects out of 1000 (max. 8388607)
  132 compressed objects within 2 object streams
  19 named destinations out of 1000 (max. 500000)
  232 words of extra memory for PDF output out of 10000 (max. 10000000)
