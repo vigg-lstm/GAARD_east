@@ -35,6 +35,8 @@ target.CNV.table <- lapply(unique(study.ids.table$study_id), load.target.cnv.tab
 Dup.names <- grep('_D[upel]{2}', colnames(target.CNV.table), value = T)
 Dup.families <- sub('_.*', '', Dup.names)
 Dup.clusters <- split(Dup.names, Dup.families)
+# Rearrange the Dup.clusters in chromosomal order
+Dup.clusters <- Dup.clusters[c('Ace1', 'Cyp6aap', 'Coeaexf', 'Coeaexg', 'Cyp6mz', 'Gstue', 'Cyp9k1')]
 
 known.Dups <- Dup.names[!grepl('Dup0', Dup.names)]
 sample.names <- target.CNV.table$sample.id
@@ -133,14 +135,14 @@ population.modal.CNVs <- aggregate(modal.CNV.table[, -c('sample.id')],
 )
 
 detox.genes <- c('Ace1',
-                 paste('Coeae', 1:2, 'f', sep = ''),
-                 'Coeaexg',
                  paste('Cyp6aa', 1:2, sep = ''),
                  paste('Cyp6p', 1:5, sep = ''),
+                 'Gstd3',
+                 paste('Coeae', 1:2, 'f', sep = ''),
+                 'Coeaexg',
                  paste('Cyp6m', 2:4, sep = ''),
                  paste('Cyp6z', 1:3, sep = ''),
                  paste('Gste', 1:8, sep = ''),
-                 'Gstd3',
                  'Cyp9k1')
 
 # Get the names of the detox genes
@@ -184,7 +186,7 @@ signif2 <- function(x, digits, threshold = 0.1){
 }
 
 target.contable <- function(Dups, include.highvar = T, shrink = T, include.plot = T, 
-                            add.sample.size = F, star.small.samples = T, 
+                            add.sample.size = F, star.small.samples = T, include.species.name = T,
                             species.colours = c(coluzzii = 'coral3', gambiae = 'dodgerblue3', arabiensis = 'limegreen'), 
                             text.cell.cex = 0.65, pop.cex = 0.5, dup.cex = 0.5, ...){
 	if (include.highvar)
@@ -251,13 +253,17 @@ target.contable <- function(Dups, include.highvar = T, shrink = T, include.plot 
 		country.names <- sub('\\.[^.]*$', '', rownames(output.table))
 		species <- sub('.*\\.', '', rownames(output.table))
 		rect(x.matrix[1,1]-1, 1 - y.matrix, par('usr')[1] - (par('usr')[2] - par('usr')[1]), -y.matrix, col = sapply(species.colours[species], lighten.col, 0.4), border = NA, xpd = NA)
-		text(x.matrix[1,1]-1, 0.5 - y.matrix[,1], paste(country.names, '  \n', species, '  ', sep = ''), adj = 1, cex = pop.cex, xpd = NA)
+		if (include.species.name)
+			pop.name <- paste(country.names, '  \n', species, '  ', sep = '')
+		else
+			pop.name <- paste(country.names, ' ')
+		text(x.matrix[1,1]-1, 0.5 - y.matrix[,1], pop.name, adj = 1, cex = pop.cex, xpd = NA, font = 2)
 	}
 	invisible(output.table)
 }
 
 modal.contable <- function(genes, shrink = T, include.plot = T, add.sample.size = F, 
-                           star.small.samples = T, use.agaps = F, 
+                           star.small.samples = T, use.agaps = F, include.species.name = T,
                            species.colours = c(coluzzii = 'coral3', gambiae = 'dodgerblue3', arabiensis = 'limegreen'), 
                            text.cell.cex = 0.65, pop.cex = 0.5, gene.cex = 0.5, ...){
 	cnvs.by.population <- population.modal.CNVs
@@ -340,7 +346,11 @@ modal.contable <- function(genes, shrink = T, include.plot = T, add.sample.size 
 		country.names <- sub('\\.[^.]*$', '', rownames(output.table))
 		species <- sub('.*\\.', '', rownames(output.table))
 		rect(x.matrix[1,1]-1, 1 - y.matrix, par('usr')[1] - (par('usr')[2] - par('usr')[1])/5, -y.matrix, col = sapply(species.colours[species], lighten.col, 0.4), border = NA, xpd = NA)
-		text(x.matrix[1,1]-1, 0.5 - y.matrix[,1], paste(country.names, '  \n', species, '  ', sep = ''), adj = 1, cex = pop.cex, xpd = NA)
+		if (include.species.name)
+			pop.name <- paste(country.names, '  \n', species, '  ', sep = '')
+		else
+			pop.name <- paste(country.names, ' ')
+		text(x.matrix[1,1]-1, 0.5 - y.matrix[,1], pop.name, adj = 1, cex = pop.cex, xpd = NA, font = 2)
 	}
 	invisible(output.table)
 }
@@ -353,23 +363,35 @@ contable <- function(x, ...){
 		modal.contable(x, ...)
 }
 
-png('detox_gene_modal_CNVs.png', width = 4.5, height = 0.7, units = 'in', res = 300)
+png('detox_gene_modal_CNVs.png', width = 4, height = 0.5, units = 'in', res = 300)
 par(family = 'Arial')
 contable(detox.genes, shrink = F,
          text.cell.cex = 0.35,
          pop.cex = 0.35,
          gene.cex = 0.35,
-         mai = c(0,0.15,0.2,0)
+         mai = c(0,0.1,0.2,0),
+		 include.species.name = F
 )
 dev.off()
 
 # And a pdf version 
-pdf('detox_gene_modal_CNVs.pdf', width = 4.5, height = 0.7)
+pdf('detox_gene_modal_CNVs.pdf', width = 4, height = 0.5)
 contable(detox.genes, shrink = F,
          text.cell.cex = 0.35,
          pop.cex = 0.35,
          gene.cex = 0.35,
-         mai = c(0,0.15,0.2,0)
+         mai = c(0,0.1,0.2,0),
+		 include.species.name = F
+)
+dev.off()
+
+pdf('All_diagnostic_read_CNVs.pdf', width = 3.9, height = 0.6)
+target.contable(do.call(c, Dup.clusters), 
+                text.cell.cex = 0.35,
+                pop.cex = 0.3,
+                dup.cex = 0.3,
+                mai = c(0,0.09,0.33,0.10),
+                include.species.name = F
 )
 dev.off()
 

@@ -1,7 +1,12 @@
-# A function to lighten the tone of the colour
+# A function to lighten the tone of the colour. Either "color" or "lightness" can be a vector, but not both.
 lighten.col <- function(color, lightness = 1, alpha = alpha){
+	if (length(color) > 1 & length(lightness) > 1)
+		stop('At least one of "color" and "lightness" must be of length 1')
 	col.rgb <- col2rgb(color)/255
-	rgb(t(1-(1-col.rgb)*lightness), alpha = alpha)
+	if (length(lightness) == 1)
+		return(rgb(t(1-(1-col.rgb)*lightness), alpha = alpha))
+	else
+		return(rgb(t(1-(1-col.rgb) %*% lightness), alpha = alpha))
 }
 
 # Write a function to draw the chromosomes on an existing plotting device
