@@ -107,19 +107,15 @@
 
 \begin{figure}[h]
 	\begin{center}
-		\makebox{\includegraphics*{../../CNV_analysis/Coeae_diagnostic_read_CNVs.png}}
-		\vskip 0.4cm
-		\makebox{\includegraphics*{../../CNV_analysis/Ace1_diagnostic_read_CNVs.png}}
-		\vskip 0.4cm
-		\makebox{\includegraphics*{../../CNV_analysis/Cyp6aap_diagnostic_read_CNVs.png}}
-		\vskip 0.4cm
-		\makebox{\includegraphics*{../../CNV_analysis/Cyp6mz_diagnostic_read_CNVs.png}}
-		\vskip 0.4cm
-		\makebox{\includegraphics*{../../CNV_analysis/Gste_diagnostic_read_CNVs.png}}
-		\vskip 0.4cm
-		\makebox{\includegraphics*{../../CNV_analysis/Cyp9k1_diagnostic_read_CNVs.png}}
+		\makebox{\includegraphics*{All_diagnostic_read_CNVs.pdf}}
+		\vskip 1cm
+		\makebox{\includegraphics*[width = 15cm]{../../CNV_analysis/new_cyp6_cnvs.pdf}}
+		\vskip 1cm
+		\makebox{\includegraphics*[width = 15cm]{../../CNV_analysis/new_coef_cnvs.pdf}}
+		\vskip 1cm
+		\makebox{\includegraphics*[width = 15cm]{../../CNV_analysis/new_coeg_cnvs.pdf}}
 	\end{center}
-	\caption{\footnotesize Frequency (proportion of samples carrying at least one copy) of known CNV alleles detected using diagnostic reads around the \textit{Coeaexf} cluster, the \textit{Coeaexg} cluster (combined into a single subfigure), \textit{Ace1}, the \textit{Cyp6aa / Cyp6p} cluster, the \textit{Cyp6m / Cyp6z} cluster, the \textit{Gste} cluster and \textit{Cyp9k1}. Only CNV alleles with frequency > 0\% are shown. Cell darkness provided as a visual aid for the magnitude of the value in each cell. The genomic coordinates of each CNV allele can be found in Supplementary Data S@. In each cluster, the ``Dup0'' column indicates the presence of increased copy number in any of the genes in the cluster. Where this is larger than the sum of known alleles, it suggests the presence of uncharacterised CNV alleles. ``Del'' alleles in Ace1 represent secondary deletions within the Ace1-Dup1 CNV.}
+	\caption{\footnotesize \textbf{Top panel}: Frequency (proportion of samples carrying at least one copy) of known CNV alleles detected using diagnostic reads around \textit{Ace1}, the \textit{Cyp6aa / Cyp6p} cluster, \textit{Gstd3}, the \textit{Coeaexf} cluster, the \textit{Coeaexg} cluster, the \textit{Cyp6m / Cyp6z} cluster, the \textit{Gste} cluster and \textit{Cyp9k1}. Only CNV alleles with frequency > 0\% are shown. Cell darkness provided as a visual aid for the magnitude of the value in each cell. \textbf{Bottom three panels}: genomic ranges of newly characterised CNV alleles, with genes previously shown to be important in resistance highlighed in colour. The precise genomic coordinates of each CNV allele can be found in Supplementary Data S2. The CNV in \textit{Coezexg} in West African \textit{An. coluzzii} is not shown as its start and end points are unknown.}
 	\label{FigS5}
 \end{figure}
 
@@ -143,7 +139,7 @@
 
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics*[width = 15cm]{../../CNV_analysis/CNV_example_plots/example_plots_modified.pdf}
+		\includegraphics*[width = 15cm]{../../CNV_analysis/CNV_extra_plots/example_plots_modified.pdf}
 		\caption{\footnotesize Example coverage traces for CNVs in \textit{Coeaexg}. Grey points show raw coverage (in 300 bp windows) normalised to a copy number of two (normal diploid copy number); brown line shows the output of the Hidden Markov Model (HMM) through the coverage data, indicating the predicted copy number state in each window. The genomic region to the right of the \textit{Coeaexg} cluster has erratic coverage, suggesting a repeat region or poor genome assembly. CNVs in \textit{Coeaexg} are evident from the HMM being consistently above the normal value of 2 across the region. The top plot shows an example sample carrying the main CNV allele found in our dataset of \textit{An. arabiensis} from Tanzania (\textit{Coeaexg}\_Dup1, region coveraged by the CNV shown by purple bar). The bottom plot shows an example sample of \textit{An. coluzzii} from Korle-Bu (Ghana), where the CNV extends far to the left, and into the region of erratic coverage to the right, thus meaning that we could not identify discordant reads that could tag individual CNV alleles in this population.}
 	\end{center}
 	\label{FigS7}

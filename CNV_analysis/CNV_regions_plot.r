@@ -153,6 +153,8 @@ coeaexg.gff[, gene.id := unique(str_extract(attributes, 'AGAP\\d{6}'))]
 coeaexg.gff[, gene.name := str_extract(attributes, '(?<=Name=)[^;]+') %>%
 						str_to_title]
 
+# Coeae7g is annotated in panoptes, but doesn't seem to be here. Add the annotation
+coeaexg.gff[gene.id == 'AGAP006728', gene.name := 'Coeae7g']
 new.coeaexg.cnvs = list('Dup1' = c(37282078, 37295500),
                         'Dup2' = c(37294010, 37299365))
 
