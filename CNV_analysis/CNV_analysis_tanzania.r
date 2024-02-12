@@ -738,11 +738,11 @@ cat('\n\t##############################\n')
 # different populations. We'll use CNVs at a minimum of 5% freq
 # Moshi:
 cat('\n\nCyp6aap alleles in Moshi:\n')
-moshi.delta.samples <- phen[location == 'Moshi', specimen]
+moshi.delta.samples <- phen[location == 'Moshi' & insecticide == 'Delta', specimen]
 moshi.delta.allele.table <- as.data.frame(target.CNV.table[moshi.delta.samples])
 moshi.delta.model <- glm.up(moshi.delta.allele.table, c(paste('Cyp6aap_Dup', 31:33, sep = ''), 'Cyp9k1_Dup18'), 'phenotype')
 print(moshi.delta.model)
-# Dup33 is significant
+# Nothing significant
 
 # Muleba:
 cat('\n\nCyp6aap alleles in Muleba:\n')
@@ -758,7 +758,7 @@ moshi.haps <- fread('../haplotypes/Moshi_arabiensis_Delta_Cyp6.csv', key = 'samp
 moshi.delta.allele.table <- cbind(moshi.delta.allele.table, moshi.haps[moshi.delta.allele.table$sample.id, -c(1,2)])
 moshi.delta.haps.model <- glm.up(moshi.delta.allele.table, c('Cyp6aap_Dup33', 'cluster_1'), 'phenotype')
 print(moshi.delta.haps.model)
-# Still just Dup33
+# Still nothing significant
 
 cat('\n\nCyp6aap alleles in Muleba, controlling for sweep:\n')
 muleba.haps <- fread('../haplotypes/Muleba_arabiensis_Delta_Cyp6.csv', key = 'sample_name')

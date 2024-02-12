@@ -345,26 +345,23 @@ Analysing markers independently.
 Running commentary on model optimisation:
 
 Building model: glm(phenotype ~ 1 , data = moshi.delta.allele.table, family = binomial) 
-	Adding marker Cyp6aap_Dup33 as the lowest significant marker (P = 0.03663738).
-
-Building model: glm(phenotype ~ Cyp6aap_Dup33, data = moshi.delta.allele.table, family = binomial) 
 	No further markers are significant, keeping final model:
 
-Call:  glm(formula = phenotype ~ Cyp6aap_Dup33, family = binomial, data = moshi.delta.allele.table)
+Call:  glm(formula = phenotype ~ 1, family = binomial, data = moshi.delta.allele.table)
 
 Coefficients:
-      (Intercept)  Cyp6aap_Dup33TRUE  
-           0.1542            -0.5943  
+(Intercept)  
+    -0.4502  
 
-Degrees of Freedom: 281 Total (i.e. Null);  280 Residual
-  (5 observations deleted due to missingness)
-Null Deviance:	    384.7 
-Residual Deviance: 380.3 	AIC: 384.3
-Final model contained 1 parameters: Cyp6aap_Dup33.
+Degrees of Freedom: 130 Total (i.e. Null);  130 Residual
+  (1 observation deleted due to missingness)
+Null Deviance:	    175.1 
+Residual Deviance: 175.1 	AIC: 177.1
+Final model was the null model.
 
 
-                       P deviance
-Cyp6aap_Dup33 0.03663738 4.367189
+   P deviance
+1 NA       NA
 $invariable.markers
 character(0)
 
@@ -372,28 +369,28 @@ $correlated.markers
 character(0)
 
 $sig.alone
-                       P pseudo.R2
-Cyp6aap_Dup31 0.49364244        NA
-Cyp6aap_Dup32 0.49364244        NA
-Cyp6aap_Dup33 0.03663738        NA
-Cyp9k1_Dup18  0.53719689        NA
+                      P pseudo.R2
+Cyp6aap_Dup31 0.4771102        NA
+Cyp6aap_Dup32 0.4771102        NA
+Cyp6aap_Dup33 0.1004091        NA
+Cyp9k1_Dup18  0.7713220        NA
 
 $final.model
 
-Call:  glm(formula = phenotype ~ Cyp6aap_Dup33, family = binomial, data = moshi.delta.allele.table)
+Call:  glm(formula = phenotype ~ 1, family = binomial, data = moshi.delta.allele.table)
 
 Coefficients:
-      (Intercept)  Cyp6aap_Dup33TRUE  
-           0.1542            -0.5943  
+(Intercept)  
+    -0.4502  
 
-Degrees of Freedom: 281 Total (i.e. Null);  280 Residual
-  (5 observations deleted due to missingness)
-Null Deviance:	    384.7 
-Residual Deviance: 380.3 	AIC: 384.3
+Degrees of Freedom: 130 Total (i.e. Null);  130 Residual
+  (1 observation deleted due to missingness)
+Null Deviance:	    175.1 
+Residual Deviance: 175.1 	AIC: 177.1
 
 $final.sig
-                       P deviance
-Cyp6aap_Dup33 0.03663738 4.367189
+   P deviance
+1 NA       NA
 
 
 
@@ -454,26 +451,23 @@ Analysing markers independently.
 Running commentary on model optimisation:
 
 Building model: glm(phenotype ~ 1 , data = moshi.delta.allele.table, family = binomial) 
-	Adding marker Cyp6aap_Dup33 as the lowest significant marker (P = 0.03663738).
-
-Building model: glm(phenotype ~ Cyp6aap_Dup33, data = moshi.delta.allele.table, family = binomial) 
 	No further markers are significant, keeping final model:
 
-Call:  glm(formula = phenotype ~ Cyp6aap_Dup33, family = binomial, data = moshi.delta.allele.table)
+Call:  glm(formula = phenotype ~ 1, family = binomial, data = moshi.delta.allele.table)
 
 Coefficients:
-      (Intercept)  Cyp6aap_Dup33TRUE  
-           0.1542            -0.5943  
+(Intercept)  
+    -0.4502  
 
-Degrees of Freedom: 281 Total (i.e. Null);  280 Residual
-  (5 observations deleted due to missingness)
-Null Deviance:	    384.7 
-Residual Deviance: 380.3 	AIC: 384.3
-Final model contained 1 parameters: Cyp6aap_Dup33.
+Degrees of Freedom: 130 Total (i.e. Null);  130 Residual
+  (1 observation deleted due to missingness)
+Null Deviance:	    175.1 
+Residual Deviance: 175.1 	AIC: 177.1
+Final model was the null model.
 
 
-                       P deviance
-Cyp6aap_Dup33 0.03663738 4.367189
+   P deviance
+1 NA       NA
 $invariable.markers
 character(0)
 
@@ -482,25 +476,25 @@ character(0)
 
 $sig.alone
                        P pseudo.R2
-Cyp6aap_Dup33 0.03663738        NA
+Cyp6aap_Dup33 0.10040911        NA
 cluster_1     0.08363746        NA
 
 $final.model
 
-Call:  glm(formula = phenotype ~ Cyp6aap_Dup33, family = binomial, data = moshi.delta.allele.table)
+Call:  glm(formula = phenotype ~ 1, family = binomial, data = moshi.delta.allele.table)
 
 Coefficients:
-      (Intercept)  Cyp6aap_Dup33TRUE  
-           0.1542            -0.5943  
+(Intercept)  
+    -0.4502  
 
-Degrees of Freedom: 281 Total (i.e. Null);  280 Residual
-  (5 observations deleted due to missingness)
-Null Deviance:	    384.7 
-Residual Deviance: 380.3 	AIC: 384.3
+Degrees of Freedom: 130 Total (i.e. Null);  130 Residual
+  (1 observation deleted due to missingness)
+Null Deviance:	    175.1 
+Residual Deviance: 175.1 	AIC: 177.1
 
 $final.sig
-                       P deviance
-Cyp6aap_Dup33 0.03663738 4.367189
+   P deviance
+1 NA       NA
 
 
 
