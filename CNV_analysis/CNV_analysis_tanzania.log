@@ -557,3 +557,112 @@ $final.sig
                          P deviance
 Cyp6aap_Dup33 2.730821e-05 17.59656
 
+
+
+Sweep in Moshi, excluding CNV positive samples:
+Using the following string to control for confounding factors: 
+
+Detecting invariable and nearly invariable markers.
+
+Analysing markers independently.
+
+Running commentary on model optimisation:
+
+Building model: glm(phenotype ~ 1 , data = moshi.sweeps.only.table, family = binomial) 
+	No further markers are significant, keeping final model:
+
+Call:  glm(formula = phenotype ~ 1, family = binomial, data = moshi.sweeps.only.table)
+
+Coefficients:
+(Intercept)  
+    -0.3567  
+
+Degrees of Freedom: 33 Total (i.e. Null);  33 Residual
+Null Deviance:	    46.07 
+Residual Deviance: 46.07 	AIC: 48.07
+Final model was the null model.
+
+
+   P deviance
+1 NA       NA
+$invariable.markers
+character(0)
+
+$correlated.markers
+character(0)
+
+$sig.alone
+                 P pseudo.R2
+cluster_1 0.795313        NA
+
+$final.model
+
+Call:  glm(formula = phenotype ~ 1, family = binomial, data = moshi.sweeps.only.table)
+
+Coefficients:
+(Intercept)  
+    -0.3567  
+
+Degrees of Freedom: 33 Total (i.e. Null);  33 Residual
+Null Deviance:	    46.07 
+Residual Deviance: 46.07 	AIC: 48.07
+
+$final.sig
+   P deviance
+1 NA       NA
+
+
+
+Sweep in Muleba, excluding CNV positive samples:
+Using the following string to control for confounding factors: 
+
+Detecting invariable and nearly invariable markers.
+
+Analysing markers independently.
+
+Running commentary on model optimisation:
+
+Building model: glm(phenotype ~ 1 , data = muleba.sweeps.only.table, family = binomial) 
+	No further markers are significant, keeping final model:
+
+Call:  glm(formula = phenotype ~ 1, family = binomial, data = muleba.sweeps.only.table)
+
+Coefficients:
+(Intercept)  
+ -5.055e-17  
+
+Degrees of Freedom: 159 Total (i.e. Null);  159 Residual
+Null Deviance:	    221.8 
+Residual Deviance: 221.8 	AIC: 223.8
+Final model was the null model.
+
+
+   P deviance
+1 NA       NA
+$invariable.markers
+character(0)
+
+$correlated.markers
+character(0)
+
+$sig.alone
+                  P pseudo.R2
+cluster_1 0.1001964        NA
+cluster_2 0.1560587        NA
+
+$final.model
+
+Call:  glm(formula = phenotype ~ 1, family = binomial, data = muleba.sweeps.only.table)
+
+Coefficients:
+(Intercept)  
+ -5.055e-17  
+
+Degrees of Freedom: 159 Total (i.e. Null);  159 Residual
+Null Deviance:	    221.8 
+Residual Deviance: 221.8 	AIC: 223.8
+
+$final.sig
+   P deviance
+1 NA       NA
+

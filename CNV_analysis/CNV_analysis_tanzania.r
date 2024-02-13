@@ -767,6 +767,17 @@ muleba.delta.haps.model <- glm.up(muleba.delta.allele.table, c('Cyp6aap_Dup33', 
 print(muleba.delta.haps.model)
 # Still just Dup33
 
+cat('\n\nSweep in Moshi, excluding CNV positive samples:\n')
+moshi.sweeps.only.table <- subset(moshi.delta.allele.table, Coeaexf_Dup2 == F)
+moshi.sweeps.only.model <- glm.up(moshi.sweeps.only.table, 'cluster_1', 'phenotype')
+print(moshi.sweeps.only.model)
+
+cat('\n\nSweep in Muleba, excluding CNV positive samples:\n')
+muleba.sweeps.only.table <- subset(muleba.delta.allele.table, Coeaexf_Dup2 == F)
+muleba.sweeps.only.model <- glm.up(muleba.sweeps.only.table, c('cluster_1', 'cluster_2'), 'phenotype')
+print(muleba.sweeps.only.model)
+
+
 # Write tables to file
 # Find the Dups found at least once in the data
 Dups.present <- known.Dups[apply(target.CNV.table[, ..known.Dups], 2, sum) > 0]
