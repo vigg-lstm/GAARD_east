@@ -54,7 +54,7 @@ alt = variants['ALT'][focal_indices].astype('str')
 ref = variants['REF'][focal_indices].astype('str')
 
 
-# Load the genotype calls 
+# Load the genotype calls
 gt_path = zarr_folder + '/' + study_id + '/' + chrom + '/calldata/GT'
 genotypes = allel.GenotypeArray(zarr.open(os.path.expanduser(gt_path), mode = 'r')[focal_indices])
 if sample_names != 'all':
@@ -62,7 +62,7 @@ if sample_names != 'all':
 	sample_names = sample_names.split(',')
 	samples_zarr = zarr_folder + '/' + study_id + '/samples'
 	# Get the sample names
-	malgen_IDs = list(meta.loc[sample_names, vobs_id_column])                                                      
+	malgen_IDs = [sub('-.*', '', x) for x in meta.loc[sample_names, vobs_id_column]]
 	# Convert the sample names to Malgen IDs
 	malgen_sample_names = [x.decode('utf-8') for x in zarr.open(os.path.expanduser(samples_zarr), mode = 'r')]
 	# Get the indices of the vobs sample names that match the malgen_IDs
@@ -73,14 +73,10 @@ if sample_names != 'all':
 allele_counts = genotypes.count_alleles(3)
 
 # Join the output together in a data frame
-output_df = pd.concat([pd.DataFrame(focal_pos, columns = ['Pos']), 
-                       pd.DataFrame(ref, columns = ['allele0']), 
-                       pd.DataFrame(alt, columns = ['allele1','allele2','allele3']), 
-                       pd.DataFrame(allele_counts, columns = ['counts0','counts1','counts2','counts3'])], 
+output_df = pd.concat([pd.DataFrame(focal_pos, columns = ['Pos']),
+                       pd.DataFrame(ref, columns = ['allele0']),
+                       pd.DataFrame(alt, columns = ['allele1','allele2','allele3']),
+                       pd.DataFrame(allele_counts, columns = ['counts0','counts1','counts2','counts3'])],
                       axis = 1)
 
 output_df.to_csv(output_fn, sep = '\t', index = False)
-
-
-
-

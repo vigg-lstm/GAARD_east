@@ -1,2 +1,3 @@
 # The following table is formatted as tab separated values. 
-#GeneName	GeneId	TranscriptId	BioType
+#GeneName	GeneId	TranscriptId	BioType	variants_impact_LOW	variants_impact_MODERATE	variants_impact_MODIFIER	variants_effect_3_prime_UTR_variant	variants_effect_5_prime_UTR_premature_start_codon_gain_variant	variants_effect_5_prime_UTR_variant	variants_effect_intron_variant	variants_effect_missense_variant	variants_effect_splice_region_variant	variants_effect_synonymous_variant
+ACE1	AGAP001356	AGAP001356-RA	protein_coding	19	5	311	30	1	1	282	5	2	16
