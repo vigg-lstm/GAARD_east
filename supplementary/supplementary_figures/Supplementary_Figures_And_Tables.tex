@@ -10,6 +10,7 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{hyperref}
 \usepackage{helvet}
+\usepackage{csvsimple}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
 
 \title{Supplementary Figures.}
@@ -21,6 +22,7 @@
 
 \renewcommand{\familydefault}{\sfdefault}
 \renewcommand{\figurename}{\textbf{Fig.}}
+\renewcommand{\tablename}{\textbf{Table}}
 \renewcommand{\thefigure}{\textbf{S\arabic{figure}}}
 \renewcommand{\thetable}{\textbf{S\arabic{table}}}
 
@@ -38,8 +40,7 @@
 
 \end{center}
 
-\noindent Eric R. Lucas, Sanjay C. Nagi, Bilali Kabula, Arjen E. Van’t Hof, Emily J. Rippon, Dimitra Pipini, Nicholas J. Harding, Naomi A. Dyer, Chris S. Clarkson, Alistair Miles, Martin J. Donnelly, David Weetman
- 
+\noindent Eric R. Lucas, Sanjay C. Nagi, Bilali Kabula, Alexander Egyir-Yawson, John Essandoh, Sam Dadzie, Joseph Chabi, Arjen E. Van’t Hof, Emily J. Rippon, Dimitra Pipini, Nicholas J. Harding, Naomi A. Dyer, Chris S. Clarkson, Alistair Miles, David Weetman, Martin J. Donnelly 
 
  
 \vskip 2cm 
@@ -171,5 +172,23 @@
 	\label{FigS9}
 \end{figure}
 
+\clearpage
+
+
+\begin{table}[!ht]
+	\vspace{5cm}
+	\footnotesize
+    \centering
+	\caption{Non-synonymous SNPs in the \textit{Ace1} gene with a minor allele count (MAC) of at least 5 (out of 302 haplotypes) in the Moshi PM dataset. \textit{P} value is the result of a logistic regression of genotype vs phenotype for each SNP. Effect direction indicates whether samples carrying the SNP tended to be more (``Resistant'') or less (``Susceptible'') likely to survive insecticide exposure. None of the five SNPs were associated with resistance.}
+    \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+    \hline
+	\textbf{Chrom} & \textbf{Pos} & \textbf{MAC} & \textbf{\textit{P}} & \textbf{Effect direction} & \textbf{Nucleotide change} & \textbf{Amino acid change} \\ \hline
+        2R & 3489390 & 6 & 0.83 & Susceptible & 178G>A & Ala60Thr \\ \hline
+        2R & 3489397 & 11 & 0.54 & Susceptible & 185T>G & Val62Gly \\ \hline
+        2R & 3493415 & 6 & 0.29 & Susceptible & 1948G>A & Glu650Lys \\ \hline
+        2R & 3493739 & 7 & 0.88 & Resistant & 2165T>C & Ile722Thr \\ \hline
+        2R & 3493765 & 5 & 0.79 & Resistant & 2191G>A & Ala731Thr \\ \hline
+    \end{tabular}
+\end{table}
 
 \end{document}
