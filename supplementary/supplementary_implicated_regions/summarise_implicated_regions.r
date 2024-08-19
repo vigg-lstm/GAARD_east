@@ -334,7 +334,7 @@ pbs.regions[['Muleba.arabiensis.Delta']][chrom == '2R' & start == 56707016, labe
 h12.regions[['Moshi.arabiensis.Delta']][chrom == '2R' & start == 28536270, label := 'Cyp6aa1']
 h12.regions[['Moshi.arabiensis.Delta']][chrom == '2R' & start == 40837427, label := 'Keap1 (-65Kb)']
 h12.regions[['Moshi.arabiensis.Delta']][chrom == '2L' & start == 28491089, label := 'Coeae1f (-6Kb)']
-h12.regions[['Moshi.arabiensis.Delta']][chrom == '2L' & start == 36821514, label.below := '\nCoeae2g-6g\n(-440Kb)']
+h12.regions[['Moshi.arabiensis.Delta']][chrom == '2L' & start == 36821514, label.below := '\nCoeae2g-7g\n(-440Kb)']
 h12.regions[['Muleba.arabiensis.Delta']][chrom == '2R' & start == 28416418, label := 'Cyp6aa1']
 h12.regions[['Muleba.arabiensis.Delta']][chrom == '2R' & start == 20316806, label := 'Cyp4k2 (-700Kb)']
 #
