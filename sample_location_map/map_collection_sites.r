@@ -12,7 +12,7 @@ sites[, species := 'arabiensis']
 pal <- c(arabiensis = rgb(0.05, 0.6, 0.05))
 
 # Load the map of Africa
-Afmap <- readOGR(dsn = 'Africa_SHP', layer = 'Africa')
+Afmap <- readOGR(dsn = 'Africa_SHP')
 
 sites[, ':='(label.offset.lat = -0.45,
              label.offset.long = c(-0.5, 0.4))
@@ -29,20 +29,21 @@ shadow.text <- function(x, y, label, shadow.size, shadow.col = 'white', text.col
 	text(x, y, label, col = text.col, ...)
 }
 
+
 # Plot the map 
 plot.collection.sites <- function(sites, palette){
 	sites <- copy(sites)
 	par(mar = c(1.2, 1.2, 0.5, 0.5), mgp = c(1,0.25,0), tcl = -0.2)
 	countries <-  unique(sites$country) %>%
 	              {setNames(sub("'", "`", .), .)}
-	plot(Afmap[Afmap$COUNTRY %in% countries,], border = 'black', col = 'white', lwd = 2, bg = rgb(0.482, 0.694, 0.741))
+	plot(Afmap[Afmap$NA2_DESCRI %in% countries,], border = 'black', col = 'white', lwd = 2, bg = rgb(0.482, 0.694, 0.741))
 	# Make the other countries grey
-	plot(Afmap[!(Afmap$COUNTRY %in% countries),], border = 'grey60', col = 'grey80', add = T, bty = 'l')
+	plot(Afmap[!(Afmap$NA2_DESCRI %in% countries),], border = 'grey60', col = 'grey80', add = T, bty = 'l')
 	# Draw the main countries again so the borders are bold all the way
-	plot(Afmap[Afmap$COUNTRY %in% countries,], border = 'black', col = 'white', lwd = 2, add = T)
-	# Label the countires
+	plot(Afmap[Afmap$NA2_DESCRI %in% countries,], border = 'black', col = 'white', lwd = 2, add = T)
+	# Label the countkies
 	for (country in names(countries)){
-		centroid = gCentroid(Afmap[Afmap$COUNTRY == countries[country], ])
+		centroid = gCentroid(Afmap[Afmap$NA2_DESCRI == countries[country], ])
 		shadow.text(centroid$x, centroid$y+0.5, country, 0.02, text.col = 'grey20', cex = 1.3, font = 2)
 	}
 	# Add the sampling locations. 

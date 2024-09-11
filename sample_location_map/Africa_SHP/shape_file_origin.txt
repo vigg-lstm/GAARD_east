@@ -1,0 +1,3 @@
+Shape files downloaded from the Food and Agriculture Organization of the United Nations on 11th September 2024:
+
+https://spatial.faoswalim.org/layers/geonode:Africa_Adm0_Country/metadata_detail
