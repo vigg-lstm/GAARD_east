@@ -1,0 +1,7 @@
+This outputs of the scripts in this folder that cannot be run within this repo since they produce very large data files. They were run on the scientific computing servers of LSTM, and were used to create data that was then used in the analysis of this repo. 
+
+The zarr files used in the scripts create_csv_tables_from_zarr_East_Africa.py and classical_analysis_nosibs.r can be found at: https://malariagen.github.io/vector-data/ag3/download.html#snp-calls-zarr-format . The data used here were from release v3.7 (sample set 1246-VO-TZ-KABULA-VMF00185). 
+
+The .rds files used in the classical_analysis_nosibs.r were created by first running create_cvs_tables_from_zarr_East_Africa.py, then download_and_bracken_EA.py, then filter_SNP_tables_asaia_tanzania.r . 
+
+The summary figures can then be created using using the script summary_figures_tanzania.r, and the .png outputs are available in the summary_figures folder. These are the figures included in Supplementary Data S6. 
