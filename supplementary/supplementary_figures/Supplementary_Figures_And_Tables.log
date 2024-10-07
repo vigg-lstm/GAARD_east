@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.2)  7 OCT 2024 12:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.2)  7 OCT 2024 12:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -431,6 +431,11 @@ LaTeX Info: Redefining \nameref on input line 29.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 35.
 
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+\T1/phv/m/n/12 https://github.com/vigg-lstm/GAARD_east (doi: 10.5281/zen-odo.13
+898157,
+ []
+
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
@@ -438,27 +443,27 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
 File: ./Anopheles_PM_resistance_map.png Graphic file (type png)
 <use ./Anopheles_PM_resistance_map.png>
 Package pdftex.def Info: ./Anopheles_PM_resistance_map.png  used on input line 
-57.
+60.
 (pdftex.def)             Requested size: 284.52756pt x 255.94102pt.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 58.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
-8.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 61.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
+1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 58.
+(Font)              <7> on input line 61.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 58.
+(Font)              <5> on input line 61.
  [2
 
  <./Anopheles_PM_resistance_map.png>]
 <odd_samples.png, id=25, 578.4009pt x 761.4849pt>
 File: odd_samples.png Graphic file (type png)
 <use odd_samples.png>
-Package pdftex.def Info: odd_samples.png  used on input line 69.
+Package pdftex.def Info: odd_samples.png  used on input line 72.
 (pdftex.def)             Requested size: 426.79134pt x 561.89815pt.
 
 
@@ -468,12 +473,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <../../PCA/PCA.png, id=35, 903.375pt x 602.25pt>
 File: ../../PCA/PCA.png Graphic file (type png)
 <use ../../PCA/PCA.png>
-Package pdftex.def Info: ../../PCA/PCA.png  used on input line 81.
+Package pdftex.def Info: ../../PCA/PCA.png  used on input line 84.
 (pdftex.def)             Requested size: 426.79134pt x 284.52786pt.
 <../../PCA/PC_variance.png, id=37, 903.375pt x 401.5pt>
 File: ../../PCA/PC_variance.png Graphic file (type png)
 <use ../../PCA/PC_variance.png>
-Package pdftex.def Info: ../../PCA/PC_variance.png  used on input line 83.
+Package pdftex.def Info: ../../PCA/PC_variance.png  used on input line 86.
 (pdftex.def)             Requested size: 426.79134pt x 189.68524pt.
 
 
@@ -484,10 +489,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../../selection_analysis/Moshi_H12.pdf Graphic file (type pdf)
 <use ../../selection_analysis/Moshi_H12.pdf>
 Package pdftex.def Info: ../../selection_analysis/Moshi_H12.pdf  used on input 
-line 95.
+line 98.
 (pdftex.def)             Requested size: 469.75386pt x 144.53963pt.
 
-Overfull \hbox (14.50978pt too wide) in paragraph at lines 95--96
+Overfull \hbox (14.50978pt too wide) in paragraph at lines 98--99
  [] 
  []
 
@@ -495,10 +500,10 @@ Overfull \hbox (14.50978pt too wide) in paragraph at lines 95--96
 File: ../../selection_analysis/Muleba_H12.pdf Graphic file (type pdf)
 <use ../../selection_analysis/Muleba_H12.pdf>
 Package pdftex.def Info: ../../selection_analysis/Muleba_H12.pdf  used on input
- line 97.
+ line 100.
 (pdftex.def)             Requested size: 469.75386pt x 144.53963pt.
 
-Overfull \hbox (14.50978pt too wide) in paragraph at lines 97--98
+Overfull \hbox (14.50978pt too wide) in paragraph at lines 100--101
  [][] 
  []
 
@@ -507,10 +512,10 @@ Overfull \hbox (14.50978pt too wide) in paragraph at lines 97--98
 File: ../../selection_analysis/Moshi_vs_Muleba_H1x.png Graphic file (type png)
 <use ../../selection_analysis/Moshi_vs_Muleba_H1x.png>
 Package pdftex.def Info: ../../selection_analysis/Moshi_vs_Muleba_H1x.png  used
- on input line 99.
+ on input line 102.
 (pdftex.def)             Requested size: 469.75386pt x 144.53963pt.
 
-Overfull \hbox (14.50978pt too wide) in paragraph at lines 99--100
+Overfull \hbox (14.50978pt too wide) in paragraph at lines 102--103
  [][] 
  []
 
@@ -523,34 +528,34 @@ pdf> <../../selection_analysis/Moshi_vs_Muleba_H1x.png (PNG copy)>]
 <All_diagnostic_read_CNVs.pdf, id=74, 377.25711pt x 108.13689pt>
 File: All_diagnostic_read_CNVs.pdf Graphic file (type pdf)
 <use All_diagnostic_read_CNVs.pdf>
-Package pdftex.def Info: All_diagnostic_read_CNVs.pdf  used on input line 111.
+Package pdftex.def Info: All_diagnostic_read_CNVs.pdf  used on input line 114.
 (pdftex.def)             Requested size: 377.2562pt x 108.13661pt.
 <../../CNV_analysis/new_cyp6_cnvs.pdf, id=76, 903.375pt x 252.945pt>
 File: ../../CNV_analysis/new_cyp6_cnvs.pdf Graphic file (type pdf)
 <use ../../CNV_analysis/new_cyp6_cnvs.pdf>
 Package pdftex.def Info: ../../CNV_analysis/new_cyp6_cnvs.pdf  used on input li
-ne 113.
+ne 116.
 (pdftex.def)             Requested size: 426.79134pt x 119.5017pt.
 <../../CNV_analysis/new_coef_cnvs.pdf, id=78, 903.375pt x 252.945pt>
 File: ../../CNV_analysis/new_coef_cnvs.pdf Graphic file (type pdf)
 <use ../../CNV_analysis/new_coef_cnvs.pdf>
 Package pdftex.def Info: ../../CNV_analysis/new_coef_cnvs.pdf  used on input li
-ne 115.
+ne 118.
 (pdftex.def)             Requested size: 426.79134pt x 119.5017pt.
 <../../CNV_analysis/new_coeg_cnvs.pdf, id=80, 903.375pt x 180.675pt>
 File: ../../CNV_analysis/new_coeg_cnvs.pdf Graphic file (type pdf)
 <use ../../CNV_analysis/new_coeg_cnvs.pdf>
 Package pdftex.def Info: ../../CNV_analysis/new_coeg_cnvs.pdf  used on input li
-ne 117.
+ne 120.
 (pdftex.def)             Requested size: 426.79134pt x 85.35835pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--119
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
 \T1/phv/m/n/10 with un-der-ly-ing data at CNV_analysis/Ag1000G_CNV_data/v3.7_12
 46-VO-TZ-KABULA-
  []
 
 
-Underfull \hbox (badness 2512) in paragraph at lines 119--119
+Underfull \hbox (badness 2512) in paragraph at lines 122--122
 \T1/phv/m/n/10 VMF00185/target_regions_analysis/focal_region_CNV_table.csv , th
 e panel was ar-ranged us-ing
  []
@@ -564,10 +569,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: Supplementary_Figure_Cyp6_haplotypes.png Graphic file (type png)
 <use Supplementary_Figure_Cyp6_haplotypes.png>
 Package pdftex.def Info: Supplementary_Figure_Cyp6_haplotypes.png  used on inpu
-t line 128.
+t line 131.
 (pdftex.def)             Requested size: 512.1496pt x 204.79718pt.
 
-Overfull \hbox (31.29822pt too wide) in paragraph at lines 128--129
+Overfull \hbox (31.29822pt too wide) in paragraph at lines 131--132
 [] [] 
  []
 
@@ -577,10 +582,10 @@ File: ../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering.png Graphic file (
 type png)
 <use ../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering.png>
 Package pdftex.def Info: ../../CNV_analysis/sweeps/Coeaexf_haplotype_clustering
-.png  used on input line 130.
+.png  used on input line 133.
 (pdftex.def)             Requested size: 512.1496pt x 170.72223pt.
 
-Overfull \hbox (31.29822pt too wide) in paragraph at lines 130--132
+Overfull \hbox (31.29822pt too wide) in paragraph at lines 133--135
 [] [] 
  []
 
@@ -595,22 +600,22 @@ File: ../../CNV_analysis/CNV_extra_plots/example_plots_modified.pdf Graphic fil
 e (type pdf)
 <use ../../CNV_analysis/CNV_extra_plots/example_plots_modified.pdf>
 Package pdftex.def Info: ../../CNV_analysis/CNV_extra_plots/example_plots_modif
-ied.pdf  used on input line 143.
+ied.pdf  used on input line 146.
 (pdftex.def)             Requested size: 426.79134pt x 262.63974pt.
 
-Underfull \hbox (badness 6047) in paragraph at lines 144--144
+Underfull \hbox (badness 6047) in paragraph at lines 147--147
 \T1/phv/m/n/10 This fig-ure was pro-duced us-ing the script CNV_analysis/CNV_ex
 tra_plots/coverage_traces.r.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
 \T1/phv/m/n/10 The un-der-ly-ing data can be found in CNV_analysis/Ag1000G_CNV_
 data/v3.7_1246-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
 \T1/phv/m/n/10 VO-TZ-KABULA-VMF00185/target_regions_analysis/target_regions_ana
 lysis.Rdata and
  []
@@ -624,7 +629,7 @@ lysis.Rdata and
 File: ../../kdr_origins/kdr_haplotype_clustering.png Graphic file (type png)
 <use ../../kdr_origins/kdr_haplotype_clustering.png>
 Package pdftex.def Info: ../../kdr_origins/kdr_haplotype_clustering.png  used o
-n input line 154.
+n input line 157.
 (pdftex.def)             Requested size: 483.69684pt x 193.47969pt.
 <../../kdr_origins/kdr_haplotype_clustering_arabiensis.png, id=201, 1084.05pt x
  433.62pt>
@@ -632,7 +637,7 @@ File: ../../kdr_origins/kdr_haplotype_clustering_arabiensis.png Graphic file (t
 ype png)
 <use ../../kdr_origins/kdr_haplotype_clustering_arabiensis.png>
 Package pdftex.def Info: ../../kdr_origins/kdr_haplotype_clustering_arabiensis.
-png  used on input line 155.
+png  used on input line 158.
 (pdftex.def)             Requested size: 483.69684pt x 193.47969pt.
 <../../kdr_origins/kdr_haplotype_clustering_arabiensis_reduced.png, id=203, 108
 4.05pt x 433.62pt>
@@ -640,25 +645,25 @@ File: ../../kdr_origins/kdr_haplotype_clustering_arabiensis_reduced.png Graphic
  file (type png)
 <use ../../kdr_origins/kdr_haplotype_clustering_arabiensis_reduced.png>
 Package pdftex.def Info: ../../kdr_origins/kdr_haplotype_clustering_arabiensis_
-reduced.png  used on input line 156.
+reduced.png  used on input line 159.
 (pdftex.def)             Requested size: 483.69684pt x 193.47969pt.
 
-Overfull \hbox (28.45276pt too wide) in paragraph at lines 154--157
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 157--160
  [] 
  []
 
 
-Overfull \hbox (28.45276pt too wide) in paragraph at lines 154--157
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 157--160
  [] 
  []
 
 
-Overfull \hbox (28.45276pt too wide) in paragraph at lines 154--157
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 157--160
  [] 
  []
 
 
-LaTeX Warning: Float too large for page by 3.87048pt on input line 161.
+LaTeX Warning: Float too large for page by 3.87048pt on input line 164.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -673,7 +678,7 @@ ions.png Graphic file (type png)
 <use ../supplementary_implicated_regions/Moshi_arabiensis_Delta_implicated_regi
 ons.png>
 Package pdftex.def Info: ../supplementary_implicated_regions/Moshi_arabiensis_D
-elta_implicated_regions.png  used on input line 167.
+elta_implicated_regions.png  used on input line 170.
 (pdftex.def)             Requested size: 369.88582pt x 184.94771pt.
 <../supplementary_implicated_regions/Moshi_arabiensis_PM_implicated_regions.png
 , id=218, 650.43pt x 325.215pt>
@@ -682,7 +687,7 @@ s.png Graphic file (type png)
 <use ../supplementary_implicated_regions/Moshi_arabiensis_PM_implicated_regions
 .png>
 Package pdftex.def Info: ../supplementary_implicated_regions/Moshi_arabiensis_P
-M_implicated_regions.png  used on input line 169.
+M_implicated_regions.png  used on input line 172.
 (pdftex.def)             Requested size: 369.88582pt x 184.94771pt.
 <../supplementary_implicated_regions/Muleba_arabiensis_Delta_implicated_regions
 .png, id=220, 650.43pt x 325.215pt>
@@ -691,11 +696,11 @@ gions.png Graphic file (type png)
 <use ../supplementary_implicated_regions/Muleba_arabiensis_Delta_implicated_reg
 ions.png>
 Package pdftex.def Info: ../supplementary_implicated_regions/Muleba_arabiensis_
-Delta_implicated_regions.png  used on input line 171.
+Delta_implicated_regions.png  used on input line 174.
 (pdftex.def)             Requested size: 369.88582pt x 184.94771pt.
 
 
-LaTeX Warning: Float too large for page by 21.18001pt on input line 174.
+LaTeX Warning: Float too large for page by 21.18001pt on input line 177.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -705,29 +710,29 @@ ons.png (PNG copy)> <../supplementary_implicated_regions/Moshi_arabiensis_PM_im
 plicated_regions.png (PNG copy)> <../supplementary_implicated_regions/Muleba_ar
 abiensis_Delta_implicated_regions.png (PNG copy)>]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 183.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 186.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 186.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 189.
  [11
 
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 195.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 195.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 198.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
 
 (./Supplementary_Figures_And_Tables.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 195.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 195.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 198.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 198.
 Package rerunfilecheck Info: File `Supplementary_Figures_And_Tables.out' has no
 t changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 195.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 198.
  ) 
 Here is how much of TeX's memory you used:
  9325 strings out of 483183
  158307 string characters out of 5966293
- 428159 words of memory out of 5000000
+ 428080 words of memory out of 5000000
  24118 multiletter control sequences out of 15000+600000
  565686 words of font info for 49 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -741,7 +746,7 @@ ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uh
 vbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Supplementary_Figures_And_Tables.pdf (11 pages, 2987091 bytes
+Output written on Supplementary_Figures_And_Tables.pdf (11 pages, 2987265 bytes
 ).
 PDF statistics:
  307 PDF objects out of 1000 (max. 8388607)
