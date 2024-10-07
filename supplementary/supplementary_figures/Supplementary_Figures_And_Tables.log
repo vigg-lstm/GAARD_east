@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.2)  10 SEP 2024 13:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.2)  7 OCT 2024 12:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -475,10 +475,11 @@ File: ../../PCA/PC_variance.png Graphic file (type png)
 <use ../../PCA/PC_variance.png>
 Package pdftex.def Info: ../../PCA/PC_variance.png  used on input line 83.
 (pdftex.def)             Requested size: 426.79134pt x 189.68524pt.
- [4
 
 
- <../../PCA/PCA.png> <../../PCA/PC_variance.png>]
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <../../PCA/PCA.png> <../../PCA/PC_variance.png>]
 <../../selection_analysis/Moshi_H12.pdf, id=48, 469.755pt x 144.54pt>
 File: ../../selection_analysis/Moshi_H12.pdf Graphic file (type pdf)
 <use ../../selection_analysis/Moshi_H12.pdf>
@@ -515,6 +516,8 @@ Overfull \hbox (14.50978pt too wide) in paragraph at lines 99--100
 
 [5
 
+
+
  <../../selection_analysis/Moshi_H12.pdf> <../../selection_analysis/Muleba_H12.
 pdf> <../../selection_analysis/Moshi_vs_Muleba_H1x.png (PNG copy)>]
 <All_diagnostic_read_CNVs.pdf, id=74, 377.25711pt x 108.13689pt>
@@ -540,6 +543,17 @@ File: ../../CNV_analysis/new_coeg_cnvs.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../../CNV_analysis/new_coeg_cnvs.pdf  used on input li
 ne 117.
 (pdftex.def)             Requested size: 426.79134pt x 85.35835pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
+\T1/phv/m/n/10 with un-der-ly-ing data at CNV_analysis/Ag1000G_CNV_data/v3.7_12
+46-VO-TZ-KABULA-
+ []
+
+
+Underfull \hbox (badness 2512) in paragraph at lines 119--119
+\T1/phv/m/n/10 VMF00185/target_regions_analysis/focal_region_CNV_table.csv , th
+e panel was ar-ranged us-ing
+ []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -570,11 +584,11 @@ Overfull \hbox (31.29822pt too wide) in paragraph at lines 130--132
 [] [] 
  []
 
-[7
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- <./Supplementary_Figure_Cyp6_haplotypes.png> <../../CNV_analysis/sweeps/Coeaex
-f_haplotype_clustering.png>]
+[7 <./Supplementary_Figure_Cyp6_haplotypes.png> <../../CNV_analysis/sweeps/Coea
+exf_haplotype_clustering.png>]
 <../../CNV_analysis/CNV_extra_plots/example_plots_modified.pdf, id=158, 469.755
 pt x 289.08pt>
 File: ../../CNV_analysis/CNV_extra_plots/example_plots_modified.pdf Graphic fil
@@ -583,7 +597,27 @@ e (type pdf)
 Package pdftex.def Info: ../../CNV_analysis/CNV_extra_plots/example_plots_modif
 ied.pdf  used on input line 143.
 (pdftex.def)             Requested size: 426.79134pt x 262.63974pt.
- [8
+
+Underfull \hbox (badness 6047) in paragraph at lines 144--144
+\T1/phv/m/n/10 This fig-ure was pro-duced us-ing the script CNV_analysis/CNV_ex
+tra_plots/coverage_traces.r.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+\T1/phv/m/n/10 The un-der-ly-ing data can be found in CNV_analysis/Ag1000G_CNV_
+data/v3.7_1246-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+\T1/phv/m/n/10 VO-TZ-KABULA-VMF00185/target_regions_analysis/target_regions_ana
+lysis.Rdata and
+ []
+
+[8
+
+
 
  <../../CNV_analysis/CNV_extra_plots/example_plots_modified.pdf>]
 <../../kdr_origins/kdr_haplotype_clustering.png, id=199, 1084.05pt x 433.62pt>
@@ -624,6 +658,9 @@ Overfull \hbox (28.45276pt too wide) in paragraph at lines 154--157
  []
 
 
+LaTeX Warning: Float too large for page by 3.87048pt on input line 161.
+
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [9 <../../kdr_origins/kdr_haplotype_clustering.png> <../../kdr_origins/kdr_hapl
@@ -636,7 +673,7 @@ ions.png Graphic file (type png)
 <use ../supplementary_implicated_regions/Moshi_arabiensis_Delta_implicated_regi
 ons.png>
 Package pdftex.def Info: ../supplementary_implicated_regions/Moshi_arabiensis_D
-elta_implicated_regions.png  used on input line 166.
+elta_implicated_regions.png  used on input line 167.
 (pdftex.def)             Requested size: 369.88582pt x 184.94771pt.
 <../supplementary_implicated_regions/Moshi_arabiensis_PM_implicated_regions.png
 , id=218, 650.43pt x 325.215pt>
@@ -645,7 +682,7 @@ s.png Graphic file (type png)
 <use ../supplementary_implicated_regions/Moshi_arabiensis_PM_implicated_regions
 .png>
 Package pdftex.def Info: ../supplementary_implicated_regions/Moshi_arabiensis_P
-M_implicated_regions.png  used on input line 168.
+M_implicated_regions.png  used on input line 169.
 (pdftex.def)             Requested size: 369.88582pt x 184.94771pt.
 <../supplementary_implicated_regions/Muleba_arabiensis_Delta_implicated_regions
 .png, id=220, 650.43pt x 325.215pt>
@@ -654,8 +691,11 @@ gions.png Graphic file (type png)
 <use ../supplementary_implicated_regions/Muleba_arabiensis_Delta_implicated_reg
 ions.png>
 Package pdftex.def Info: ../supplementary_implicated_regions/Muleba_arabiensis_
-Delta_implicated_regions.png  used on input line 170.
+Delta_implicated_regions.png  used on input line 171.
 (pdftex.def)             Requested size: 369.88582pt x 184.94771pt.
+
+
+LaTeX Warning: Float too large for page by 21.18001pt on input line 174.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -665,33 +705,33 @@ ons.png (PNG copy)> <../supplementary_implicated_regions/Moshi_arabiensis_PM_im
 plicated_regions.png (PNG copy)> <../supplementary_implicated_regions/Muleba_ar
 abiensis_Delta_implicated_regions.png (PNG copy)>]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 182.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 183.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 185.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 186.
  [11
 
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 194.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 194.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 195.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 195.
 
 (./Supplementary_Figures_And_Tables.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 194.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 194.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 195.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 195.
 Package rerunfilecheck Info: File `Supplementary_Figures_And_Tables.out' has no
 t changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 194.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 195.
  ) 
 Here is how much of TeX's memory you used:
  9325 strings out of 483183
  158307 string characters out of 5966293
- 419800 words of memory out of 5000000
+ 428159 words of memory out of 5000000
  24118 multiletter control sequences out of 15000+600000
  565686 words of font info for 49 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 43i,9n,48p,1569b,681s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,9n,48p,1961b,681s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/eric/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600p
 k>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
@@ -701,7 +741,7 @@ ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uh
 vbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Supplementary_Figures_And_Tables.pdf (11 pages, 2984932 bytes
+Output written on Supplementary_Figures_And_Tables.pdf (11 pages, 2987091 bytes
 ).
 PDF statistics:
  307 PDF objects out of 1000 (max. 8388607)
